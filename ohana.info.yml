@@ -1,0 +1,40 @@
+name: Ohana
+type: theme
+description: 'Pattern Lab based starter theme.'
+package: Core
+core: 8.x
+base theme: stable
+
+libraries:
+  - ohana/global
+
+libraries-override:
+  system/base:
+    css:
+      component:
+        # Replace one file with another.
+        /core/themes/stable/css/system/components/hidden.module.css: dist/css/hidden.css
+
+ckeditor_stylesheets:
+  - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap
+  - css/global.css
+
+regions:
+  page_top: 'Page top'
+  header: Header
+  help: Help
+  highlighted: Highlighted
+  preface: Preface
+  content: Content
+  postscript: Postscript
+  footer: Footer
+  hidden: Hidden
+  page_bottom: 'Page bottom'
+
+component-libraries:
+  ohana:
+    paths:
+      - src/patterns/global
+      - src/patterns/components
+      - src/patterns/pages
+      - src/templates

@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ohana theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function ohana_preprocess_html(array &$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function ohana_preprocess_page(array &$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function ohana_preprocess_form(array &$variables) {
+
+}

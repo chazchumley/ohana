@@ -1,0 +1,22 @@
+/// Convert value to rem.
+///
+/// @param {Number} $value - Value to convert.
+/// @param {Number} $context - Base font size or browser context in pixels.
+///
+/// @return {Number} - Value in rems.
+
+@use 'sass:math';
+@use 'sass:meta';
+
+$browser-context: 16px !default;
+
+@function rem($value, $context: $browser-context) {
+  @if (meta.type-of($context) != 'number' or math.unit($context) != 'px') {
+    @error 'Browser context must be in pixels.';
+  }
+
+  @return ($value / $context) * 1rem;
+}
+
+// @debug rem(16px);
+// @retun 1rem
