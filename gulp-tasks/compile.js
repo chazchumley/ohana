@@ -10,6 +10,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const rename = require('gulp-rename');
 
+// Set sass compiler to use Dart Sass
+sass.compiler = require('sass');
+
 /**
  * Error handler function so we can see when errors happen.
  * @param {object} err error that was thrown

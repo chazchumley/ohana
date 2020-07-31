@@ -8,13 +8,13 @@
 @use '../../variables/font' as vars;
 @use 'rem' as function;
 
-@function font-size($value) {
+@function font-size($size) {
 
-  @if not(map.has-key(vars.$font-size, $value)) {
-    @error '"#{$value}" is not a valid font size in $font-size map.';
+  @if not(map.has-key(vars.$font-size, $size)) {
+    @error '"#{$size}" is not a valid font size in $font-size map.';
   }
 
-  @return function.rem(map.get(vars.$font-size, $value));
+  @return function.rem(map.get(vars.$font-size, $size));
 }
 
 // @debug font-size(5);

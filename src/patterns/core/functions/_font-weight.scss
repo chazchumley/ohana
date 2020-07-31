@@ -7,13 +7,13 @@
 @use 'sass:map';
 @use '../../variables/font' as vars;
 
-@function font-weight($value) {
+@function font-weight($weight) {
 
-  @if not(map.has-key(vars.$font-weight, $value)) {
-    @error '"#{$value}" is not a valid font weight in $font-weight map.';
+  @if not(map.has-key(vars.$font-weight, $weight)) {
+    @error '"#{$weight}" is not a valid font weight in $font-weight map.';
   }
 
-  @return map.get(vars.$font-weight, $value);
+  @return map.get(vars.$font-weight, $weight);
 }
 
 // @debug font-weight(normal);
