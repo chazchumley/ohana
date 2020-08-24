@@ -2,7 +2,7 @@ name: Ohana
 type: theme
 description: 'Pattern Lab based starter theme.'
 package: Core
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 base theme: stable
 
 libraries:
@@ -17,7 +17,7 @@ libraries-override:
 
 ckeditor_stylesheets:
   - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap
-  - css/global.css
+  - dist/css/styles.css
 
 regions:
   page_top: 'Page top'

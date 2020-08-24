@@ -17,66 +17,68 @@
 }
 
 #sg-patterns {
-  -webkit-box-sizing: border-box !important;
-          box-sizing: border-box !important;
+  box-sizing: border-box;
   max-width: 100%;
   padding: 0 8px;
 }
 
-.pl-swatch {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 5px;
-  width: 180px;
-  height: 180px;
-  border-radius: 3px;
-  vertical-align: top;
-  border: 3px solid rgba(0, 0, 0, 0.15);
+.pl-swatch__group {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.pl-swatch__hex {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px;
+.pl-swatch {
+  align-items: flex-end;
+  border: 3px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  display: flex;
+  height: 180px;
+  margin: 0 5px 5px 0;
+  position: relative;
+  vertical-align: top;
+  width: 180px;
+}
+
+.pl-swatch__meta {
   background-color: rgba(0, 0, 0, 0.5);
-  color: #FFF;
+  color: #fff;
   font-size: small;
+  padding: 15px;
+  width: 100%;
 }
 
 /* Increases size of pattern category and pattern name */
 .pl-c-category__title a {
-  font-size: 32px !important;
+  font-size: 32px;
 }
 
 .pl-c-pattern__title a {
-  font-size: 24px !important;
+  font-size: 24px;
 }
 
 .pl-icons__item {
+  border: 3px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
   display: inline-block;
-  position: relative;
   margin-bottom: 5px;
   min-width: 100px;
-  border-radius: 3px;
-  vertical-align: top;
+  position: relative;
   text-align: center;
-  border: 3px solid rgba(0, 0, 0, 0.15);
+  vertical-align: top;
 }
 
 .pl-icons .icon {
-  vertical-align: middle;
-  margin: 20px auto;
   fill: #222222;
   height: 50px;
-  width: auto;
+  margin: 20px auto;
   max-width: 100%;
+  width: auto;
+  vertical-align: middle;
 }
 
 .pl-icons__name {
-  margin: 0;
-  font-size: small;
-  padding: 15px;
   background-color: rgba(0, 0, 0, 0.25);
+  font-size: small;
+  margin: 0;
+  padding: 15px;
 }
