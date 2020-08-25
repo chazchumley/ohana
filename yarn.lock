@@ -1015,7 +1015,28 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@pattern-lab/core@^5.12.0":
+"@pattern-lab/core@5.11.1":
+  version "5.11.1"
+  resolved "https://registry.yarnpkg.com/@pattern-lab/core/-/core-5.11.1.tgz#92956e2a4393a8d0c1ee473bfe6df37c99403256"
+  integrity sha512-S3fatSAzqWVWmIcnW/UXgiXhis5T2gPktlssimqTRUAc1RxTAoZ/pWqKOqOwrj7hZ1tAWbhO2U4ieAVStYQ+HQ==
+  dependencies:
+    "@pattern-lab/engine-mustache" "^5.10.1"
+    "@pattern-lab/live-server" "^5.10.1"
+    chalk "1.1.3"
+    chokidar "1.7.0"
+    dive "0.5.0"
+    fs-extra "5.0.0"
+    glob "7.0.0"
+    graphlib "2.1.1"
+    js-beautify "1.6.3"
+    js-yaml "3.13.1"
+    lodash "4.17.15"
+    markdown-it "6.0.1"
+    node-fetch "1.6.0"
+    recursive-copy "2.0.8"
+    update-notifier "2.2.0"
+
+"@pattern-lab/core@^5.11.1":
   version "5.12.0"
   resolved "https://registry.yarnpkg.com/@pattern-lab/core/-/core-5.12.0.tgz#e118054d2fe9a3ef38a0ad782414e1e25962d125"
   integrity sha512-ghJs44gtanIuQyANPc5kEj6ZPsd73Xt+fs2yC6YtVv3ri4eExe7hKyJFDaRgWTBkVr8aZcM6NY014Jk3Hb0tfA==
@@ -1036,7 +1057,7 @@
     recursive-copy "2.0.8"
     update-notifier "2.2.0"
 
-"@pattern-lab/engine-mustache@^5.12.0":
+"@pattern-lab/engine-mustache@^5.10.1", "@pattern-lab/engine-mustache@^5.12.0":
   version "5.12.0"
   resolved "https://registry.yarnpkg.com/@pattern-lab/engine-mustache/-/engine-mustache-5.12.0.tgz#d1168e6ee119173f0bf236cc64c1c2349634e100"
   integrity sha512-2lpCa8TvVaBUr9VoEK8nF4pq6wqOKP2L2e3sOGWHn2YYeY4HZyL6TfyFk7fKgufjN8YM8GCfwiT491qE4jqwtQ==
@@ -1044,13 +1065,13 @@
     fs-extra "0.30.0"
     mustache "3.1.0"
 
-"@pattern-lab/engine-twig-php@^5.12.0":
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/@pattern-lab/engine-twig-php/-/engine-twig-php-5.12.0.tgz#651403bd301f1ca298e8cfc9aecaf620fe845c30"
-  integrity sha512-cuTusayK+Q7sLL/Z56Piy8rg9nvsROTDnHcqphBETZTng4pH5IDrM7TNqc+VJ7DZ9N5N9haQfJfT/JUqrWl9dw==
+"@pattern-lab/engine-twig-php@5.11.1":
+  version "5.11.1"
+  resolved "https://registry.yarnpkg.com/@pattern-lab/engine-twig-php/-/engine-twig-php-5.11.1.tgz#706cab0fd0747e4cda6f3d67d967ea4487746992"
+  integrity sha512-f48jdg3/fGDVhLq/GA9qtXOhOucGVsShzk0JwM+gZXjA06SACiCTTjYA17/6uU2r3k3rexpX4VFu7yL/1eildQ==
   dependencies:
     "@basalt/twig-renderer" "0.13.1"
-    "@pattern-lab/core" "^5.12.0"
+    "@pattern-lab/core" "^5.11.1"
     chalk "^4.0.0"
     fs-extra "0.30.0"
 
@@ -1092,10 +1113,10 @@
     get-own-property-symbols "^0.9.3"
     promise-polyfill "^8.0.0"
 
-"@pattern-lab/uikit-workshop@^5.12.0":
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/@pattern-lab/uikit-workshop/-/uikit-workshop-5.12.0.tgz#dccfc918693a897d9df02eec8a6a24fb0ba3f323"
-  integrity sha512-jt9PEUf9rtSTjT6FTxftLYhpETRDq3IxmrzFd/St0hOAkFqRaXoJAVTRRkFiE5dqYSLXkVeYSHrO3i6ILRs3TA==
+"@pattern-lab/uikit-workshop@5.11.1":
+  version "5.11.1"
+  resolved "https://registry.yarnpkg.com/@pattern-lab/uikit-workshop/-/uikit-workshop-5.11.1.tgz#0a0aa2c94b897b2f1e8fd6c12086829cbf4b7c99"
+  integrity sha512-B5SbJ+6AQguVYxEPqccKnkFdMRjGJYHPuVBWcdhHJXInj9bEiC6l/7WMMTnMU9KPWpRXDPEBG+5FDTOcdEgR6w==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/plugin-proposal-class-properties" "^7.5.5"

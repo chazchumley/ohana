@@ -22,6 +22,20 @@
   padding: 0 8px;
 }
 
+.pl-c-category {
+  display: none;
+}
+
+/* Increases size of pattern category and pattern name */
+.pl-c-category__title a {
+  font-size: 32px;
+}
+
+.pl-c-pattern__title a {
+  font-size: 24px;
+}
+
+/* Colors */
 .pl-swatch__group {
   display: flex;
   flex-wrap: wrap;
@@ -47,38 +61,68 @@
   width: 100%;
 }
 
-/* Increases size of pattern category and pattern name */
-.pl-c-category__title a {
-  font-size: 32px;
+.pl-font {
+  margin-bottom: 45px;
 }
 
-.pl-c-pattern__title a {
-  font-size: 24px;
-}
-
-.pl-icons__item {
-  border: 3px solid rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
-  display: inline-block;
+.pl-font__family {
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 5px;
-  min-width: 100px;
-  position: relative;
-  text-align: center;
-  vertical-align: top;
+  text-align: left;
 }
 
-.pl-icons .icon {
-  fill: #222222;
-  height: 50px;
-  margin: 20px auto;
-  max-width: 100%;
-  width: auto;
-  vertical-align: middle;
+.pl-font__item {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0;
 }
 
-.pl-icons__name {
-  background-color: rgba(0, 0, 0, 0.25);
-  font-size: small;
-  margin: 0;
-  padding: 15px;
+.pl-font__preview {
+  border-bottom: 0;
+  border-right: 2px solid #eee;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 5px 30px 0 0;
+  padding: 0 20px;
+  text-align: left;
+  width: 65%;
+}
+
+.pl-font__preview-character {
+  flex-shrink: 0;
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: left;
+  width: 35%;
+}
+
+.pl-font__preview-meta {
+  text-align: left;
+  width: 100%;
+}
+
+.pl-font__label {
+  color: #999;
+}
+
+.pl-font__name {
+  color: #565454;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.pl-font__weight {
+  color: #000;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.pl-font__style {
+  color: #000;
+  font-size: 13px;
+  margin-bottom: 5px;
 }

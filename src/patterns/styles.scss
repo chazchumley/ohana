@@ -1,11 +1,11 @@
 // @file
 // Main styles
 
-@use 'vendor/normalize' as vendor;
-@use 'core/functions/radius' as function;
+// @use 'vendor/normalize' as vendor;
+// @use 'core/functions/radius' as function;
 
 
-// Enable normalize presets
-@include vendor.normalize;
+// // Enable normalize presets
+// @include vendor.normalize;
 
-@debug function.radius(1);
+// @debug function.radius(1);

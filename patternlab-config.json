@@ -97,6 +97,13 @@
           ]
         },
         {
+          "id": "global",
+          "recursive": true,
+          "paths": [
+            "./src/patterns/global"
+          ]
+        },
+        {
           "id": "components",
           "recursive": true,
           "paths": [
