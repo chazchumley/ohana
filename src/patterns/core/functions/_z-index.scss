@@ -5,15 +5,15 @@
 /// @return {Number} - Number returned based on z-index
 
 @use 'sass:map';
-@use '../../variables/z-index' as vars;
+@use '../../settings/z-index' as settings;
 
 @function z-index($value) {
 
-  @if not(map.has-key(vars.$z-index, $value)) {
+  @if not(map.has-key(settings.$z-index, $value)) {
     @error '"#{$value}" is not a valid index in $z-index map.';
   }
 
-  @return map.get(vars.$z-index, $value);
+  @return map.get(settings.$z-index, $value);
 }
 
 // @debug z-index(low);

@@ -5,15 +5,15 @@
 /// @return {Number} - Return font weight value based on string
 
 @use 'sass:map';
-@use '../../variables/font' as vars;
+@use '../../settings/font' as settings;
 
 @function font-weight($weight) {
 
-  @if not(map.has-key(vars.$font-weight, $weight)) {
+  @if not(map.has-key(settings.$font-weight, $weight)) {
     @error '"#{$weight}" is not a valid font weight in $font-weight map.';
   }
 
-  @return map.get(vars.$font-weight, $weight);
+  @return map.get(settings.$font-weight, $weight);
 }
 
 // @debug font-weight(normal);

@@ -6,15 +6,15 @@
 /// @return {String} - Hexadecimal color value
 
 @use 'sass:map';
-@use '../../variables/color' as vars;
+@use '../../settings/color' as settings;
 
 @function color($color, $variant) {
 
-  @if not(map.has-key(vars.$colors, $color)) {
+  @if not(map.has-key(settings.$colors, $color)) {
     @error '"#{$color}" is not a valid color in $colors map.';
   }
 
-  $curr_color: map.get(vars.$colors, $color);
+  $curr_color: map.get(settings.$colors, $color);
 
   @if not(map.has-key($curr_color, $variant)) {
     @error '"#{$variant}" is not a valid variant in $colors map.';

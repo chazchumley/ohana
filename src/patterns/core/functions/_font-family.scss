@@ -6,10 +6,10 @@
 
 @use 'sass:list';
 @use 'sass:map';
-@use '../../variables/font' as vars;
+@use '../../settings/font' as settings;
 
 @function font-family($family) {
-  $map: vars.$font-family;
+  $map: settings.$font-family;
 
   // Is $family in $font-family map
   @if not map.has-key($map, $family) {
