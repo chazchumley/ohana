@@ -26,10 +26,6 @@ rules:
   # https://stylelint.io/user-guide/rules/font-family-no-duplicate-names/
   font-family-no-duplicate-names: true
 
-  # Disallow duplicate font family names.
-  # https://stylelint.io/user-guide/rules/font-family-no-duplicate-names/
-  font-family-no-missing-generic-family-keyword: true
-
   ## Function.
   # Disallow an invalid expression within calc functions.
   # https://stylelint.io/user-guide/rules/function-calc-no-invalid/
@@ -384,15 +380,6 @@ rules:
   # Disallow whitespace before the commas of selector lists.
   # https://stylelint.io/user-guide/rules/selector-list-comma-space-before/
   selector-list-comma-space-before: never
-
-  ## Rule
-  # Require empty lines before rules.
-  # https://stylelint.io/user-guide/rules/rule-empty-line-before/
-  # Note that `rule-non-nested-empty-line-before` is Deprecated per https://github.com/18F/stylelint-rules/issues/26
-  rule-empty-line-before:
-    - always
-    - ignore:
-        - after-comment
 
   # Prefer newline at the end of a file.
   # https://stylelint.io/user-guide/rules/no-missing-end-of-source-newline/

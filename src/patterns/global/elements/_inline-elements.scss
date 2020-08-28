@@ -56,7 +56,6 @@ a {
 }
 
 abbr {
-
   &[title] {
     border-bottom: 0;
     text-decoration: underline;
@@ -68,7 +67,6 @@ abbr {
   }
 
   @media print {
-
     &[title]::after {
       content: ' (' attr(title) ')';
     }

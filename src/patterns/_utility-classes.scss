@@ -1,31 +1,30 @@
 // @file
 // Utility classes
 
-@import '../patterns/01-global/01-mixins/accessibility';
-@import '../patterns/01-global/01-mixins/clearfix';
+@use 'core/mixins/clearfix';
+@use 'core/mixins/accessiblity';
 
 // Clearfix
 .clearfix {
-  @include clearfix-important;
+  @include clearfix(true);
 }
 
 // Accessibility utility classes
 .visually-hidden {
-  @include visually-hidden-important;
+  @include visually-hidden(true);
 
   &.focusable {
-
     &:focus,
     &:active {
-      @include visually-hidden-off-important;
+      @include visually-hidden-off(true);
     }
   }
 }
 
 .hidden {
-  @include hidden-important;
+  @include hidden(true);
 }
 
 .invisible {
-  @include invisible-important;
+  @include invisible(true);
 }
