@@ -1,0 +1,13 @@
+// @file
+// Preformatted text styles.
+
+@use '../../core/functions' as *;
+
+pre {
+  margin: 0 0 units(2);
+  overflow: auto;
+
+  @media print {
+    page-break-inside: avoid;
+  }
+}

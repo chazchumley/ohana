@@ -1,0 +1,135 @@
+// @file
+// Inline element styles.
+
+@use '../../core/functions' as *;
+@use '../../core/mixins' as *;
+
+a {
+  @include focus;
+  background-color: transparent;
+  color: color(text, link);
+  transition-duration: 200ms;
+  transition-property: background-color, border-color, color, outline-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+
+  &:visited {
+    color: color(text, link-visited);
+  }
+
+  &:hover,
+  &:focus {
+    color: color(text, link-hover);
+  }
+
+  &:active {
+    color: color(text, link-active);
+  }
+
+  @media print {
+
+    &,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &[href]::after {
+      content: ' <' attr(href) '>';
+      font-family: font-family(body);
+      font-size: 10pt;
+      font-weight: normal;
+      text-transform: lowercase;
+    }
+
+    // Uncomment and replace example.com with your site’s domain.
+    //&[href^='/']::after {
+    //  content: ' <http://example.com' attr(href) '>';
+    //}
+
+    &[href^='javascript:']::after,
+    &[href^='mailto:']::after,
+    &[href^='tel:']::after,
+    &[href^='#']::after,
+    &[href*='?']::after {
+      content: '';
+    }
+  }
+}
+
+abbr {
+
+  &[title] {
+    border-bottom: 0;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+  }
+
+  &:hover {
+    cursor: help;
+  }
+
+  @media print {
+
+    &[title]::after {
+      content: ' (' attr(title) ')';
+    }
+  }
+}
+
+// b {}
+
+cite {
+  color: color(grayscale, gray-60);
+  font-family: font-family(body);
+  font-size: font-size(1);
+  font-style: normal;
+  font-weight: font-weight(semibold);
+  letter-spacing: 0.02em;
+  line-height: line-height(tight);
+}
+
+// code {}
+
+// del {}
+
+dfn {
+  font-style: italic;
+}
+
+// em {}
+
+// i {}
+
+// ins {}
+
+// kbd {}
+
+mark {
+  background: color(background, mark);
+  color: color(text, mark);
+}
+
+// q {}
+
+// s {}
+
+// samp {}
+
+small {
+  font-size: 75%;
+}
+
+// strong {}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+// time {}
+
+// u {}
+
+// var {}

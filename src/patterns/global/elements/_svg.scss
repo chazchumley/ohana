@@ -1,0 +1,9 @@
+// @file
+// SVG element styles.
+
+svg {
+
+  &:not(:root) {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,10 @@
+// @file
+// Options element styles.
+
+@use '../../core/functions' as *;
+
+// option {}
+
+optgroup {
+  font-weight: font-weight(bold);
+}

@@ -2,6 +2,7 @@
 // Heading styles.
 
 @use '../../core/functions' as *;
+@use '../../settings' as *;
 
 %hN {
   color: inherit;
@@ -30,53 +31,88 @@
 h1,
 %h1 {
   @extend %hN;
-  @include display-text-style(h1);
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(15);
+  letter-spacing: -1.5px;
+  line-height: line-height(tight);
 
-  @media (min-width: $medium-screen) {
-    font-size: font-size(5);
+  a {
+    color: inherit;
+    font-weight: inherit;
   }
 }
 
 h2,
 %h2 {
   @extend %hN;
-  @include display-text-style(h2);
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(14);
+  letter-spacing: -0.5px;
+  line-height: line-height(tight);
 
-  @media (min-width: $medium-screen) {
-    font-size: font-size(4);
+  a {
+    color: inherit;
+    font-weight: inherit;
   }
 }
 
 h3,
 %h3 {
   @extend %hN;
-  @include display-text-style(h3);
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(12);
+  line-height: line-height(tight);
 
-  @media (min-width: $medium-screen) {
-    font-size: font-size(3);
+  a {
+    color: inherit;
+    font-weight: inherit;
   }
 }
 
 h4,
 %h4 {
   @extend %hN;
-  @include display-text-style(h4);
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(10);
+  letter-spacing: 0.25px;
 
-  @media (min-width: $medium-screen) {
-    font-size: font-size(2);
+  a {
+    color: inherit;
+    font-weight: inherit;
   }
 }
 
 h5,
 %h5 {
   @extend %hN;
-  @include display-text-style(h5);
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(5);
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
 }
 
 h6,
 %h6 {
   @extend %hN;
-  @include display-text-style(h6);
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(1);
+  letter-spacing: 0.15px;
+  line-height: line-height(loose);
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
 }
 
 h1,

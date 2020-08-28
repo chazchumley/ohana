@@ -24,18 +24,38 @@ $grayscale: (
 $background: (
   dark: #000,
   light: #fff,
+  mark: #ff0,
   transparent: transparent
 );
 
 $text: (
   dark: #000,
   light: #fff,
-  transparent: transparent
+  link: #0071bc,
+  link-hover: #205493,
+  link-active: #205493,
+  link-visited: #205493,
+  mark: #000
 );
+
+$ui: (
+  border: #adadad,
+  focus: #4773aa
+);
+
+$table: (
+  background: #fff,
+  background-head: #f0f0f0,
+  background-foot: #f0f0f0,
+  border: #5c5c5c
+);
+
 
 $colors: (
   shades: $shades,
   grayscale: $grayscale,
   background: $background,
-  text: $text
+  text: $text,
+  table: $table,
+  ui: $ui
 ) !default;
