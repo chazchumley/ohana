@@ -1,9 +1,8 @@
 // @file
 // Main styles
 
-@use 'global/elements' as elements;
-
-
+@use 'global/elements' as *;
+@use 'layouts/grid/grid' as *;
 
 // @use 'core/functions/radius' as function;
 // @debug function.radius(1);

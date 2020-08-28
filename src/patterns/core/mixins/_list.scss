@@ -89,7 +89,7 @@
     padding-bottom: $list-item-padding;
   }
 
-  @media($small-screen) {
+  @media(min-width:$small-screen) {
     column-count: $list-column-count;
     column-gap: $list-column-gap;
   }
