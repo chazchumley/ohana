@@ -5,12 +5,12 @@
 /// @return {Number} - Rem number returned based on radius
 
 @use 'sass:map';
-@use '../../variables/spacing' as vars;
+@use '../../settings/spacing' as settings;
 @use 'rem' as function;
 
 @function radius($value) {
 
-  @if not(map.has-key(vars.$spacing, $value)) {
+  @if not(map.has-key(settings.$spacing, $value)) {
     @error '"#{$value}" is not a valid unit in $spacing map.';
   }
 
@@ -18,7 +18,7 @@
     @return 0;
   }
   @else {
-    @return function.rem(map.get(vars.$spacing, $value));
+    @return function.rem(map.get(settings.$spacing, $value));
   }
 }
 

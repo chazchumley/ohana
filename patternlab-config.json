@@ -79,7 +79,7 @@
   },
   "uikits": [
     {
-      "name": "uikit-workshop",
+      "package": "@pattern-lab/uikit-workshop",
       "outputDir": "",
       "enabled": true,
       "excludedPatternStates": [],
@@ -94,6 +94,13 @@
           "recursive": true,
           "paths": [
             "./node_modules/@pattern-lab/uikit-workshop/views-twig"
+          ]
+        },
+        {
+          "id": "global",
+          "recursive": true,
+          "paths": [
+            "./src/patterns/global"
           ]
         },
         {

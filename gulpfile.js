@@ -127,6 +127,17 @@ function watchFiles() {
     )
   );
 
+  // Watch all my patterns and compile if a file changes.
+  watch(
+    './src/patterns/**/**/*{.twig,.yml}',
+    series(
+      parallel(buildPatternlab), (done) => {
+        server.reload('*{.html}');
+        done();
+      }
+    )
+  );
+
   // Reload the browser after patternlab updates.
   patternlab.events.on('patternlab-build-end', () => {
     server.reload('*.html');

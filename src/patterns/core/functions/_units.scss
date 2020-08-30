@@ -5,16 +5,16 @@
 /// @return {Number} - Rem number returned based on spacing scale
 
 @use 'sass:map';
-@use '../../variables/spacing' as vars;
+@use '../../settings/spacing' as settings;
 @use 'rem' as function;
 
 @function units($value) {
 
-  @if not(map.has-key(vars.$spacing, $value)) {
+  @if not(map.has-key(settings.$spacing, $value)) {
     @error '"#{$value}" is not a valid unit in $spacing map.';
   }
 
-  @return function.rem(map.get(vars.$spacing, $value));
+  @return function.rem(map.get(settings.$spacing, $value));
 }
 
 // @debug units(0.5);

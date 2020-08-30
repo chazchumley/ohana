@@ -5,15 +5,15 @@
 /// @return {Number} - Unitless number returned based on line height scale
 
 @use 'sass:map';
-@use '../../variables/font' as vars;
+@use '../../settings/font' as settings;
 
 @function line-height($value) {
 
-  @if not(map.has-key(vars.$line-height, $value)) {
+  @if not(map.has-key(settings.$line-height, $value)) {
     @error '"#{$value}" is not a valid line-height in $line-height map.';
   }
 
-  @return map.get(vars.$line-height, $value);
+  @return map.get(settings.$line-height, $value);
 }
 
 // @debug line-height(base);
