@@ -30,7 +30,7 @@ module.exports = {
           'dist/css/global.css',
           'dist/css/*.css'
         ], { base: './' }))
-        .pipe(concat('styles.css'))
+        .pipe(concat('all.css'))
         .pipe(dest('./dist/css'))
     );
   },

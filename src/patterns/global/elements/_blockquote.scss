@@ -1,10 +1,11 @@
 // @file
 // Blockquote styles.
 
+@use '../../settings/variables' as *;
 @use '../../core/functions' as *;
 
 blockquote {
-  color: color(text, link);
+  color: $blockquote-color;
   font-family: font-family(body);
   font-size: font-size(10);
   margin: 0 0 units(5);

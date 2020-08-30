@@ -1,28 +1,29 @@
 // @file
 // Inline element styles.
 
+@use '../../settings/variables' as *;
 @use '../../core/functions' as *;
 @use '../../core/mixins' as *;
 
 a {
   @include focus;
   background-color: transparent;
-  color: color(text, link);
+  color: $link-color;
   transition-duration: 200ms;
   transition-property: background-color, border-color, color, outline-color;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 
   &:visited {
-    color: color(text, link-visited);
+    color: $link-color-visited;
   }
 
   &:hover,
   &:focus {
-    color: color(text, link-hover);
+    color: $link-color-hover;
   }
 
   &:active {
-    color: color(text, link-active);
+    color: $link-color-active;
   }
 
   @media print {
@@ -67,6 +68,7 @@ abbr {
   }
 
   @media print {
+
     &[title]::after {
       content: ' (' attr(title) ')';
     }
@@ -76,7 +78,7 @@ abbr {
 // b {}
 
 cite {
-  color: color(grayscale, gray-60);
+  color: $cite-color;
   font-family: font-family(body);
   font-size: font-size(1);
   font-style: normal;
@@ -102,8 +104,8 @@ dfn {
 // kbd {}
 
 mark {
-  background: color(background, mark);
-  color: color(text, mark);
+  background: $mark-background;
+  color: $mark-color;
 }
 
 // q {}

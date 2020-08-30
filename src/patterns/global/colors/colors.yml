@@ -1,7 +1,8 @@
 ---
 colors:
   brand:
-    mandy: '#EC5f67'
+    blue-60: '#005ea2'
+    blue-70: '#0b4778'
   shades:
     light: '#fff'
     dark: '#000'

@@ -2,6 +2,11 @@
 // Color maps
 // ==========================================================================
 
+$brand: (
+  blue-60: #005ea2,
+  blue-70: #0b4778
+);
+
 $shades: (
   dark: #000,
   light: #fff,
@@ -21,26 +26,21 @@ $grayscale: (
   gray-90: #1b1b1b
 );
 
+$ui: (
+  border: #adadad,
+  focus: #4773aa,
+  mark: #ff0
+);
+
 $background: (
   dark: #000,
   light: #fff,
-  mark: #ff0,
   transparent: transparent
 );
 
 $text: (
   dark: #000,
-  light: #fff,
-  link: #0071bc,
-  link-hover: #205493,
-  link-active: #205493,
-  link-visited: #205493,
-  mark: #000
-);
-
-$ui: (
-  border: #adadad,
-  focus: #4773aa
+  light: #fff
 );
 
 $table: (
@@ -50,8 +50,8 @@ $table: (
   border: #5c5c5c
 );
 
-
 $colors: (
+  brand: $brand,
   shades: $shades,
   grayscale: $grayscale,
   background: $background,
