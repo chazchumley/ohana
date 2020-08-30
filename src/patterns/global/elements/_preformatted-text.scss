@@ -4,6 +4,8 @@
 @use '../../core/functions' as *;
 
 pre {
+  font-family: font-family(mono);
+  font-size: font-size(5);
   margin: 0 0 units(2);
   overflow: auto;
 

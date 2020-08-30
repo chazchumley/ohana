@@ -1,9 +1,6 @@
 // @file
 // Universal styles.
 
-@use 'vendor/normalize' as vendor;
-@include vendor.normalize;
-
 *,
 *::before,
 *::after {

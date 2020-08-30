@@ -1,7 +1,9 @@
 // @file
 // Details element styles.
 
-// details {}
+details {
+  display: block;
+}
 
 summary {
   display: list-item;
