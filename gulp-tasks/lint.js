@@ -13,8 +13,7 @@ module.exports = {
   // Lint Sass based on .stylelintrc.yml config.
   lintSass: function () {
     return src([
-      './src/patterns/**/*.scss',
-      '!./src/patterns/00-config/_tokens.scss'
+      './src/patterns/**/*.scss'
     ])
       .pipe(
         gulpStylelint({
@@ -31,8 +30,7 @@ module.exports = {
   // Lint JavaScript based on .eslintrc config.
   lintJS: function() {
     return src([
-      './src/patterns/**/*.js',
-      '!./src/patterns/components/**/vendors/*'
+      './src/patterns/**/*.js'
     ])
       .pipe(eslint())
       .pipe(eslint.format());
