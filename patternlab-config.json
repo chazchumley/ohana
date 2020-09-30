@@ -100,23 +100,49 @@
           "id": "global",
           "recursive": true,
           "paths": [
-            "./src/patterns/global"
+            "./src/patterns/02-global"
+          ]
+        },
+        {
+          "id": "layouts",
+          "recursive": true,
+          "paths": [
+            "./src/patterns/03-layouts"
           ]
         },
         {
           "id": "components",
           "recursive": true,
           "paths": [
-            "./src/patterns/components"
+            "./src/patterns/04-components"
+          ]
+        },
+        {
+          "id": "composites",
+          "recursive": true,
+          "paths": [
+            "./src/patterns/05-composites"
+          ]
+        },
+        {
+          "id": "templates",
+          "recursive": true,
+          "paths": [
+            "./src/patterns/06-templates"
+          ]
+        },
+        {
+          "id": "pages",
+          "recursive": true,
+          "paths": [
+            "./src/patterns/07-pages"
           ]
         }
       ],
       "alterTwigEnv": [
         {
           "file": "./src/styleguide/drupal-twig/alter-twig.php",
-          "functions": [
-            "twig_extensions"
-          ]
+          "functions": ["twig_extensions"]
         }
       ]
     }

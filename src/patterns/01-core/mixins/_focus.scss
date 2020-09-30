@@ -1,0 +1,13 @@
+// @file
+// Focus mixin
+
+@use '../../variables' as *;
+
+@mixin focus($color: $focus-color, $width: $focus-width, $offset: $focus-offset) {
+  outline: $width solid transparent;
+  outline-offset: $offset;
+
+  &:focus {
+    outline-color: $color;
+  }
+}

@@ -1,0 +1,23 @@
+---
+colors:
+  brand:
+    blue-cool-30v: '#59b9de'
+    blue-cool-50v: '#0d7ea2'
+    green-warm-20: '#cbd17a'
+    green-warm-50: '#6f7a41'
+    red-warm-20v: '#f6bd9c'
+    red-warm-40v: '#ef5e25'
+  shades:
+    light: '#fff'
+    dark: '#000'
+  grayscale:
+    gray-5: '#f0f0f0'
+    gray-10: '#e6e6e6'
+    gray-20: '#c9c9c9'
+    gray-30: '#adadad'
+    gray-40: '#919191'
+    gray-50: '#757575'
+    gray-60: '#5c5c5c'
+    gray-70: '#454545'
+    gray-80: '#2e2e2e'
+    gray-90: '#1b1b1b'

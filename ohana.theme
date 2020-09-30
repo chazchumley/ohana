@@ -2,26 +2,13 @@
 
 /**
  * @file
- * Functions to support theming in the ohana theme.
+ * Functions to support theming.
  */
 
-/**
- * Implements hook_preprocess_HOOK() for html.html.twig.
- */
-function ohana_preprocess_html(array &$variables) {
-
-}
-
-/**
- * Implements hook_preprocess_page() for page.html.twig.
- */
-function ohana_preprocess_page(array &$variables) {
-
-}
-
-/**
- * Implements hook_preprocess_form().
- */
-function ohana_preprocess_form(array &$variables) {
-
-}
+require_once dirname(__FILE__) . '/includes/block.inc';
+require_once dirname(__FILE__) . '/includes/field.inc';
+require_once dirname(__FILE__) . '/includes/form.inc';
+require_once dirname(__FILE__) . '/includes/html.inc';
+require_once dirname(__FILE__) . '/includes/navigation.inc';
+require_once dirname(__FILE__) . '/includes/taxonomy.inc';
+require_once dirname(__FILE__) . '/includes/views.inc';
