@@ -9,9 +9,9 @@
 /**
  * Implements hook_preprocess_html().
  */
-function ohana_preprocess_html(&$vars, $hook) {
+function ohana_preprocess_html(array $variables, $hook) {
   // Add x-ua-compatible meta tag.
-  $vars['page']['#attached']['html_head'][] = [
+  $variables['page']['#attached']['html_head'][] = [
     [
       '#tag' => 'meta',
       '#attributes' => [
@@ -26,18 +26,18 @@ function ohana_preprocess_html(&$vars, $hook) {
 /**
  * Implements hook_preprocess_maintenance_page().
  */
-function ohana_preprocess_maintenance_page(&$vars, $hook) {
+function ohana_preprocess_maintenance_page(array $variables, $hook) {
   // While markup for normal pages is split into html.html.twig and
   // page.html.twig, the markup for the maintenance page is all in the single
   // maintenance-page.html.twig template. So, to have what’s done in
   // ohana_preprocess_html() and ohana_preprocess_page() also happen
   // on the maintenance page, it has to be called here.
-  ohana_preprocess_html($vars, $hook);
-  ohana_preprocess_page($vars, $hook);
+  ohana_preprocess_html($variables, $hook);
+  ohana_preprocess_page($variables, $hook);
 }
 
 /**
  * Implements hook_preprocess_page().
  */
-function ohana_preprocess_page(&$vars, $hook) {
+function ohana_preprocess_page(array $variables, $hook) {
 }

@@ -8,17 +8,17 @@
 /**
  * Implements template_preprocess_input().
  */
-function ohana_preprocess_input(&$vars) {
-  $vars['required'] = isset($vars['element']['#required']) ? $vars['element']['#required'] : NULL;
-  $vars['type'] = isset($vars['element']['#attributes']['type']) ? $vars['element']['#attributes']['type'] : NULL;
-  $vars['dropbutton'] = isset($vars['element']['#dropbutton']) ? $vars['element']['#dropbutton'] : NULL;
+function ohana_preprocess_input(array $variables) {
+  $variables['required'] = isset($variables['element']['#required']) ? $variables['element']['#required'] : NULL;
+  $variables['type'] = isset($variables['element']['#attributes']['type']) ? $variables['element']['#attributes']['type'] : NULL;
+  $variables['dropbutton'] = isset($variables['element']['#dropbutton']) ? $variables['element']['#dropbutton'] : NULL;
 }
 
 /**
  * Implements template_preprocess_fieldset().
  */
-function ohana_preprocess_fieldset(&$vars) {
-  $vars['type'] = isset($vars['element']['#type']) ? $vars['element']['#type'] : NULL;
+function ohana_preprocess_fieldset(array $variables) {
+  $variables['type'] = isset($variables['element']['#type']) ? $variables['element']['#type'] : NULL;
 }
 
 /**
