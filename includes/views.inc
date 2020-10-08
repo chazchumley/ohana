@@ -1,9 +1,14 @@
 <?php
 
 /**
- * Implements views_theme_suggestions_views_view().
+ * @file
+ * Views-specific theming alterations.
  */
-function views_theme_suggestions_views_view(array $variables) {
+
+/**
+ * Implements hook_theme_suggestions_views_view().
+ */
+function ohana_theme_suggestions_views_view(array $variables) {
   $suggestions = [];
   $view = $variables['view'];
 
@@ -15,9 +20,9 @@ function views_theme_suggestions_views_view(array $variables) {
 }
 
 /**
- * Implements views_theme_suggestions_views_view_unformatted().
+ * Implements hook_theme_suggestions_views_view_unformatted().
  */
-function views_theme_suggestions_views_view_unformatted(array $variables) {
+function ohana_theme_suggestions_views_view_unformatted(array $variables) {
   $suggestions = [];
   $view = $variables['view'];
 
@@ -36,15 +41,15 @@ function ohana_preprocess_views_view(&$variables) {
 }
 
 /**
-* Implements hook_theme_suggestions_container_alter().
-*/
+ * Implements hook_theme_suggestions_container_alter().
+ */
 function ohana_theme_suggestions_container_alter(array &$suggestions, array $variables) {
   // A list of view names in which to exclude the container markup.
-  // Included views will use container--no-wrapper.html.twig instead of container.html.twig.
+  // Included views will use container--no-wrapper.html.twig
+  // instead of container.html.twig.
   $exclude_views = [
     // 'example_view_machine_name',
   ];
-
   if (isset($variables['element']['#name'])) {
     if (in_array($variables['element']['#name'], $exclude_views)) {
       $suggestions[] = 'container__no_wrapper';

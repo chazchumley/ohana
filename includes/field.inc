@@ -5,6 +5,9 @@
  * Field template functions.
  */
 
-function ohana_theme_suggestions_field_alter(&$suggestions, $variables) {
+ /**
+  * Implements hook_theme_suggestions_field_alter().
+  */
+function ohana_theme_suggestions_field_alter(array $suggestions, array $variables) {
  $suggestions[] = 'field__node__' . $variables['element']['#field_name'] . '__' . $variables['element']['#bundle'] . '__' . $variables['element']['#view_mode'];
 }
