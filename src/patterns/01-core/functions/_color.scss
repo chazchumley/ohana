@@ -7,8 +7,9 @@
 
 @use 'sass:map';
 @use '../../00-settings/color' as settings;
+@use 'maps' as maps;
 
-@function color($color, $variant) {
+@function color($color, $keys...) {
 
   @if not(map.has-key(settings.$colors, $color)) {
     @error '"#{$color}" is not a valid color in $colors map.';
@@ -16,11 +17,7 @@
 
   $curr_color: map.get(settings.$colors, $color);
 
-  @if not(map.has-key($curr_color, $variant)) {
-    @error '"#{$variant}" is not a valid variant in $colors map.';
-  }
-
-  @return map.get($curr_color, $variant);
+  @return maps.map-deep-get($curr_color, $keys...);
 }
 
 // @debug color("blue", "base");
