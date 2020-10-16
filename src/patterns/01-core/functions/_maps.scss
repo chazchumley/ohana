@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+@function map-deep-get($map, $keys...) {
+  $arg-type: type-of($map);
+
+  @if ($arg-type != map) {
+    @error "A valid sass map is required as the first argument. Argument #{$map} is type #{$arg-type}";
+  }
+
+  @each $key in $keys {
+    @if (map.has-key($map, $key)) {
+      $map: map.get($map, $key);
+    }
+    @else {
+      @warn "Key `#{$key}` not found in map";
+    }
+  }
+
+  @return $map;
+}
