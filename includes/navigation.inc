@@ -6,6 +6,7 @@
  */
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements theme_preprocess_menu_local_tasks()
@@ -37,5 +38,17 @@ function ohana_preprocess_menu_local_tasks(array &$variables) {
 
     // Overwrite the original tabs data.
     $variables[$type] = $tabs;
+  }
+}
+
+/**
+ * Implements theme_preprocess_menu()
+ *
+ * @param array $variables
+ *   Variables that get passed along to the theming template.
+ */
+function ohana_preprocess_menu(&$variables){
+  foreach($variables['items'] as &$link){
+    $link['title'] = Markup::create($link['title']);
   }
 }

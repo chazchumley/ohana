@@ -18,11 +18,16 @@ module.exports = {
 
   // Clean Images files.
   cleanImages: function() {
-    return del(['./dist/images/*'], { force: true });
+    return del(['./dist/img/*'], { force: true });
   },
 
   // Clean JS files.
   cleanJS: function() {
     return del(['./dist/js/*'], { force: true });
+  },
+
+  // Clean Vendor files.
+  cleanVendor: function() {
+    return del(['./dist/vendor/*'], { force: true });
   }
 };
