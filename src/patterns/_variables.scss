@@ -22,6 +22,17 @@ $blockquote-color: color(brand, blue-cool-50v) !default;
 
 // Button
 
+// Messages
+$message-background: color(grayscale, gray-20) !default;
+$message-border: color(grayscale, gray-40) !default;
+$message-color: color(shades, dark) !default;
+$message-status-background: color(brand, green-400) !default;
+$message-status-border: color(brand, green-500) !default;
+$message-error-background: color(brand, red-500) !default;
+$message-error-border: color(brand, red-600) !default;
+$message-warning-background: color(brand, yellow-200) !default;
+$message-warning-border: color(brand, yellow-300) !default;
+
 // Media Query Ranges
 $small-screen: 600px !default;
 $medium-screen: 992px !default;

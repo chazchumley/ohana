@@ -1,4 +1,0 @@
----
-el: .author
-title: Author
----
