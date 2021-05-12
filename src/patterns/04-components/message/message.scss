@@ -1,0 +1,82 @@
+// @file
+// Styles for Messages.
+
+@use '../../variables' as *;
+@use '../../01-core/functions' as *;
+@use '../../01-core/mixins' as *;
+
+.message {
+  background-color: $message-background;
+  border: 1px solid $message-border;
+  color: $message-color;
+  margin-bottom: units(2);
+  overflow: hidden;
+  padding: units(2);
+  position: relative;
+  word-wrap: break-word;
+
+  &::before {
+    background-repeat: no-repeat;
+    background-size: em(52px);
+    bottom: -0.5em;
+    content: '';
+    display: block;
+    height: em(52px);
+    position: absolute;
+    right: -0.5em;
+    transform: rotate(-20deg);
+    width: em(52px);
+    @media print {
+      display: none !important;
+    }
+  }
+
+  a {
+    color: color(grayscale, gray-50);
+    font-weight: font-weight(semibold);
+    text-decoration: underline;
+  }
+}
+
+.message__content {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Status Message
+.message--status {
+  background-color: $message-status-background;
+  border-color: $message-status-border;
+
+  &::before {
+    @include svg-background(messages-status);
+  }
+}
+
+// Error Message
+.message--error {
+  background-color: $message-error-background;
+  border-color: $message-error-border;
+
+  &::before {
+    @include svg-background(messages-error);
+  }
+
+  .message__item {
+    em:first-child {
+      font-style: normal;
+      font-weight: font-weight(bold);
+    }
+  }
+}
+
+// Warning Message
+.message--warning {
+  background-color: $message-warning-background;
+  border-color: $message-warning-border;
+
+  &::before {
+    @include svg-background(messages-warning);
+  }
+}

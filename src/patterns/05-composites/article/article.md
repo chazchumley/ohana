@@ -1,4 +1,0 @@
----
-el: .article
-title: Article
----

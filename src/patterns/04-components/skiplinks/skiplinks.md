@@ -1,4 +1,0 @@
----
-el: .skiplinks
-title: Skiplinks
----

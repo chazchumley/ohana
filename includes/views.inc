@@ -10,6 +10,7 @@
  */
 function ohana_preprocess_views_view(array &$variables) {
   $variables['path'] = $variables['view']->getRequest()->getPathInfo();
+  $variables['get'] = $variables['view']->getExposedInput();
 }
 
 /**

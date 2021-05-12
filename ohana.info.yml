@@ -4,6 +4,10 @@ description: 'Pattern Lab based starter theme.'
 package: Core
 core_version_requirement: ^8.8 || ^9
 base theme: stable
+dependencies:
+  - components
+  - twig_tweak
+  - twig_field_value
 
 libraries:
   - ohana/global
@@ -41,16 +45,9 @@ regions:
   hidden: Hidden
   page_bottom: 'Page bottom'
 
-component-libraries:
-  layouts:
-    paths:
-      - src/patterns/03-layouts
-  components:
-    paths:
-      - src/patterns/04-components
-  composites:
-    paths:
-      - src/patterns/05-composites
-  templates:
-    paths:
-      - src/patterns/06-templates
+components:
+  namespaces:
+    layouts: src/patterns/03-layouts
+    components: src/patterns/04-components
+    composites: src/patterns/05-composites
+    templates: src/patterns/06-templates

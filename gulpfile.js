@@ -14,8 +14,9 @@ const patternlab = require('@pattern-lab/core')(config);
 const { compileSass, compileJS } = require('./gulp-tasks/compile');
 const { lintJS, lintSass } = require('./gulp-tasks/lint');
 const { compressAssets } = require('./gulp-tasks/compress');
-const { cleanCSS, cleanFonts, cleanImages, cleanJS } = require('./gulp-tasks/clean');
+const { cleanCSS, cleanFonts, cleanImages, cleanJS, cleanVendor } = require('./gulp-tasks/clean');
 const { concatCSS, concatJS } = require('./gulp-tasks/concat');
+// const { copyVendorJS, copyVendorFonts, copyVendorImages, copyVendorCSS } = require('./gulp-tasks/copy');
 const { moveFonts, movePatternCSS } = require('./gulp-tasks/move');
 const { prettier } = require('./gulp-tasks/format');
 const server = require('browser-sync').create();
@@ -36,7 +37,7 @@ exports.compress = compressAssets;
 exports.concat = parallel(concatCSS, concatJS);
 
 // Clean all directories.
-exports.clean = parallel(cleanCSS, cleanFonts, cleanImages, cleanJS);
+exports.clean = parallel(cleanCSS, cleanFonts, cleanImages, cleanJS, cleanVendor);
 
 /**
  * Start browsersync server.
@@ -109,7 +110,7 @@ function watchFiles() {
     './src/patterns/**/**/*.js',
     series(
       prettier,
-      parallel(lintJS, compileJS), concatJS, (done) => {
+      parallel(cleanJS, lintJS, compileJS), concatJS, (done) => {
         server.reload('*.js');
         done();
       }
@@ -147,6 +148,7 @@ function watchFiles() {
 // Watch task that runs a browsersync server.
 exports.watch = series(
   parallel(cleanCSS, cleanJS),
+  // parallel(copyVendorJS, copyVendorFonts, copyVendorImages, copyVendorCSS),
   parallel(lintSass, compileSass, lintJS, compileJS, compressAssets, moveFonts, movePatternCSS),
   parallel(concatCSS, concatJS),
   series(watchPatternlab, serve, watchFiles)
@@ -158,6 +160,7 @@ exports.styleguide = buildPatternlab;
 // Default Task
 exports.default = series(
   parallel(cleanCSS, cleanJS),
+  // parallel(copyVendorJS, copyVendorFonts, copyVendorImages, copyVendorCSS),
   parallel(lintSass, compileSass, lintJS, compileJS, compressAssets, moveFonts, movePatternCSS),
   parallel(concatCSS, concatJS),
   buildPatternlab

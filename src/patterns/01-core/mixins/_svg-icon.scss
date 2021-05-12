@@ -1,0 +1,13 @@
+// @file
+// SVG Icon mixins
+
+@mixin svg-icon($path, $height, $width, $color) {
+  background-color: $color;
+  background-size: cover;
+  height: $height;
+  mask-image: url($path);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  width: $width;
+}
