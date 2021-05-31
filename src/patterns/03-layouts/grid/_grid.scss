@@ -8,8 +8,14 @@ $grid-gutter: 40px;
 
 .l-grid {
   display: grid;
-  grid-gap: rem($grid-gutter);
-  grid-template-columns: repeat(1, 1fr);
+  gap: rem($grid-gutter);
+  grid-auto-flow: row;
+}
+
+.l-grid--auto {
+  display: grid;
+  gap: rem($grid-gutter);
+  grid-auto-flow: column;
 }
 
 .l-grid--2col {
@@ -19,7 +25,7 @@ $grid-gutter: 40px;
 }
 
 .l-grid--3col {
-   @media(min-width:$small-screen) {
+  @media(min-width:$small-screen) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
