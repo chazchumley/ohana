@@ -9,5 +9,7 @@ html {
   font-size: 100% * (font-size(base) / rem(16px));
   line-height: line-height(base);
   min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
   text-size-adjust: 100%;
 }

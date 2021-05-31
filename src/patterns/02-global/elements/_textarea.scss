@@ -2,6 +2,8 @@
 // Textarea element styles.
 
 textarea {
+  appearance: none;
+  border-radius: 0;
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;

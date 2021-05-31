@@ -1,107 +1,45 @@
 // @file
 // Styles for Grid layout.
 
-@use '../../01-core/mixins' as *;
+@use '../../01-core/functions' as *;
 @use '../../variables' as *;
 
 $grid-gutter: 40px;
 
 .l-grid {
-  @include flex-grid(1, $grid-gutter);
-
-  @supports (display: grid) {
-    @include css-fixed-grid(1);
-  }
+  display: grid;
+  grid-gap: rem($grid-gutter);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .l-grid--2col {
-  @include flex-grid(1, $grid-gutter);
-
-  @supports (display: grid) {
-    @include css-fixed-grid(1);
-  }
-
   @media(min-width:$small-screen) {
-    > * {
-      @include set-flex-column(2, $grid-gutter, 275px);
-    }
-
-    @supports (display: grid) {
-      @include set-css-fixed-columns(2, $grid-gutter, true);
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .l-grid--3col {
-  @include flex-grid(1, $grid-gutter);
-
-  @supports (display: grid) {
-    @include css-fixed-grid(1);
-  }
-
-  @media(min-width: 760px) {
-    > * {
-      @include set-flex-column(3, $grid-gutter, 275px);
-    }
-
-    @supports (display: grid) {
-      @include set-css-fixed-columns(3, $grid-gutter, true);
-    }
+   @media(min-width:$small-screen) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .l-grid--4col {
-  @include flex-grid(1, $grid-gutter);
-
-  @supports (display: grid) {
-    @include css-fixed-grid(1);
-  }
-
   @media(min-width: 600px) and (max-width: 800px) {
-    > * {
-      @include set-flex-column(2, $grid-gutter, 275px);
-    }
-
-    @supports (display: grid) {
-      @include set-css-fixed-columns(2, $grid-gutter, true);
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media(min-width: 801px) {
-    > * {
-      @include set-flex-column(4, $grid-gutter);
-    }
-
-    @supports (display: grid) {
-      @include set-css-fixed-columns(4, $grid-gutter, true);
-    }
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .l-grid--6col {
-  @include flex-grid(1, $grid-gutter);
-
-  @supports (display: grid) {
-    @include css-fixed-grid(1);
-  }
-
   @media(min-width: 600px) and (max-width: 999px) {
-    > * {
-      @include set-flex-column(3, $grid-gutter);
-    }
-
-    @supports (display: grid) {
-      @include set-css-fixed-columns(3, $grid-gutter, true);
-    }
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media(min-width: 1000px) {
-    > * {
-      @include set-flex-column(6, $grid-gutter);
-    }
-
-    @supports (display: grid) {
-      @include set-css-fixed-columns(6, $grid-gutter, true);
-    }
+    grid-template-columns: repeat(6, 1fr);
   }
 }

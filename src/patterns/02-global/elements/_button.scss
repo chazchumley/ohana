@@ -4,6 +4,7 @@
 // Don’t style button elements, since they’re often styled as links for
 // accessible widgets. Use the .button class in components/button.
 button {
+  cursor: pointer;
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;

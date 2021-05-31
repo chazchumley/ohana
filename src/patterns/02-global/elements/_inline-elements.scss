@@ -9,6 +9,7 @@ a {
   @include focus;
   background-color: transparent;
   color: $link-color;
+  cursor: pointer;
   transition-duration: 200ms;
   transition-property: background-color, border-color, color, outline-color;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
