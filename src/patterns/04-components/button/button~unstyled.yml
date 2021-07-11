@@ -1,5 +1,5 @@
 ---
-modifier: ''
+modifier: 'button--unstyled'
 button: true
 disabled: false
 url: '#'

@@ -1,7 +1,7 @@
 ---
 header: |-
-  <div><p style="background:#333;color:#fff;padding:1em;margin:0;">Header</p></div>
+  <div><p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Header</p></div>
 main: |-
-  <div><p style="background:#333;color:#fff;padding:1em;margin:0;">Main</p></div>
+  <div><p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Main</p></div>
 footer: |-
-  <div><p style="background:#333;color:#fff;padding:1em;margin:0;">Footer</p></div>
+  <div><p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Footer</p></div>

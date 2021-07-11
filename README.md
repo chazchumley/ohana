@@ -1,5 +1,10 @@
 # Getting Started
 
+## System Requirements
+The following Drupal contributed modules are required:
+* _components_
+* _twig_field_value_
+
 ## Browser Support
 Autoprefixer & Babel is set to support the last 2 versions of modern browsers
 

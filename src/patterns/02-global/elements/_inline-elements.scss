@@ -6,7 +6,6 @@
 @use '../../01-core/mixins' as *;
 
 a {
-  @include focus;
   background-color: transparent;
   color: $link-color;
   cursor: pointer;
@@ -18,8 +17,12 @@ a {
     color: $link-color-visited;
   }
 
-  &:hover,
+  &:hover {
+    color: $link-color-hover;
+  }
+
   &:focus {
+    @include focus-outline;
     color: $link-color-hover;
   }
 

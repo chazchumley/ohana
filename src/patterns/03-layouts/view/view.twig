@@ -1,0 +1,79 @@
+{% set classes = [
+  'l-view',
+  modifier ? modifier,
+  attributes ? attributes.class
+]|join(' ')|trim %}
+
+<div class="{{ classes }}" {{ attributes ? attributes|without('class','id') }}>
+  {{ title_prefix }}
+  {% if title %}
+    {{ title }}
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if aside %}
+    <aside class="l-view__aside">
+      {% if exposed %}
+        <div class="l-view__filters">
+          {{- exposed -}}
+        </div>
+      {% endif %}
+
+      {{ aside }}
+    </aside>
+  {% endif %}
+
+  <div class="l-view__main">
+    {% if header %}
+      <div class="l-view__header">
+        <{{ heading ?: 'h3' }}>{{- header -}}</{{ heading ?: 'h3' }}>
+      </div>
+    {% endif %}
+
+    {% if attachment_before %}
+      <div class="attachment attachment--before">
+        {{- attachment_before -}}
+      </div>
+    {% endif %}
+
+    {% if rows %}
+      <div class="l-view__content {{ row_modifier }}">
+        {{- rows -}}
+      </div>
+    {% elseif empty %}
+      <div class="l-view__empty">
+        {{- empty -}}
+      </div>
+    {% endif %}
+
+    {% if attachment_after %}
+      <div class="attachment attachment--after">
+        {{- attachment_after -}}
+      </div>
+    {% endif %}
+
+    {% if more %}
+      {{ more }}
+    {% endif %}
+
+    {% if pager %}
+      <div class="l-view__pager">
+        {{ pager }}
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% if footer %}
+    <div class="l-view__footer">
+      {{- footer -}}
+    </div>
+  {% endif %}
+
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{- feed_icons -}}
+    </div>
+  {% endif %}
+
+</div>

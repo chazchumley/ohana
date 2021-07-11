@@ -4,18 +4,10 @@
 @use '../../01-core/functions' as *;
 @use '../../variables' as *;
 
-$grid-gutter: 40px;
-
 .l-grid {
   display: grid;
-  gap: rem($grid-gutter);
+  gap: $grid-gutter-width;
   grid-auto-flow: row;
-}
-
-.l-grid--auto {
-  display: grid;
-  gap: rem($grid-gutter);
-  grid-auto-flow: column;
 }
 
 .l-grid--2col {

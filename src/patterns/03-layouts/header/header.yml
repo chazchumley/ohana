@@ -1,4 +1,5 @@
 ---
 modifier: ''
 constrain: ''
-content: Header Content
+content: |-
+  <div><p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Header Content</p></div>

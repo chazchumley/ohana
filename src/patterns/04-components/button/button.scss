@@ -1,4 +1,81 @@
 // @file
 // Styles for Button.
 
-// .button {}
+@use '../../01-core/mixins' as *;
+@use '../../01-core/functions' as *;
+@use '../../variables' as *;
+
+.button {
+  appearance: none;
+  background-color: color(brand, blue-cool-30v);
+  border: 0;
+  border-radius: units(0.5);
+  box-sizing: border-box;
+  color: color(shades, light);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: font-weight(bold);
+  padding: units(1.5) units(2.5);
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  @media(min-width:$small-screen) {
+    width: auto;
+  }
+
+  &:visited {
+    color: color(shades, light);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: color(brand, blue-cool-50v);
+    color: color(shades, light);
+  }
+
+  &:active {
+    background-color: color(brand, blue-cool-50v);
+    color: color(shades, light);
+  }
+
+  &:not([disabled]):focus {
+    outline-offset: units(0.5);
+  }
+
+  &:disabled {
+    background-color: color(grayscale, gray-20);
+    color: color(shades, light);
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+// Unstyled Button
+.button--unstyled {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: color(brand, blue-cool-30v);
+  font-weight: font-weight(normal);
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+
+  &:visited {
+    color: color(brand, blue-cool-30v);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: color(brand, blue-cool-50v);
+  }
+
+  &:active {
+    background-color: transparent;
+    color: color(brand, blue-cool-50v);
+  }
+}

@@ -1,6 +1,8 @@
 // @file
 // Button element styles.
 
+@use '../../01-core/mixins' as *;
+
 // Don’t style button elements, since they’re often styled as links for
 // accessible widgets. Use the .button class in components/button.
 button {
@@ -11,6 +13,12 @@ button {
   margin: 0;
   overflow: visible;
   text-transform: none;
+
+  &:not([disabled]) {
+    &:focus {
+      @include focus-outline;
+    }
+  }
 }
 
 button,

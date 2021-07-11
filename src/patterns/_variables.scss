@@ -2,9 +2,10 @@
 @use '01-core/functions/' as *;
 
 // Focus
+$focus-width: units(0.5) !default;
+$focus-style: solid !default;
 $focus-color: color(brand, blue-cool-50v) !default;
-$focus-width: units(2px) !default;
-$focus-offset: units(2px) !default;
+$focus-offset: units(0.5) !default;
 
 // Links
 $link-color: color(brand, blue-cool-50v) !default;
@@ -20,24 +21,27 @@ $mark-color: color(shades, dark) !default;
 // Blockquote
 $blockquote-color: color(brand, blue-cool-50v) !default;
 
-// Button
+// Breadcrumb
+$breadcrumb-color: color(breadcrumb, icon-color) !default;
 
 // Messages
-$message-background: color(grayscale, gray-20) !default;
-$message-border: color(grayscale, gray-40) !default;
-$message-color: color(shades, dark) !default;
-$message-status-background: color(brand, green-400) !default;
-$message-status-border: color(brand, green-500) !default;
-$message-error-background: color(brand, red-500) !default;
-$message-error-border: color(brand, red-600) !default;
-$message-warning-background: color(brand, yellow-200) !default;
-$message-warning-border: color(brand, yellow-300) !default;
+$message-color: color(messages, text-color) !default;
+$message-status-background: color(messages, status-background) !default;
+$message-status-border: color(messages, status-border) !default;
+$message-error-background: color(messages, error-background) !default;
+$message-error-border: color(messages, error-border) !default;
+$message-warning-background: color(messages, warning-background) !default;
+$message-warning-border: color(messages, warning-border) !default;
 
 // Media Query Ranges
-$small-screen: 600px !default;
-$medium-screen: 992px !default;
-$large-screen: 1200px !default;
+$small-screen: 576px !default;
+$medium-screen: 768px !default;
+$large-screen: 992px !default;
+$xlarge-screen: 1200px !default;
 
-
-// Grid
+// Gutters
+$gutter-width: units(2.5);
 $grid-gutter-width: units(5);
+
+// Contstraints
+$max-width: rem(1440px) !default;

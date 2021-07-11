@@ -1,6 +1,6 @@
 ---
 modifier: ''
 button: true
-disabled: false
+disabled: true
 url: '#'
 text: 'Button Text'

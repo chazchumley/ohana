@@ -1,14 +1,12 @@
 // @file
 // Styles for Messages.
 
-@use '../../variables' as *;
 @use '../../01-core/functions' as *;
 @use '../../01-core/mixins' as *;
+@use '../../variables' as *;
 
 .message {
-  background-color: $message-background;
-  border: 1px solid $message-border;
-  color: $message-color;
+  border: 1px solid;
   margin-bottom: units(2);
   overflow: hidden;
   padding: units(2);
@@ -16,8 +14,6 @@
   word-wrap: break-word;
 
   &::before {
-    background-repeat: no-repeat;
-    background-size: em(52px);
     bottom: -0.5em;
     content: '';
     display: block;
@@ -26,13 +22,14 @@
     right: -0.5em;
     transform: rotate(-20deg);
     width: em(52px);
+
     @media print {
       display: none !important;
     }
   }
 
   a {
-    color: color(grayscale, gray-50);
+    color: $message-color;
     font-weight: font-weight(semibold);
     text-decoration: underline;
   }
@@ -50,7 +47,7 @@
   border-color: $message-status-border;
 
   &::before {
-    @include svg-background(messages-status);
+    @include svg-icon("../img/messages-status.svg", 52px, 52px, $message-status-border);
   }
 }
 
@@ -60,7 +57,7 @@
   border-color: $message-error-border;
 
   &::before {
-    @include svg-background(messages-error);
+    @include svg-icon("../img/messages-error.svg", 52px, 52px, $message-error-border);
   }
 
   .message__item {
@@ -77,6 +74,6 @@
   border-color: $message-warning-border;
 
   &::before {
-    @include svg-background(messages-warning);
+    @include svg-icon("../img/messages-warning.svg", 52px, 52px, $message-warning-border);
   }
 }

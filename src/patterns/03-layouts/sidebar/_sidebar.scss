@@ -19,10 +19,6 @@ $l-sidebar-width: 300px;
 }
 
 .l-sidebar__aside {
-  display: none;
-  margin-left: -1.25rem;
-  margin-right: -1.25rem;
-
   @media(min-width:$medium-screen) {
     display: block;
     flex-basis: $l-sidebar-width;
@@ -46,12 +42,6 @@ $l-sidebar-width: 300px;
     flex-basis: calc(100% - #{$l-sidebar-width});
     flex-grow: 1;
     flex-shrink: 0;
-    padding-left: units(3);
     width: calc(100% - #{$l-sidebar-width});
-
-    .l-sidebar--right & {
-      padding-left: 0;
-      padding-right: units(3);
-    }
   }
 }

@@ -2,6 +2,7 @@
 // Layout mixins
 
 @use '../functions' as *;
+@use '../../variables' as *;
 
 @mixin layout-align-left($margin) {
   float: left;
@@ -25,15 +26,12 @@
   margin-right: 0;
 }
 
-@mixin layout-constrain($max-width: 1440px, $gutter-width: 40px) {
+@mixin layout-constrain {
   margin-left: auto;
   margin-right: auto;
-  max-width: rem($max-width);
-
-  @if $gutter-width {
-    padding-left: rem($gutter-width / 2);
-    padding-right: rem($gutter-width / 2);
-  }
+  max-width: $max-width;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
 
   // Just in case .l-constrain is nested within another .l-constrain.
   & & {

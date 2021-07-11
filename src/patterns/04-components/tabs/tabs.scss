@@ -1,0 +1,32 @@
+// @file
+// Styles for Tabs.
+
+@use '../../01-core/mixins' as *;
+@use '../../01-core/functions' as *;
+@use '../../variables' as *;
+
+.tabs {
+  @include clearfix;
+}
+
+.tabs__items {
+  @include list-clean;
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width:$small-screen) {
+    flex-direction: row;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.tabs__item {
+  margin: 0;
+}
+
+.tabs__link {
+  display: block;
+}
