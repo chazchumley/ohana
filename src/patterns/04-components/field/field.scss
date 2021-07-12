@@ -2,24 +2,34 @@
 // Styles for fields.
 
 @use '../../01-core/functions' as *;
+@use '../../02-global/elements/headings' as *;
 
 .field {
   margin-bottom: units(2);
 }
 
 .field__label {
-  font-size: font-size(5);
-  font-weight: font-weight(bold);
-  margin-bottom: units(1);
+  @extend %h4;
+  display: block;
+  margin-bottom: 0;
+
+  &.is-inline {
+    @extend %h5;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 0.25rem;
+
+    &::after {
+      content: ':';
+    }
+
+    + .field__content {
+      display: inline;
+    }
+  }
 }
 
-// Variant
-.field--label-inline {
-  align-items: baseline;
-  display: flex;
-  flex-direction: row;
-
-  .field__label {
-    margin: 0 units(1) 0 0;
-  }
+// Variants
+.field--tight {
+  margin-bottom: 0;
 }

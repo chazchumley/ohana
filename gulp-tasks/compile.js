@@ -4,14 +4,11 @@
 const { src, dest } = require('gulp');
 
 // Include Our Plugins
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const prefix = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const rename = require('gulp-rename');
-
-// Set sass compiler to use Dart Sass
-sass.compiler = require('sass');
 
 /**
  * Error handler function so we can see when errors happen.
@@ -30,7 +27,7 @@ module.exports = {
   // Compile Sass.
   compileSass: function() {
     return src('./src/patterns/**/**/*.scss')
-      .pipe(sass({
+      .pipe(sass.sync({
         includePaths: ['node_modules'],
         outputStyle: 'expanded'
       }).on('error', handleError))

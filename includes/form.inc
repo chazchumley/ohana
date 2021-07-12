@@ -24,7 +24,17 @@ function ohana_preprocess_fieldset(array $variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function ohana_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+function gesso_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $form_id = $variables['element']['#form_id'];
   $suggestions[] = 'form__' . $form_id;
+
+  // A list of form IDs in which to use form--inline.html.twig instead of form.html.twig.
+  $inline_forms = [
+    // 'example-form-id',
+  ];
+  if (isset($variables['element']['#id'])) {
+    if (in_array($variables['element']['#id'], $inline_forms)) {
+      $suggestions[] = 'form__inline';
+    }
+  }
 }

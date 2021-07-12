@@ -24,9 +24,68 @@
 }
 
 .tabs__item {
-  margin: 0;
+  &:first-child {
+    .tabs__link {
+      border-bottom-left-radius: 0;
+      border-left: 0;
+      border-top-left-radius: 0;
+    }
+  }
+
+  &:last-child {
+    .tabs__link {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &.is-active {
+    z-index: 1;
+  }
+
+  &:focus-within,
+  &:hover {
+    z-index: 2;
+  }
 }
 
 .tabs__link {
+  background-color: color(grayscale, gray-10);
+  border-left: 1px solid color(grayscale, gray-40);
+  border-radius: 0;
+  color: color(shades, dark);
   display: block;
+  font-family: font-family(system);
+  font-size: font-size(5);
+  line-height: line-height(tight);
+  margin: 0;
+  padding: units(1) units(2);
+  text-decoration: none;
+
+  &:visited {
+    color: color(shades, light);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: color(grayscale, gray-70);
+    color: color(shades, light);
+  }
+
+  &:active {
+    background-color: color(grayscale, gray-70);
+    color: color(shades, light);
+  }
+
+  &.is-active {
+    background-color: color(grayscale, gray-70);
+    border-color: color(grayscale, gray-40);
+    color: color(shades, light);
+
+    &:hover {
+      background-color: color(grayscale, gray-70);
+      border-color: color(grayscale, gray-40);
+      color: color(shades, light);
+    }
+  }
 }

@@ -3,7 +3,7 @@ modifier: ''
 element: 'div'
 label_hidden: false
 label_element: 'div'
-label_display: ''
+label_display: 'inline'
 label: 'Field Label'
 items:
   - content: 'Field Item'

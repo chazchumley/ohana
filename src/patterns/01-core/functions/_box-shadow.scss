@@ -1,0 +1,21 @@
+/// Return box shadow value
+///
+/// @param {String} $value - String to convert into box-shadow
+///
+/// @return {Number} - Return font weight value based on string
+
+@use 'sass:map';
+@use 'sass:string';
+@use '../../00-settings/shadow' as settings;
+
+@function box-shadow($value) {
+
+  @if not(map.has-key(settings.$shadows, $value)) {
+    @error '"#{$value}" is not a valid box shadow in $shadows map.';
+  }
+
+  @return string.unquote(map.get(settings.$shadows, $value));
+}
+
+// @debug box-shadow(1);
+// @return 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

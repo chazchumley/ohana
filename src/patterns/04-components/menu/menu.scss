@@ -1,0 +1,18 @@
+// @file
+// Styles for Menu.
+
+@use '../../01-core/mixins' as *;
+@use '../../01-core/functions' as *;
+@use '../../variables' as *;
+
+.menu {
+  @include list-clean;
+
+  @media print {
+    display: none;
+  }
+}
+
+.menu__item {
+  margin-bottom: 0;
+}
