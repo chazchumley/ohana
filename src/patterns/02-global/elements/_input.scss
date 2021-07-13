@@ -1,12 +1,21 @@
 // @file
 // Input element styles.
 
+@use '../../variables' as *;
+@use '../../01-core/mixins' as *;
+
 input {
   font-family: inherit;
   font-size: 100%;
   line-height: normal;
   margin: 0;
   overflow: visible;
+
+  &:not([disabled]) {
+    &:focus {
+      @include focus-outline;
+    }
+  }
 }
 
 input[type="checkbox"],

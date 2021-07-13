@@ -6,14 +6,14 @@
 @use '../../variables' as *;
 
 .breadcrumb {
-  @include clearfix;
   padding: units(2) 0;
 }
 
 .breadcrumb__list {
-  @include list-inline;
   display: block;
-  margin-bottom: 0;
+  list-style-type: none;
+  margin: - units(0.5);
+  padding: units(0.5);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -60,5 +60,12 @@
       margin: 0 units(1);
       position: relative;
     }
+  }
+}
+
+.breadcrumb__link {
+  &:focus {
+    outline-offset: 0;
+    text-decoration: none;
   }
 }

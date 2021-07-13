@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% extends '@layouts/page/page.twig' %}
+  {% block header %}
+    {{ page.header }}
+    {{ page.help }}
+    {{ page.highlighted }}
+  {% endblock %}
+
+  {% block main %}
+    {{ page.preface }}
+    {{ page.content }}
+    {{ page.postscript }}
+  {% endblock %}
+
+  {% block footer %}
+    {{ page.footer }}
+  {% endblock %}

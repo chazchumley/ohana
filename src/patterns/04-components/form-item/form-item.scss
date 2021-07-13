@@ -1,0 +1,114 @@
+// @file
+// Styles for form items.
+
+@use '../../01-core/functions' as *;
+@use '../../01-core/mixins' as *;
+
+.form-item {
+  margin: 0 0 units(1);
+}
+
+.form-item__label {
+  display: block;
+
+  .is-disabled > & {
+    opacity: 0.35;
+  }
+}
+
+.form-item__fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.form-item__description {
+  color: color(grayscale, gray-50);
+  font-size: font-size(5);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-item__required-marker::before {
+  content: '*';
+}
+
+%form-item__box,
+.form-item__color,
+.form-item__date,
+.form-item__email,
+.form-item__month,
+.form-item__number,
+.form-item__password,
+.form-item__search,
+.form-item__select,
+.form-item__tel,
+.form-item__text,
+.form-item__textarea,
+.form-item__time,
+.form-item__url,
+.form-item__week {
+  appearance: none;
+  background-color: color(grayscale, gray-10);
+  border: 1px solid color(grayscale, gray-30);
+  border-radius: 0;
+  display: inline-block;
+  font-size: font-size(3);
+  margin: units(0.5) 0;
+  max-width: 100%;
+  padding: units(1.5) units(1);
+  transition-duration: 200ms;
+  transition-property: background-color, border;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: color(shades, light);
+    border: 1px solid color(grayscale, gray-50);
+  }
+
+  &:not([disabled]) {
+    &:focus {
+      @include focus-outline;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.35;
+
+    &:hover,
+    &:focus {
+      background-color: color(grayscale, gray-10);
+      border: 1px solid color(grayscale, gray-30);
+    }
+  }
+
+  .is-full-width > & {
+    width: 100%;
+  }
+
+  .is-dark & {
+    background-color: color(grayscale, gray-60);
+    border: 1px solid color(grayscale, gray-60);
+    color: color(grayscale, gray-10);
+
+    &:hover,
+    &:focus {
+      background-color: color(grayscale, gray-60);
+      border: 1px solid color(grayscale, gray-60);
+      color: color(grayscale, gray-10);
+    }
+
+    &::placeholder {
+      color: color(grayscale, gray-10);
+      opacity: 1;
+    }
+  }
+}
+
+.form-item__textarea {
+  height: auto;
+}

@@ -1,8 +1,15 @@
 // @file
 // Iframe element styles.
 
+@use '../../variables' as *;
+@use '../../01-core/mixins' as *;
+
 iframe {
   border: 0;
+
+  &:focus {
+    @include focus-outline;
+  }
 
   @media print {
     display: none;

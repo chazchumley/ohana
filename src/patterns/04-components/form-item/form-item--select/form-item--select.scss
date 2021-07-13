@@ -1,0 +1,26 @@
+// @file
+// Styles for select form items.
+
+@use 'sass:math';
+@use '../../../01-core/functions' as *;
+@use '../../../01-core/mixins' as *;
+
+.form-item--select {
+  .form-item__select {
+    @include svg-background(select-arrows);
+    background-position: right math.div(rem(20px), 2) center; // LTR
+    background-repeat: no-repeat;
+    background-size: rem(20px);
+    padding-right: rem(20px * 2); // LTR
+
+    // Remove inner focus styling on Firefox.
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

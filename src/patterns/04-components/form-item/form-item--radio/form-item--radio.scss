@@ -1,0 +1,49 @@
+// @file
+// Styles for radio form items.
+
+@use '../../../01-core/functions' as *;
+@use '../../../01-core/mixins' as *;
+@use '../../../variables' as *;
+
+.form-item--radio {
+  margin-bottom: units(1);
+
+  .form-item__radio {
+    appearance: none;
+    background-color: color(shades, light);
+    border: 1px solid color(grayscale, gray-50);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px transparent;
+    cursor: pointer;
+    height: 18px;
+    margin-right: 3px;
+    outline: none;
+    position: relative;
+    top: 2px;
+    transition-duration: 200ms;
+    transition-property: background-color, border-color, border-radius;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    width: 18px;
+
+    &:checked {
+      background-color: color(brand, blue-cool-50v);
+      border: 2px solid color(shades, light);
+      box-shadow: 0 0 0 2px color(brand, blue-cool-50v);
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.35;
+    }
+
+    + .form-item__label {
+      cursor: pointer;
+      display: inline;
+    }
+
+    &:disabled + .form-item__label {
+      cursor: default;
+      opacity: 0.35;
+    }
+  }
+}

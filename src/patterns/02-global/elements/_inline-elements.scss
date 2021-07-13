@@ -23,7 +23,7 @@ a {
 
   &:focus {
     @include focus-outline;
-    color: $link-color-hover;
+    text-decoration: none;
   }
 
   &:active {

@@ -17,6 +17,7 @@ button {
   &:not([disabled]) {
     &:focus {
       @include focus-outline;
+      text-decoration: none;
     }
   }
 }

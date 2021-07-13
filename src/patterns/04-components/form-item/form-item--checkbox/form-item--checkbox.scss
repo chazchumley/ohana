@@ -1,0 +1,58 @@
+// @file
+// Styles for checkbox form items.
+
+@use '../../../01-core/functions' as *;
+@use '../../../01-core/mixins' as *;
+@use '../../../variables' as *;
+
+.form-item--checkbox {
+  margin-bottom: units(1);
+}
+
+.form-item--checkbox.has-visible-label-after {
+  .form-item__checkbox {
+    @include visually-hidden(true);
+
+    + .form-item__label {
+      cursor: pointer;
+      display: block;
+
+      &::before {
+        background: color(shades, light);
+        border: 1px solid color(grayscale, gray-50);
+        content: '\a0';
+        display: inline-block;
+        height: rem(20px);
+        line-height: rem(20px);
+        margin-right: 0.6em;
+        text-indent: 0.15em;
+        transition-duration: 200ms;
+        transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        vertical-align: middle;
+        width: rem(20px);
+      }
+    }
+
+    &:checked + .form-item__label::before {
+      @include svg-background(correct);
+      background-color: color(brand, blue-cool-50v);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: rem(20px);
+    }
+
+    &:focus + .form-item__label::before {
+      @include focus-outline;
+    }
+
+    &:disabled + .form-item__label {
+      cursor: default;
+      opacity: 0.35;
+
+      &::before {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
