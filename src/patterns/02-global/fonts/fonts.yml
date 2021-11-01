@@ -1,10 +1,10 @@
 ---
 fonts:
   serif:
-    - family: 'Merriweather, serif'
+    - family: 'Droid, serif'
       style: 'normal'
       weight: '400'
-    - family: 'Merriweather, serif'
+    - family: 'Droid, serif'
       style: 'normal'
       weight: '700'
   sans:
