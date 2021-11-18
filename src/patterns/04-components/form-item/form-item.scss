@@ -1,8 +1,8 @@
 // @file
 // Styles for form items.
 
-@use '../../core/functions' as *;
-@use '../../core/mixins' as *;
+@use '../../01-core/functions' as *;
+@use '../../01-core/mixins' as *;
 
 .form-item {
   margin: 0 0 units(1);

@@ -5,7 +5,7 @@
 /// @return {Number} - Rem number returned based on radius
 
 @use 'sass:map';
-@use '../../settings/spacing' as settings;
+@use '../../00-settings/spacing' as settings;
 @use 'rem' as function;
 
 @function radius($value) {

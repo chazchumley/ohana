@@ -7,7 +7,7 @@
 @use 'sass:list';
 @use 'sass:map';
 @use 'sass:string';
-@use '../../settings/font' as settings;
+@use '../../00-settings/font' as settings;
 
 @function font-family($family) {
   $map: settings.$font-family;

@@ -1,8 +1,7 @@
 // @file
 // Styles for view layout.
 
-@use '../../core/functions' as *;
-@use '../../core/mixins' as *;
+@use '../../01-core/functions' as *;
 @use '../../variables' as *;
 
 $l-view-sidebar: 300px;

@@ -1,7 +1,7 @@
 // @file
 // Horizontal rule styles.
 
-@use '../../core/functions' as *;
+@use '../../01-core/functions' as *;
 
 hr {
   border: 1px solid color(ui, border);

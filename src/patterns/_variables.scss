@@ -1,5 +1,5 @@
-@use 'settings' as *;
-@use 'core/functions/' as *;
+@use '00-settings' as *;
+@use '01-core/functions/' as *;
 
 // Focus
 $focus-width: units(0.5) !default;
@@ -20,18 +20,6 @@ $mark-color: color(shades, dark) !default;
 
 // Blockquote
 $blockquote-color: color(brand, blue-cool-50v) !default;
-
-// Breadcrumb
-$breadcrumb-color: color(breadcrumb, icon-color) !default;
-
-// Messages
-$message-color: color(messages, text-color) !default;
-$message-status-background: color(messages, status-background) !default;
-$message-status-border: color(messages, status-border) !default;
-$message-error-background: color(messages, error-background) !default;
-$message-error-border: color(messages, error-border) !default;
-$message-warning-background: color(messages, warning-background) !default;
-$message-warning-border: color(messages, warning-border) !default;
 
 // Media Query Ranges
 $small-screen: 576px !default;

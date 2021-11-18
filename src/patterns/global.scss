@@ -1,9 +1,9 @@
 // @file
 // Main styles
 
-@use 'base' as *;
-@use 'layouts' as *;
-@use 'core/utilities' as *;
+@use '02-base' as *;
+@use '03-layouts' as *;
+@use '01-core/utilities' as *;
 
 // @use 'core/functions/radius' as function;
 // @debug function.radius(1);

@@ -6,7 +6,7 @@
 
 @use 'sass:map';
 @use 'sass:string';
-@use '../../settings/shadow' as settings;
+@use '../../00-settings/shadow' as settings;
 
 @function box-shadow($value) {
 

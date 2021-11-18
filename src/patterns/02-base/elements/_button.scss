@@ -1,7 +1,7 @@
 // @file
 // Button element styles.
 
-@use '../../core/mixins' as *;
+@use '../../01-core/mixins' as *;
 
 // Don’t style button elements, since they’re often styled as links for
 // accessible widgets. Use the .button class in components/button.

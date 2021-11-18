@@ -1,9 +1,17 @@
 // @file
 // Styles for Messages.
 
-@use '../../core/functions' as *;
-@use '../../core/mixins' as *;
-@use '../../variables' as *;
+@use '../../01-core/functions' as *;
+@use '../../01-core/mixins' as *;
+
+// Messages
+$message-color: color(messages, text-color) !default;
+$message-status-background: color(messages, status-background) !default;
+$message-status-border: color(messages, status-border) !default;
+$message-error-background: color(messages, error-background) !default;
+$message-error-border: color(messages, error-border) !default;
+$message-warning-background: color(messages, warning-background) !default;
+$message-warning-border: color(messages, warning-border) !default;
 
 .message {
   border: 1px solid;

@@ -5,7 +5,7 @@
 /// @return {Number} - Unitless number returned based on line height scale
 
 @use 'sass:map';
-@use '../../settings/font' as settings;
+@use '../../00-settings/font' as settings;
 
 @function line-height($value) {
 
