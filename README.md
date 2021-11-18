@@ -3,6 +3,7 @@
 ## System Requirements
 The following Drupal contributed modules are required:
 * _components_
+* _twig_tweak_
 * _twig_field_value_
 
 ## Browser Support

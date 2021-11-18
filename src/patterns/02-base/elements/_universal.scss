@@ -1,6 +1,11 @@
 // @file
 // Universal styles.
 
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -18,4 +23,12 @@
   @page {
     margin: 2cm;
   }
+}
+
+:first-child {
+  margin-top: 0;
+}
+
+:last-child {
+  margin-bottom: 0;
 }

@@ -2,8 +2,8 @@
 // Inline element styles.
 
 @use '../../variables' as *;
-@use '../../01-core/functions' as *;
-@use '../../01-core/mixins' as *;
+@use '../../core/functions' as *;
+@use '../../core/mixins' as *;
 
 a {
   background-color: transparent;

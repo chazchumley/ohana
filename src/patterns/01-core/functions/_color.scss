@@ -6,7 +6,7 @@
 /// @return {String} - Hexadecimal color value
 
 @use 'sass:map';
-@use '../../00-settings/color' as settings;
+@use '../../settings/color' as settings;
 @use 'maps' as maps;
 
 @function color($color, $keys...) {

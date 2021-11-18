@@ -26,7 +26,10 @@ module.exports = {
 
   // Compile Sass.
   compileSass: function() {
-    return src('./src/patterns/**/**/*.scss')
+    return src([
+        './src/patterns/**/**/*.scss',
+        './src/styleguide/*.scss'
+      ])
       .pipe(sass.sync({
         includePaths: ['node_modules'],
         outputStyle: 'expanded'
@@ -41,18 +44,7 @@ module.exports = {
     return src(['./src/patterns/**/**/*.js'], { base: './' })
       .pipe(sourcemaps.init())
       .pipe(babel())
-      .pipe(
-        rename(function(path) {
-          // Currently not using ES6 modules so for now
-          // es6 files are compiled into individual JS files.
-          // Eventually this can use ES6 Modules and compile
-          // all files within a component directory into a single
-          // foo.bundle.js file. In that case the bundle name should
-          // reflect the components directory name.
-          path.dirname = '';
-          return path;
-        })
-      )
+      .pipe(rename(function(path) { path.dirname = ''; return path; }))
       .pipe(sourcemaps.write('./'))
       .pipe(dest('./dist/js'));
   }

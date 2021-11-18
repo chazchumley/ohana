@@ -5,7 +5,7 @@
 /// @return {Number} - Return font weight value based on string
 
 @use 'sass:map';
-@use '../../00-settings/font' as settings;
+@use '../../settings/font' as settings;
 
 @function font-weight($weight) {
 

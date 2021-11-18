@@ -98,10 +98,10 @@
           ]
         },
         {
-          "id": "global",
+          "id": "base",
           "recursive": true,
           "paths": [
-            "./src/patterns/02-global"
+            "./src/patterns/02-base"
           ]
         },
         {

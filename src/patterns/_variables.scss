@@ -1,5 +1,5 @@
-@use '00-settings' as *;
-@use '01-core/functions/' as *;
+@use 'settings' as *;
+@use 'core/functions/' as *;
 
 // Focus
 $focus-width: units(0.5) !default;
@@ -38,6 +38,7 @@ $small-screen: 576px !default;
 $medium-screen: 768px !default;
 $large-screen: 992px !default;
 $xlarge-screen: 1200px !default;
+$xxlarge-screen: 1400px !default;
 
 // Gutters
 $gutter-width: units(2.5);

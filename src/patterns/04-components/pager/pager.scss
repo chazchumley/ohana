@@ -2,8 +2,8 @@
 // Styles for Pager.
 
 @use '../../variables' as *;
-@use '../../01-core/functions' as *;
-@use '../../01-core/mixins' as *;
+@use '../../core/functions' as *;
+@use '../../core/mixins' as *;
 
 $pager-background-color: color(brand, blue-cool-50v);
 $pager-background-color-hover: color(brand, blue-cool-50v);

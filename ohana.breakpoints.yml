@@ -1,55 +1,47 @@
-ohana.mobile:
-  label: mobile
-  mediaQuery: ''
+ohana.xsmall:
+  label: xsmall
+  mediaQuery: '(min-width: 0px)'
   weight: 0
   multipliers:
     - 1x
     - 2x
   group: ohana.images
-ohana.mobile-lg:
-  label: mobile wide
-  mediaQuery: '(min-width: 480px)'
+ohana.small:
+  label: small
+  mediaQuery: '(min-width: 576px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+  group: ohana.images
+ohana.medium:
+  label: medium
+  mediaQuery: '(min-width: 768px)'
   weight: 1
   multipliers:
     - 1x
     - 2x
   group: ohana.images
-ohana.tablet:
-  label: tablet
-  mediaQuery: '(min-width: 640px)'
+ohana.large:
+  label: large
+  mediaQuery: '(min-width: 992px)'
   weight: 2
   multipliers:
     - 1x
     - 2x
   group: ohana.images
-ohana.tablet-lg:
-  label: tablet wide
-  mediaQuery: '(min-width: 880px)'
+ohana.xlarge:
+  label: xlarge
+  mediaQuery: '(min-width: 1200px)'
   weight: 3
   multipliers:
     - 1x
     - 2x
   group: ohana.images
-ohana.desktop:
-  label: desktop
-  mediaQuery: '(min-width: 1024px)'
+ohana.xxlarge:
+  label: xxlarge
+  mediaQuery: '(min-width: 1400px)'
   weight: 4
-  multipliers:
-    - 1x
-    - 2x
-  group: ohana.images
-ohana.desktop-lg:
-  label: desktop wide
-  mediaQuery: '(min-width: 1200px)'
-  weight: 5
-  multipliers:
-    - 1x
-    - 2x
-  group: ohana.images
-ohana.desktop-xlg:
-  label: desktop extra wide
-  mediaQuery: '(min-width: 1800px)'
-  weight: 6
   multipliers:
     - 1x
     - 2x

@@ -2,7 +2,7 @@
 // Blockquote styles.
 
 @use '../../variables' as *;
-@use '../../01-core/functions' as *;
+@use '../../core/functions' as *;
 
 blockquote {
   color: $blockquote-color;

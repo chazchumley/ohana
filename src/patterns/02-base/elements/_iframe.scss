@@ -2,7 +2,7 @@
 // Iframe element styles.
 
 @use '../../variables' as *;
-@use '../../01-core/mixins' as *;
+@use '../../core/mixins' as *;
 
 iframe {
   border: 0;

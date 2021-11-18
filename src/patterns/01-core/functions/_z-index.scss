@@ -5,7 +5,7 @@
 /// @return {Number} - Number returned based on z-index
 
 @use 'sass:map';
-@use '../../00-settings/z-index' as settings;
+@use '../../settings/z-index' as settings;
 
 @function z-index($value) {
 

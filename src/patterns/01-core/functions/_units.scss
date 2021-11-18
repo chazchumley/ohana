@@ -5,7 +5,7 @@
 /// @return {Number} - Rem number returned based on spacing scale
 
 @use 'sass:map';
-@use '../../00-settings/spacing' as settings;
+@use '../../settings/spacing' as settings;
 @use 'rem' as function;
 
 @function units($value) {
