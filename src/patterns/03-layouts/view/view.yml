@@ -10,9 +10,9 @@ exposed: false
 attachment_before: false
 row_modifier: ''
 rows: |-
-  <div class="l-view__row" style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Row One</div>
-  <div class="l-view__row" style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Row Two</div>
-  <div class="l-view__row" style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Row Three</div>
+  <div class="l-view__row" style="border: 1px dashed #333; border-bottom: 0; color:#333; padding:1rem; margin:0;">Row One</div>
+  <div class="l-view__row" style="border: 1px dashed #333; border-bottom: 0; color:#333; padding:1rem; margin:0;">Row Two</div>
+  <div class="l-view__row" style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Row Three</div>
 empty: false
 pager: ''
 attachment_after: false

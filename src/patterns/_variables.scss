@@ -2,31 +2,35 @@
 @use '01-core/functions/' as *;
 
 // Focus
-$focus-width: units(0.5) !default;
-$focus-style: solid !default;
-$focus-color: color(brand, blue-cool-50v) !default;
-$focus-offset: units(0.5) !default;
+$focus-width: units(0.5);
+$focus-style: solid;
+$focus-color: color(brand, blue-cool-50v);
+$focus-offset: units(0.5);
 
 // Links
-$link-color: color(brand, blue-cool-50v) !default;
-$link-color-visited: color(brand, blue-cool-30v) !default;
-$link-color-hover: color(brand, blue-cool-30v) !default;
-$link-color-active: color(brand, blue-cool-30v) !default;
+$link-color: color(brand, blue-cool-50v);
+$link-color-visited: color(brand, blue-cool-30v);
+$link-color-hover: color(brand, blue-cool-30v);
+$link-color-active: color(brand, blue-cool-30v);
+
+// Lists
+$pipeline-border-color: color(ui, border);
+$list-border-color: color(ui, border);
 
 // Inline Elements
-$cite-color: color(grayscale, gray-60) !default;
-$mark-background: color(ui, mark) !default;
-$mark-color: color(shades, dark) !default;
+$cite-color: color(grayscale, gray-60);
+$mark-background: color(ui, mark);
+$mark-color: color(shades, dark);
 
 // Blockquote
-$blockquote-color: color(brand, blue-cool-50v) !default;
+$blockquote-color: color(brand, blue-cool-50v);
 
 // Media Query Ranges
-$small-screen: 576px !default;
-$medium-screen: 768px !default;
-$large-screen: 992px !default;
-$xlarge-screen: 1200px !default;
-$xxlarge-screen: 1400px !default;
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$xlarge-screen: 1200px;
+$xxlarge-screen: 1400px;
 
 // Gutters
 $gutter-width: units(2.5);

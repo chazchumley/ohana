@@ -1,8 +1,7 @@
 // @file
 // Styles for radio form items.
 
-@use '../../../01-core/functions' as *;
-@use '../../../variables' as *;
+@use '../../../01-core' as *;
 
 .form-item--radio {
   margin-bottom: units(1);

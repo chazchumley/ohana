@@ -1,8 +1,7 @@
 // @file
 // Blockquote styles.
 
-@use '../../variables' as *;
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 blockquote {
   color: $blockquote-color;
@@ -38,7 +37,7 @@ blockquote {
 
     em {
       border-left: 1px solid color(ui, border);
-      font-weight: font-weight(normal);
+      font-weight: 400;
       margin-left: units(0.5);
       padding-left: units(1);
     }

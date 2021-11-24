@@ -5,16 +5,14 @@
 /// @return {Number} - Rem number returned based on font size
 
 @use 'sass:map';
+@use 'sass:math';
 @use '../../00-settings/font' as settings;
-@use 'rem' as function;
 
 @function font-size($size) {
-
   @if not(map.has-key(settings.$font-size, $size)) {
     @error '"#{$size}" is not a valid font size in $font-size map.';
   }
-
-  @return function.rem(map.get(settings.$font-size, $size));
+  @return math.div(map.get(settings.$font-size, $size), 16px) * 1rem;
 }
 
 // @debug font-size(5);

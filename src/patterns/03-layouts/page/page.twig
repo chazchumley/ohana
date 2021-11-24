@@ -1,15 +1,15 @@
 <div class="l-page">
   {% block header %}
-    {{ header }}
+    {{ header|default('<div><p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Header</p></div>') }}
   {% endblock %}
 
   <main id="main-content" class="l-main" role="main" tabindex="-1">
     {% block main %}
-      {{ main }}
+      {{ main|default('<div><p style="border: 1px dashed #333; border-top: 0; border-bottom: 0; color:#333; padding:1rem; margin:0;">Main</p></div>') }}
     {% endblock %}
   </main>
 
   {% block footer %}
-    {{ footer }}
+    {{ footer|default('<div><p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Footer</p></div>') }}
   {% endblock %}
 </div>

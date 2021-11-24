@@ -1,9 +1,7 @@
 // @file
 // Inline element styles.
 
-@use '../../variables' as *;
-@use '../../01-core/functions' as *;
-@use '../../01-core/mixins' as *;
+@use '../../01-core' as *;
 
 a {
   background-color: transparent;
@@ -87,7 +85,7 @@ cite {
   font-family: font-family(body);
   font-size: font-size(1);
   font-style: normal;
-  font-weight: font-weight(semibold);
+  font-weight: 600;
   letter-spacing: 0.02em;
   line-height: line-height(tight);
 }

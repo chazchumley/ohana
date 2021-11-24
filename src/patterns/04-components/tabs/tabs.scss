@@ -1,9 +1,7 @@
 // @file
 // Styles for Tabs.
 
-@use '../../01-core/mixins' as *;
-@use '../../01-core/functions' as *;
-@use '../../variables' as *;
+@use '../../01-core' as *;
 
 .tabs {
   @include clearfix;

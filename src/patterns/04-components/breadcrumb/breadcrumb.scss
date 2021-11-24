@@ -1,9 +1,7 @@
 // @file
 // Styles for Breadcrumb.
 
-@use '../../01-core/functions' as *;
-@use '../../01-core/mixins' as *;
-@use '../../variables' as *;
+@use '../../01-core' as *;
 
 $breadcrumb-color: color(breadcrumb, icon-color) !default;
 

@@ -1,7 +1,7 @@
 // @file
 // Unordered list styles.
 
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 ul {
   list-style-type: disc;

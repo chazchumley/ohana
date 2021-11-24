@@ -1,11 +1,11 @@
 // @file
 // Heading styles.
 
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 %hN {
   color: inherit;
-  font-weight: font-weight(bold);
+  font-weight: 700;
   hyphens: none;
   line-height: line-height(base);
   margin: 0 0 units(2);

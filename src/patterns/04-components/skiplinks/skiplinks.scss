@@ -1,8 +1,7 @@
 // @file
 // Styles for SKiplinks.
 
-@use '../../01-core/functions' as *;
-@use '../../variables' as *;
+@use '../../01-core' as *;
 
 .skiplinks {
   display: flex;
@@ -16,12 +15,12 @@
 .skiplinks__link,
 .skiplinks__link:visited,
 .skiplinks__link:focus {
+  @include box-shadow(2);
   background-color: color(shades, dark);
   border: 2px solid color(shades, light);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-top: 0;
-  box-shadow: box-shadow(2);
   color: color(shades, light);
   display: inline-block;
   font-weight: bold;

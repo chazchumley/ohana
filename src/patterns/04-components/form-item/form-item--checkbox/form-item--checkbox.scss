@@ -1,9 +1,7 @@
 // @file
 // Styles for checkbox form items.
 
-@use '../../../01-core/functions' as *;
-@use '../../../01-core/mixins' as *;
-@use '../../../variables' as *;
+@use '../../../01-core' as *;
 
 .form-item--checkbox {
   margin-bottom: units(1);
@@ -35,7 +33,7 @@
     }
 
     &:checked + .form-item__label::before {
-      @include svg-background(correct);
+      @include svg-background('/img/correct.svg');
       background-color: color(brand, blue-cool-50v);
       background-position: 50%;
       background-repeat: no-repeat;

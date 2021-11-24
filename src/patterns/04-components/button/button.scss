@@ -1,8 +1,7 @@
 // @file
 // Styles for Button.
 
-@use '../../01-core/functions' as *;
-@use '../../variables' as *;
+@use '../../01-core' as *;
 
 .button {
   appearance: none;
@@ -13,7 +12,7 @@
   color: color(shades, light);
   cursor: pointer;
   display: inline-block;
-  font-weight: font-weight(bold);
+  font-weight: 700;
   padding: units(1.5) units(2.5);
   text-align: center;
   text-decoration: none;
@@ -57,7 +56,7 @@
   border-radius: 0;
   box-shadow: none;
   color: color(brand, blue-cool-30v);
-  font-weight: font-weight(normal);
+  font-weight: 400;
   margin: 0;
   padding: 0;
   text-align: left;

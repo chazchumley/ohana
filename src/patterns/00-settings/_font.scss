@@ -1,6 +1,5 @@
-// ==========================================================================
-// Font maps
-// ==========================================================================
+// @file
+// Styles for Font variables.
 
 $font-family: (
   serif: 'Merriweather, serif',
@@ -12,18 +11,6 @@ $font-family: (
   body: 'sans',
   code: 'mono',
   alt: 'serif'
-);
-
-$font-weight: (
-  thin: 100,
-  extra-light: 200,
-  light: 300,
-  normal: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 700,
-  extra-bold: 800,
-  black: 900
 );
 
 $font-size: (

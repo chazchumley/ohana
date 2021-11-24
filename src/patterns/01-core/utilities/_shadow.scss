@@ -1,0 +1,14 @@
+// @file
+// Utility classes for Box shadows
+
+@use '../mixins/box-shadow' as *;
+
+// Define elevation levels.
+$levels: (0, 1, 2, 3, 4, 5);
+
+// Loop through the levels.
+@each $level in $levels {
+  .shadow-#{$level} {
+    @include box-shadow($level);
+  }
+}

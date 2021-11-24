@@ -32,14 +32,14 @@
   }
 }
 
-@mixin list-pipeline($pipeline-border-color: color(ui, border)) {
+@mixin list-pipeline($border-color: $pipeline-border-color) {
   @include clearfix;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 
   > li {
-    border-right: 1px solid $pipeline-border-color;
+    border-right: 1px solid $border-color;
     display: block;
     float: left;
     margin-right: 0.75em;
@@ -47,7 +47,7 @@
     padding-right: 0.75em;
 
     &.is-active {
-      font-weight: font-weight(bold);
+      font-weight: 700;
     }
 
     &:last-child {
@@ -58,7 +58,7 @@
   }
 }
 
-@mixin list-border($list-border-padding: 0.25rem, $list-border-color: color(ui, border)) {
+@mixin list-border($border-padding: 0.25rem, $border-color: $list-border-color) {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
@@ -68,8 +68,8 @@
   }
 
   > li {
-    border-bottom: 1px solid $list-border-color;
-    padding: $list-border-padding;
+    border-bottom: 1px solid $border-color;
+    padding: $border-padding;
   }
 }
 

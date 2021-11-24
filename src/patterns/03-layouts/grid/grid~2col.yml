@@ -1,9 +1,9 @@
 ---
 modifier: 'l-grid--2col'
 grid_content: |-
-  <p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Grid Item</p>
-  <p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Grid Item</p>
-  <p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Grid Item</p>
-  <p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Grid Item</p>
-  <p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Grid Item</p>
-  <p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Grid Item</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Grid Item</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Grid Item</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Grid Item</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Grid Item</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Grid Item</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Grid Item</p>

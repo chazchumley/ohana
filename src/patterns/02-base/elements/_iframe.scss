@@ -1,8 +1,7 @@
 // @file
 // Iframe element styles.
 
-@use '../../variables' as *;
-@use '../../01-core/mixins' as *;
+@use '../../01-core' as *;
 
 iframe {
   border: 0;

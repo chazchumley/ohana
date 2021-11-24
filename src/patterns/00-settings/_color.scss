@@ -1,6 +1,5 @@
-// ==========================================================================
-// Color maps
-// ==========================================================================
+// @file
+// Styles for Color variables.
 
 $brand: (
   blue-cool-30v: #59b9de,
@@ -70,7 +69,6 @@ $messages: (
   warning-border: #ffbe2e,
 );
 
-
 $colors: (
   brand: $brand,
   shades: $shades,
@@ -81,4 +79,4 @@ $colors: (
   text: $text,
   table: $table,
   ui: $ui
-) !default;
+);

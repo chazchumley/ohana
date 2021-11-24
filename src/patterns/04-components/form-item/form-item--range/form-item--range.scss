@@ -2,8 +2,7 @@
 // Styles for range form items.
 
 @use 'sass:math';
-@use '../../../01-core/functions' as *;
-@use '../../../01-core/mixins' as *;
+@use '../../../01-core' as *;
 
 @mixin form-item__range-thumb {
   background: color(grayscale, gray-50);

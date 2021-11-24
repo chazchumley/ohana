@@ -1,7 +1,7 @@
 // @file
 // Body styles.
 
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 body {
   background-color: color(background, light);

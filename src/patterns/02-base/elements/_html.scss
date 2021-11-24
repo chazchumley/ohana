@@ -2,7 +2,7 @@
 // HTML styles.
 
 @use 'sass:math';
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 html {
   box-sizing: border-box;
