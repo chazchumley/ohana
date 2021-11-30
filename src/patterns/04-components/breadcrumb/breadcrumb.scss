@@ -4,7 +4,7 @@
 @use '../../01-core' as *;
 
 $breadcrumb-padding: units(2) 0;
-$breadcrumb-item-color: color(breadcrumb, icon-color);
+$breadcrumb-item-color: $black;
 
 .breadcrumb {
   padding: $breadcrumb-padding;

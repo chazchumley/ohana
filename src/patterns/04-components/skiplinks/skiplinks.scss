@@ -3,11 +3,11 @@
 
 @use '../../01-core' as *;
 
-$skiplinks-link-bg: color(shades, dark);
+$skiplinks-link-bg: $black;
 $skiplinks-link-border-width: units(2px);
-$skiplinks-link-border-color: color(shades, light);
+$skiplinks-link-border-color: $white;
 $skiplinks-link-border-radius: units(0.5);
-$skiplinks-link-color: color(shades, light);
+$skiplinks-link-color: $white;
 $skiplinks-link-padding: units(1);
 
 .skiplinks {

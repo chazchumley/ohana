@@ -4,7 +4,7 @@
 @use '../../variables' as *;
 @use '../functions' as *;
 
-@mixin focus-outline($focus-width: units(0.5), $focus-style: solid, $focus-color: color(brand, blue-cool-50v), $focus-offset: units(0.5)) {
+@mixin focus-outline($focus-width: units(0.5), $focus-style: solid, $focus-color: $blue, $focus-offset: units(0.5)) {
   outline: $focus-width $focus-style $focus-color;
   outline-offset: $focus-offset;
 }

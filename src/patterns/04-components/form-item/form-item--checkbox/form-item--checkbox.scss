@@ -16,8 +16,8 @@
       display: block;
 
       &::before {
-        background: color(shades, light);
-        border: 1px solid color(grayscale, gray-50);
+        background: $white;
+        border: 1px solid $gray-500;
         content: '\a0';
         display: inline-block;
         height: rem(20px);

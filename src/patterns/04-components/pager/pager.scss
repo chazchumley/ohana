@@ -5,7 +5,7 @@
 
 %pager__link {
   background-color: transparent;
-  color: color(shades, dark);
+  color: $black;
   min-width: units(5);
   padding: units(1);
 
@@ -48,7 +48,7 @@
 .pager__item--current.pager__item {
   @extend %pager__link;
   background-color: color(brand, blue-cool-50v);
-  color: color(shades, light);
+  color: $white;
 }
 
 .pager__link {
@@ -57,31 +57,31 @@
   text-decoration: none;
 
   &:visited {
-    color: color(shades, dark);
+    color: $black;
   }
 
   &:hover,
   &:focus {
     background-color: color(brand, blue-cool-50v);
-    color: color(shades, light);
+    color: $white;
   }
 
   &:active {
     background-color: color(brand, blue-cool-30v);
-    color: color(shades, light);
+    color: $white;
   }
 }
 
 .pager__link--previous,
 .pager__link--next {
   background-color: transparent;
-  color: color(shades, dark);
+  color: $black;
   position: relative;
 
   &:hover,
   &:focus {
     background-color: transparent;
-    color: color(shades, dark);
+    color: $black;
 
     .pager__link-icon g {
       fill: color(brand, blue-cool-50v);
@@ -89,7 +89,7 @@
   }
 
   &:visited {
-    color: color(shades, dark);
+    color: $black;
   }
 }
 
@@ -117,7 +117,7 @@
   width: units(3);
 
   g {
-    fill: color(shades, dark);
+    fill: $black;
   }
 
   .pager__item--next & {

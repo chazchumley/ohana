@@ -22,7 +22,7 @@
 }
 
 .form-item__description {
-  color: color(grayscale, gray-50);
+  color: $gray-500;
   font-size: font-size(5);
 
   > :last-child {
@@ -50,8 +50,8 @@
 .form-item__url,
 .form-item__week {
   appearance: none;
-  background-color: color(grayscale, gray-10);
-  border: 1px solid color(grayscale, gray-30);
+  background-color: $gray-100;
+  border: 1px solid $gray-300;
   border-radius: 0;
   display: inline-block;
   font-size: font-size(3);
@@ -64,8 +64,8 @@
 
   &:hover,
   &:focus {
-    background-color: color(shades, light);
-    border: 1px solid color(grayscale, gray-50);
+    background-color: $white;
+    border: 1px solid $gray-500;
   }
 
   &:not([disabled]) {
@@ -80,8 +80,8 @@
 
     &:hover,
     &:focus {
-      background-color: color(grayscale, gray-10);
-      border: 1px solid color(grayscale, gray-30);
+      background-color: $gray-100;
+      border: 1px solid $gray-300;
     }
   }
 
@@ -90,19 +90,19 @@
   }
 
   .is-dark & {
-    background-color: color(grayscale, gray-60);
-    border: 1px solid color(grayscale, gray-60);
-    color: color(grayscale, gray-10);
+    background-color: $gray-600;
+    border: 1px solid $gray-600;
+    color: $gray-100;
 
     &:hover,
     &:focus {
-      background-color: color(grayscale, gray-60);
-      border: 1px solid color(grayscale, gray-60);
-      color: color(grayscale, gray-10);
+      background-color: $gray-600;
+      border: 1px solid $gray-600;
+      color: $gray-100;
     }
 
     &::placeholder {
-      color: color(grayscale, gray-10);
+      color: $gray-100;
       opacity: 1;
     }
   }

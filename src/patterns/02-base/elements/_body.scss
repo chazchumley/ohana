@@ -4,8 +4,8 @@
 @use '../../01-core' as *;
 
 body {
-  background-color: color(background, light);
-  color: color(text, dark);
+  background-color: $white;
+  color: $black;
   margin: 0;
   overflow-x: hidden;
   padding: 0;

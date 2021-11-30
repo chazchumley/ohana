@@ -8,8 +8,8 @@
 
   .form-item__radio {
     appearance: none;
-    background-color: color(shades, light);
-    border: 1px solid color(grayscale, gray-50);
+    background-color: $white;
+    border: 1px solid $gray-500;
     border-radius: 50%;
     box-shadow: 0 0 0 2px transparent;
     cursor: pointer;
@@ -25,7 +25,7 @@
 
     &:checked {
       background-color: color(brand, blue-cool-50v);
-      border: 2px solid color(shades, light);
+      border: 2px solid $white;
       box-shadow: 0 0 0 2px color(brand, blue-cool-50v);
     }
 

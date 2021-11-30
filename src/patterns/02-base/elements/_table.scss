@@ -21,21 +21,21 @@ table {
 // tbody {}
 
 td {
-  background-color: color(table, background);
-  border: 1px solid color(table, border);
+  background-color: $white;
+  border: 1px solid $black;
   padding: units(2);
 }
 
 tfoot {
   td,
   th {
-    background-color: color(table, background-foot);
+    background-color: $gray-200;
   }
 }
 
 th {
-  background-color: color(table, background);
-  border: 1px solid color(table, border);
+  background-color: $white;
+  border: 1px solid $black;
   padding: units(2);
   text-align: left;
 }
@@ -43,7 +43,7 @@ th {
 thead {
   td,
   th {
-    background-color: color(table, background-head);
+    background-color: $gray-200;
   }
 
   @media print {

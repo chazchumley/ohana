@@ -5,7 +5,7 @@
 @use '../../variables' as *;
 @use '../functions' as *;
 
-@mixin list-border($list-border-color: color(ui, border), $list-border-padding: units(0.5)) {
+@mixin list-border($list-border-color: $gray-500, $list-border-padding: units(0.5)) {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
@@ -56,7 +56,7 @@
   }
 }
 
-@mixin list-pipeline($list-pipeline-border-color: color(ui, border)) {
+@mixin list-pipeline($list-pipeline-border-color: $gray-500) {
   @include clearfix;
   list-style-type: none;
   margin-left: 0;

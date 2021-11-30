@@ -30,7 +30,7 @@
 h1,
 %h1 {
   @extend %hN;
-  color: color(text, dark);
+  color: $black;
   font-family: font-family(heading);
   font-size: font-size(15);
   letter-spacing: -1.5px;
@@ -45,7 +45,7 @@ h1,
 h2,
 %h2 {
   @extend %hN;
-  color: color(text, dark);
+  color: $black;
   font-family: font-family(heading);
   font-size: font-size(14);
   letter-spacing: -0.5px;
@@ -60,7 +60,7 @@ h2,
 h3,
 %h3 {
   @extend %hN;
-  color: color(text, dark);
+  color: $black;
   font-family: font-family(heading);
   font-size: font-size(12);
   line-height: line-height(tight);
@@ -74,7 +74,7 @@ h3,
 h4,
 %h4 {
   @extend %hN;
-  color: color(text, dark);
+  color: $black;
   font-family: font-family(heading);
   font-size: font-size(10);
   letter-spacing: 0.25px;
@@ -88,7 +88,7 @@ h4,
 h5,
 %h5 {
   @extend %hN;
-  color: color(text, dark);
+  color: $black;
   font-family: font-family(heading);
   font-size: font-size(5);
 
@@ -101,7 +101,7 @@ h5,
 h6,
 %h6 {
   @extend %hN;
-  color: color(text, dark);
+  color: $black;
   font-family: font-family(heading);
   font-size: font-size(1);
   letter-spacing: 0.15px;

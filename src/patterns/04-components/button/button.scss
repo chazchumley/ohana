@@ -3,13 +3,23 @@
 
 @use '../../01-core' as *;
 
+$button-bg: color(brand, blue-cool-30v);
+$button-color: $white;
+$button-visited-color: $white;
+$button-hover-bg: color(brand, blue-cool-50v);
+$button-hover-color: $white;
+$button-active-bg: color(brand, blue-cool-50v);
+$button-active-color: $white;
+$button-disabled-bg: $gray-200;
+$button-disabled-color: $white;
+
 .button {
   appearance: none;
-  background-color: color(brand, blue-cool-30v);
+  background-color: $button-bg;
   border: 0;
   border-radius: units(0.5);
   box-sizing: border-box;
-  color: color(shades, light);
+  color: $button-color;
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
@@ -23,18 +33,18 @@
   }
 
   &:visited {
-    color: color(shades, light);
+    color: $button-visited-color;
   }
 
   &:hover,
   &:focus {
-    background-color: color(brand, blue-cool-50v);
-    color: color(shades, light);
+    background-color: $button-hover-bg;
+    color: $button-hover-color;
   }
 
   &:active {
-    background-color: color(brand, blue-cool-50v);
-    color: color(shades, light);
+    background-color: $button-active-bg;
+    color: $button-active-color;
   }
 
   &:not([disabled]):focus {
@@ -42,8 +52,8 @@
   }
 
   &:disabled {
-    background-color: color(grayscale, gray-20);
-    color: color(shades, light);
+    background-color: $button-disabled-bg;
+    color: $button-disabled-color;
     cursor: default;
     pointer-events: none;
   }
