@@ -3,18 +3,42 @@
 
 @use 'clearfix' as *;
 @use '../../variables' as *;
+@use '../functions' as *;
 
-@mixin list-clean {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+@mixin list-border($list-border-color: color(ui, border), $list-border-padding: units(0.5)) {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 
   li {
     padding-left: 0;
+  }
 
-    &::before {
-      display: none;
-    }
+  > li {
+    border-bottom: 1px solid $list-border-color;
+    padding: $list-border-padding;
+  }
+}
+
+@mixin list-column($list-column-count: 2, $list-column-gap: units(4), $list-column-padding-bottom: units(0.5),) {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  > li {
+    break-inside: avoid-column;
+    display: table;
+    margin-bottom: 0;
+    padding-bottom: $list-column-padding-bottom;
+  }
+
+  @media(min-width:$small-screen) {
+    column-count: $list-column-count;
+    column-gap: $list-column-gap;
   }
 }
 
@@ -32,14 +56,14 @@
   }
 }
 
-@mixin list-pipeline($border-color: $pipeline-border-color) {
+@mixin list-pipeline($list-pipeline-border-color: color(ui, border)) {
   @include clearfix;
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
 
   > li {
-    border-right: 1px solid $border-color;
+    border-right: 1px solid $list-pipeline-border-color;
     display: block;
     float: left;
     margin-right: 0.75em;
@@ -58,39 +82,16 @@
   }
 }
 
-@mixin list-border($border-padding: 0.25rem, $border-color: $list-border-color) {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+@mixin list-unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 
   li {
     padding-left: 0;
-  }
 
-  > li {
-    border-bottom: 1px solid $border-color;
-    padding: $border-padding;
-  }
-}
-
-@mixin list-column($list-column-count: 2, $list-column-gap: 2em, $list-item-padding: 0.25em) {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-
-  li {
-    padding-left: 0;
-  }
-
-  > li {
-    break-inside: avoid-column;
-    display: table;
-    margin-bottom: 0;
-    padding-bottom: $list-item-padding;
-  }
-
-  @media(min-width:$small-screen) {
-    column-count: $list-column-count;
-    column-gap: $list-column-gap;
+    &::before {
+      display: none;
+    }
   }
 }

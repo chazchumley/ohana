@@ -4,7 +4,7 @@
 @use '../../01-core' as *;
 
 .menu {
-  @include list-clean;
+  @include list-unstyled;
 
   @media print {
     display: none;

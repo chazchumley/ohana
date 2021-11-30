@@ -5,5 +5,5 @@
 
 // Clearfix
 .clearfix {
-  @include clearfix(true);
+  @include clearfix;
 }

@@ -9,7 +9,7 @@
 
 .form-item--checkbox.has-visible-label-after {
   .form-item__checkbox {
-    @include visually-hidden(true);
+    @include visually-hidden;
 
     + .form-item__label {
       cursor: pointer;

@@ -5,20 +5,20 @@
 
 // Accessibility utility classes
 .visually-hidden {
-  @include visually-hidden(true);
+  @include visually-hidden;
 
   &.focusable {
     &:focus,
     &:active {
-      @include visually-hidden-off(true);
+      @include visually-hidden-off;
     }
   }
 }
 
 .hidden {
-  @include hidden(true);
+  @include hidden;
 }
 
 .invisible {
-  @include invisible(true);
+  @include invisible;
 }

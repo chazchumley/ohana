@@ -3,9 +3,15 @@
 
 @use '../../01-core' as *;
 
+$skiplinks-link-bg: color(shades, dark);
+$skiplinks-link-border-width: units(2px);
+$skiplinks-link-border-color: color(shades, light);
+$skiplinks-link-border-radius: units(0.5);
+$skiplinks-link-color: color(shades, light);
+$skiplinks-link-padding: units(1);
+
 .skiplinks {
   display: flex;
-  font-family: font-family(system);
   justify-content: center;
   position: absolute;
   width: 100%;
@@ -16,18 +22,17 @@
 .skiplinks__link:visited,
 .skiplinks__link:focus {
   @include box-shadow(2);
-  background-color: color(shades, dark);
-  border: 2px solid color(shades, light);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  background-color: $skiplinks-link-bg;
+  border: $skiplinks-link-border-width solid $skiplinks-link-border-color;
+  border-bottom-left-radius: $skiplinks-link-border-radius;
+  border-bottom-right-radius: $skiplinks-link-border-radius;
   border-top: 0;
-  color: color(shades, light);
+  color: $skiplinks-link-color;
   display: inline-block;
-  font-weight: bold;
-  line-height: line-height(tight);
+  font-weight: 700;
   margin: 0;
   outline: 0;
-  padding: units(1);
+  padding: $skiplinks-link-padding;
   text-align: center;
   text-decoration: none;
 }

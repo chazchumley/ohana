@@ -3,10 +3,11 @@
 
 @use '../../01-core' as *;
 
-$breadcrumb-color: color(breadcrumb, icon-color) !default;
+$breadcrumb-padding: units(2) 0;
+$breadcrumb-item-color: color(breadcrumb, icon-color);
 
 .breadcrumb {
-  padding: units(2) 0;
+  padding: $breadcrumb-padding;
 }
 
 .breadcrumb__list {
@@ -31,7 +32,7 @@ $breadcrumb-color: color(breadcrumb, icon-color) !default;
 
     .breadcrumb__link {
       &::before {
-        @include svg-icon("../img/breadcrumb-back.svg", 16px, 16px, $breadcrumb-color);
+        @include svg-icon("../img/breadcrumb-back.svg", 16px, 16px, $breadcrumb-item-color);
         bottom: -0.2em;
         content: '';
         display: inline-block;
@@ -53,7 +54,7 @@ $breadcrumb-color: color(breadcrumb, icon-color) !default;
     }
 
     &:not(:last-child)::after {
-      @include svg-icon("../img/breadcrumb-next.svg", 16px, 16px, $breadcrumb-color);
+      @include svg-icon("../img/breadcrumb-next.svg", 16px, 16px, $breadcrumb-item-color);
       bottom: -0.2em;
       content: '';
       display: inline-block;

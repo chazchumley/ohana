@@ -4,19 +4,25 @@
 @use '../../01-core' as *;
 
 // Messages
-$message-color: color(messages, text-color) !default;
-$message-status-background: color(messages, status-background) !default;
-$message-status-border: color(messages, status-border) !default;
-$message-error-background: color(messages, error-background) !default;
-$message-error-border: color(messages, error-border) !default;
-$message-warning-background: color(messages, warning-background) !default;
-$message-warning-border: color(messages, warning-border) !default;
+$message-border-width: 1px;
+$message-margin-bottom: units(2);
+$message-padding: units(2);
+$message-color: color(messages, text-color);
+
+$message-status-bg: color(messages, status-background);
+$message-status-border: color(messages, status-border);
+
+$message-error-bg: color(messages, error-background);
+$message-error-border: color(messages, error-border);
+
+$message-warning-bg: color(messages, warning-background);
+$message-warning-border: color(messages, warning-border);
 
 .message {
-  border: 1px solid;
-  margin-bottom: units(2);
+  border: $message-border-width solid;
+  margin-bottom: $message-margin-bottom;
   overflow: hidden;
-  padding: units(2);
+  padding: $message-padding;
   position: relative;
   word-wrap: break-word;
 
@@ -50,7 +56,7 @@ $message-warning-border: color(messages, warning-border) !default;
 
 // Status Message
 .message--status {
-  background-color: $message-status-background;
+  background-color: $message-status-bg;
   border-color: $message-status-border;
 
   &::before {
@@ -60,7 +66,7 @@ $message-warning-border: color(messages, warning-border) !default;
 
 // Error Message
 .message--error {
-  background-color: $message-error-background;
+  background-color: $message-error-bg;
   border-color: $message-error-border;
 
   &::before {
@@ -77,7 +83,7 @@ $message-warning-border: color(messages, warning-border) !default;
 
 // Warning Message
 .message--warning {
-  background-color: $message-warning-background;
+  background-color: $message-warning-bg;
   border-color: $message-warning-border;
 
   &::before {

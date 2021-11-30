@@ -1,21 +1,13 @@
 @use '00-settings' as *;
 @use '01-core/functions/' as *;
 
-// Focus
-$focus-width: units(0.5);
-$focus-style: solid;
-$focus-color: color(brand, blue-cool-50v);
-$focus-offset: units(0.5);
+// Default Variables
 
 // Links
 $link-color: color(brand, blue-cool-50v);
 $link-color-visited: color(brand, blue-cool-30v);
 $link-color-hover: color(brand, blue-cool-30v);
 $link-color-active: color(brand, blue-cool-30v);
-
-// Lists
-$pipeline-border-color: color(ui, border);
-$list-border-color: color(ui, border);
 
 // Inline Elements
 $cite-color: color(grayscale, gray-60);
