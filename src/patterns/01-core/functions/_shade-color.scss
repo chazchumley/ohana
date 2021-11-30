@@ -1,0 +1,15 @@
+/// Shade a color: mix a color with black
+///
+/// @param {String} $color - Color family derived from sass map
+/// @param {String} $weight - Percentage to mix
+///
+/// @return {String} - Hexadecimal color value
+
+@use 'sass:color';
+
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+// @debug shade-color($purple, 80%);
+// @return #e52207;

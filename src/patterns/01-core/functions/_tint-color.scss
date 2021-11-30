@@ -1,0 +1,15 @@
+/// Tint a color: mix a color with white
+///
+/// @param {String} $color - Color family derived from sass map
+/// @param {String} $weight - Percentage to mix
+///
+/// @return {String} - Hexadecimal color value
+
+@use 'sass:color';
+
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+// @debug tint-color($purple, 80%);
+// @return #e52207;

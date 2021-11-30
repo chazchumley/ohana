@@ -10,7 +10,7 @@
   padding: units(1);
 
   &:focus {
-    outline: 1px dotted color(brand, blue-cool-30v);
+    outline: 1px dotted $primary;
   }
 }
 
@@ -47,7 +47,7 @@
 
 .pager__item--current.pager__item {
   @extend %pager__link;
-  background-color: color(brand, blue-cool-50v);
+  background-color: $primary;
   color: $white;
 }
 
@@ -62,12 +62,12 @@
 
   &:hover,
   &:focus {
-    background-color: color(brand, blue-cool-50v);
+    background-color: $primary;
     color: $white;
   }
 
   &:active {
-    background-color: color(brand, blue-cool-30v);
+    background-color: $primary;
     color: $white;
   }
 }
@@ -84,7 +84,7 @@
     color: $black;
 
     .pager__link-icon g {
-      fill: color(brand, blue-cool-50v);
+      fill: $primary;
     }
   }
 

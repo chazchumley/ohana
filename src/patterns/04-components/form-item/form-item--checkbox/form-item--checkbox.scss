@@ -34,7 +34,7 @@
 
     &:checked + .form-item__label::before {
       @include svg-background('/img/correct.svg');
-      background-color: color(brand, blue-cool-50v);
+      background-color: $primary;
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: rem(20px);

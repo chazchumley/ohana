@@ -24,9 +24,9 @@
     width: 18px;
 
     &:checked {
-      background-color: color(brand, blue-cool-50v);
+      background-color: $primary;
       border: 2px solid $white;
-      box-shadow: 0 0 0 2px color(brand, blue-cool-50v);
+      box-shadow: 0 0 0 2px $primary;
     }
 
     &:disabled {

@@ -19,7 +19,7 @@
   }
 
   // Is $family in list
-  $list: 'ui', 'heading', 'body', 'code', 'alt';
+  $list: 'heading', 'body', 'alt';
   @if list.index($list, $family) {
     $value: map.get($map, $family);
 

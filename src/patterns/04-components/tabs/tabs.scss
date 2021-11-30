@@ -14,15 +14,15 @@ $tabs-item-margin-small: 0 units(1) 0 0;
 $tabs-link-border-radius: units(0.5);
 $tabs-link-font-size: font-size(5);
 $tabs-link-padding: units(1) units(2);
-$tabs-link-bg: color(brand, blue-cool-50v);
+$tabs-link-bg: $primary;
 $tabs-link-color: $white;
 
 $tabs-link-visited-color: $white;
 
-$tabs-link-hover-bg: color(brand, blue-cool-30v);
+$tabs-link-hover-bg: shade-color($tabs-link-bg, 20%);
 $tabs-link-hover-color: $white;
 
-$tabs-link-active-bg: color(brand, blue-cool-30v);;
+$tabs-link-active-bg: shade-color($tabs-link-bg, 20%);
 $tabs-link-active-color: $white;
 
 .tabs {

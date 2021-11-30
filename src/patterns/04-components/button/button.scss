@@ -3,12 +3,12 @@
 
 @use '../../01-core' as *;
 
-$button-bg: color(brand, blue-cool-30v);
+$button-bg: $primary;
 $button-color: $white;
 $button-visited-color: $white;
-$button-hover-bg: color(brand, blue-cool-50v);
+$button-hover-bg: shade-color($button-bg, 20%);
 $button-hover-color: $white;
-$button-active-bg: color(brand, blue-cool-50v);
+$button-active-bg: shade-color($button-bg, 20%);
 $button-active-color: $white;
 $button-disabled-bg: $gray-200;
 $button-disabled-color: $white;
@@ -65,7 +65,7 @@ $button-disabled-color: $white;
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  color: color(brand, blue-cool-30v);
+  color: $button-color;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -73,17 +73,17 @@ $button-disabled-color: $white;
   text-decoration: underline;
 
   &:visited {
-    color: color(brand, blue-cool-30v);
+    color: $button-color;
   }
 
   &:hover,
   &:focus {
     background-color: transparent;
-    color: color(brand, blue-cool-50v);
+    color: shade-color($button-bg, 20%);
   }
 
   &:active {
     background-color: transparent;
-    color: color(brand, blue-cool-50v);
+    color: shade-color($button-bg, 20%);
   }
 }

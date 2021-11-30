@@ -9,14 +9,14 @@ $message-margin-bottom: units(2);
 $message-padding: units(2);
 $message-color: $black;
 
-$message-status-bg: color(messages, status-background);
-$message-status-border: color(messages, status-border);
+$message-status-bg: tint-color($green, 80%);
+$message-status-border: $green;
 
-$message-error-bg: color(messages, error-background);
-$message-error-border: color(messages, error-border);
+$message-error-bg: tint-color($red, 80%);
+$message-error-border: $red;
 
-$message-warning-bg: color(messages, warning-background);
-$message-warning-border: color(messages, warning-border);
+$message-warning-bg: tint-color(yellow, 80%);
+$message-warning-border: $yellow;
 
 .message {
   border: $message-border-width solid;

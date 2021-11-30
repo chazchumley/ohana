@@ -14,7 +14,7 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-// Primary Color Variables
+// System Color Variables
 $blue: #0d6efd;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -26,11 +26,14 @@ $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
 
+// Brand Color Variables
+$primary: $blue;
+
 // Links
-$link-color: color(brand, blue-cool-50v);
-$link-color-visited: color(brand, blue-cool-30v);
-$link-color-hover: color(brand, blue-cool-30v);
-$link-color-active: color(brand, blue-cool-30v);
+$link-color: $primary;
+$link-color-visited: shade-color($link-color, 20%);
+$link-color-hover: shade-color($link-color, 20%);
+$link-color-active: shade-color($link-color, 20%);
 
 // Inline Elements
 $cite-color: $gray-600;
@@ -38,7 +41,7 @@ $mark-background: $yellow;
 $mark-color: $black;
 
 // Blockquote
-$blockquote-color: color(brand, blue-cool-50v);
+$blockquote-color: $primary;
 
 // Media Query Ranges
 $small-screen: 576px;
