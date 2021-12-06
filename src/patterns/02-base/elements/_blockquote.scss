@@ -5,7 +5,7 @@
 
 blockquote {
   color: $blockquote-color;
-  font-family: font-family(body);
+  font-family: $font-body;
   font-size: font-size(10);
   margin: 0 0 units(5);
 

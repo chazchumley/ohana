@@ -4,7 +4,7 @@
 @use '../../01-core' as *;
 
 pre {
-  font-family: font-family(mono);
+  font-family: var(--font-mono);
   font-size: font-size(5);
   margin: 0 0 units(2);
   overflow: auto;

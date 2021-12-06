@@ -22,7 +22,7 @@ $button-disabled-color: $white;
   color: $button-color;
   cursor: pointer;
   display: inline-block;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   padding: units(1.5) units(2.5);
   text-align: center;
   text-decoration: none;

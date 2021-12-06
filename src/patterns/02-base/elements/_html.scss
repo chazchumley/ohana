@@ -1,14 +1,14 @@
 // @file
 // HTML styles.
 
-@use 'sass:math';
 @use '../../01-core' as *;
+@use 'sass:math';
 
 html {
   box-sizing: border-box;
-  font-family: font-family(body);
-  font-size: 100% * math.div(font-size(base), rem(16px));
-  line-height: line-height(base);
+  font-family: $font-body;
+  font-size: 100%;
+  line-height: var(--line-none);
   min-height: 100%;
   overflow-x: hidden;
   position: relative;

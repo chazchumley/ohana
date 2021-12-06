@@ -1,4 +1,3 @@
-@use '00-settings' as *;
 @use '01-core/functions/' as *;
 
 // Grayscale Variables
@@ -29,6 +28,10 @@ $cyan: #0dcaf0;
 // Brand Color Variables
 $primary: $blue;
 
+// Typography Variables
+$font-heading: var(--font-serif);
+$font-body: var(--font-sans);
+
 // Links
 $link-color: $primary;
 $link-color-visited: shade-color($link-color, 20%);
@@ -42,6 +45,7 @@ $mark-color: $black;
 
 // Blockquote
 $blockquote-color: $primary;
+$blockquote-font-family: $font-body;
 
 // Media Query Ranges
 $small-screen: 576px;

@@ -37,7 +37,7 @@ a {
 
     &[href]::after {
       content: ' <' attr(href) '>';
-      font-family: font-family(body);
+      font-family: $font-body;
       font-size: 10pt;
       font-weight: normal;
       text-transform: lowercase;
@@ -82,7 +82,7 @@ b {
 
 cite {
   color: $cite-color;
-  font-family: font-family(body);
+  font-family: $font-body;
   font-size: font-size(1);
   font-style: normal;
   font-weight: 600;
@@ -91,7 +91,7 @@ cite {
 }
 
 code {
-  font-family: font-family(mono);
+  font-family: var(--font-mono);
   font-size: font-size(5);
 }
 
@@ -108,7 +108,7 @@ dfn {
 // ins {}
 
 kbd {
-  font-family: font-family(mono);
+  font-family: var(--font-mono);
   font-size: font-size(5);
 }
 
@@ -122,7 +122,7 @@ mark {
 // s {}
 
 samp {
-  font-family: font-family(mono);
+  font-family: var(--font-mono);
   font-size: font-size(5);
 }
 
