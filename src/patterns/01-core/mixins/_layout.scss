@@ -1,7 +1,7 @@
 // @file
 // Layout mixins
 
-@use '../../variables' as *;
+@use '../variables' as *;
 
 @mixin layout-align-left($margin) {
   float: left;

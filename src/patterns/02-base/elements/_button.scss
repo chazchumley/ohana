@@ -9,7 +9,7 @@ button {
   cursor: pointer;
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.15;
+  line-height: var(--line-xs);
   margin: 0;
   overflow: visible;
   text-transform: none;

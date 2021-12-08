@@ -2,13 +2,12 @@
 // HTML styles.
 
 @use '../../01-core' as *;
-@use 'sass:math';
 
 html {
   box-sizing: border-box;
   font-family: $font-body;
   font-size: 100%;
-  line-height: var(--line-none);
+  line-height: var(--line-md);
   min-height: 100%;
   overflow-x: hidden;
   position: relative;

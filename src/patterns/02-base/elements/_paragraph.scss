@@ -1,10 +1,8 @@
 // @file
 // Paragraph styles.
 
-@use '../../01-core' as *;
-
 p {
-  margin: 0 0 units(2);
+  margin: 0 0 var(--size-4);
 
   @media print {
     orphans: 3;

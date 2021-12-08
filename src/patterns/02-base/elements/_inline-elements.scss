@@ -77,22 +77,22 @@ abbr {
 }
 
 b {
-  font-weight: bolder;
+  font-weight: var(--font-extrabold);
 }
 
 cite {
   color: $cite-color;
   font-family: $font-body;
-  font-size: font-size(1);
+  font-size: var(--scale-000);
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--font-semibold);
   letter-spacing: 0.02em;
-  line-height: line-height(tight);
+  line-height: var(--line-xs);
 }
 
 code {
   font-family: var(--font-mono);
-  font-size: font-size(5);
+  font-size: var(--scale-0);
 }
 
 // del {}
@@ -109,7 +109,7 @@ dfn {
 
 kbd {
   font-family: var(--font-mono);
-  font-size: font-size(5);
+  font-size: var(--scale-0);
 }
 
 mark {
@@ -123,7 +123,7 @@ mark {
 
 samp {
   font-family: var(--font-mono);
-  font-size: font-size(5);
+  font-size: var(--scale-0);
 }
 
 small {

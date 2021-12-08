@@ -4,7 +4,7 @@
 @use '../../01-core' as *;
 
 caption {
-  margin-bottom: units(0.5);
+  margin-bottom: var(--size-1);
 }
 
 // col {}
@@ -14,7 +14,7 @@ caption {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: units(2);
+  margin-bottom: var(--size-4);
   min-width: 100%;
 }
 
@@ -23,7 +23,7 @@ table {
 td {
   background-color: $white;
   border: 1px solid $black;
-  padding: units(2);
+  padding: var(--size-4);
 }
 
 tfoot {
@@ -36,7 +36,7 @@ tfoot {
 th {
   background-color: $white;
   border: 1px solid $black;
-  padding: units(2);
+  padding: var(--size-4);
   text-align: left;
 }
 

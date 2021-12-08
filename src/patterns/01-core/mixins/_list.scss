@@ -2,7 +2,7 @@
 // List Mixins
 
 @use 'clearfix' as *;
-@use '../../variables' as *;
+@use '../variables' as *;
 @use '../functions' as *;
 
 @mixin list-border($list-border-color: $gray-500, $list-border-padding: units(0.5)) {

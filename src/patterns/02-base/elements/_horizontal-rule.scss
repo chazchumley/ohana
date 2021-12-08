@@ -7,7 +7,7 @@ hr {
   border: 1px solid $gray-500;
   box-sizing: content-box;
   height: 0;
-  margin: units(3) 0;
+  margin: var(--size-6) 0;
   overflow: visible;
   padding-bottom: -1px;
 }

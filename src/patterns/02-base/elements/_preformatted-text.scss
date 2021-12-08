@@ -5,8 +5,8 @@
 
 pre {
   font-family: var(--font-mono);
-  font-size: font-size(5);
-  margin: 0 0 units(2);
+  font-size: var(--scale-00);
+  margin: 0 0 var(--size-4);
   overflow: auto;
 
   @media print {

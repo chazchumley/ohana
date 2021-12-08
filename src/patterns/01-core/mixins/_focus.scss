@@ -1,7 +1,7 @@
 // @file
 // Focus mixin
 
-@use '../../variables' as *;
+@use '../variables' as *;
 @use '../functions' as *;
 
 @mixin focus-outline($focus-width: units(0.5), $focus-style: solid, $focus-color: $blue, $focus-offset: units(0.5)) {

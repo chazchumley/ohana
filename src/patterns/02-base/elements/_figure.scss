@@ -1,10 +1,8 @@
 // @file
 // Figure element styles.
 
-@use '../../01-core' as *;
-
 figure {
-  margin: 0 0 units(2);
+  margin: 0 0 var(--size-1);
 }
 
 // figcaption {}
