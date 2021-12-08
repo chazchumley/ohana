@@ -1,25 +1,24 @@
 // @file
 // Styles for Figure.
 
-@use '../../01-core/functions' as *;
-@use '../../variables' as *;
+@use '../../01-core' as *;
 
 .figure {
   display: table;
-  margin-bottom: units(2);
+  margin-bottom: var(--size-4);
   margin-top: 0;
 
   &.u-align-left {
     @media(min-width:$small-screen) {
-      margin-right: units(4);
-      max-width: calc(50% - #{units(2)});
+      margin-right: var(--size-8);
+      max-width: calc(50% - #{var(--size-4)});
     }
   }
 
   &.u-align-right {
     @media(min-width:$small-screen) {
-      margin-left: units(4);
-      max-width: calc(50% - #{units(2)});
+      margin-left: var(--size-8);
+      max-width: calc(50% - #{var(--size-4)});
     }
   }
 }
@@ -27,25 +26,25 @@
 .figure__caption {
   caption-side: bottom;
   display: table-caption;
-  font-family: font-family(alt);
-  font-size: font-size(1);
-  font-weight: font-weight(bold);
-  line-height: line-height(tight);
-  margin-top: units(1);
+  font-family: var(--font-sans);
+  font-size: var(--scale-000);
+  font-weight: var(--font-bold);
+  line-height: var(--line-xs);
+  margin-top: var(--size-2);
 }
 
 .figure--center {
   clear: both;
   margin-left: auto;
   margin-right: auto;
-  margin-top: units(2);
+  margin-top: var(--size-4);
 }
 
 .figure--left {
   @media(min-width:$small-screen) {
     float: left;
     margin-right: $gutter-width;
-    max-width: calc(50% - #{units(2)});
+    max-width: calc(50% - #{var(--size-4)});
   }
 }
 
@@ -53,7 +52,7 @@
   @media(min-width:$small-screen) {
     float: right;
     margin-left: $gutter-width;
-    max-width: calc(50% - #{units(2)});
+    max-width: calc(50% - #{var(--size-4)});
   }
 }
 

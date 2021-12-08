@@ -1,7 +1,7 @@
 // @file
 // Styles for list.
 
-@use '../../01-core/mixins' as *;
+@use '../../01-core' as *;
 
 // .list {}
 
@@ -9,8 +9,8 @@
   @include list-border;
 }
 
-.list--clean {
-  @include list-clean;
+.list--unstyled {
+  @include list-unstyled;
 }
 
 .list--column {

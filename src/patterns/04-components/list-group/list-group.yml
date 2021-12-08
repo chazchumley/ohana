@@ -1,5 +1,5 @@
 ---
-modifier: 'list--clean'
+modifier: ''
 list:
   -
     content: 'List Item One'

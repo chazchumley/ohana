@@ -1,20 +1,29 @@
 // @file
 // Styles for Button.
 
-@use '../../01-core/functions' as *;
-@use '../../variables' as *;
+@use '../../01-core' as *;
+
+$button-bg: $primary;
+$button-color: var(--color-white);
+$button-visited-color: var(--color-white);
+$button-hover-bg: shade-color($button-bg, 20%);
+$button-hover-color: var(--color-white);
+$button-active-bg: shade-color($button-bg, 20%);
+$button-active-color: var(--color-white);
+$button-disabled-bg: $gray-200;
+$button-disabled-color: var(--color-white);
 
 .button {
   appearance: none;
-  background-color: color(brand, blue-cool-30v);
+  background-color: $button-bg;
   border: 0;
-  border-radius: units(0.5);
+  border-radius: var(--size-1);
   box-sizing: border-box;
-  color: color(shades, light);
+  color: $button-color;
   cursor: pointer;
   display: inline-block;
-  font-weight: font-weight(bold);
-  padding: units(1.5) units(2.5);
+  font-weight: var(--font-bold);
+  padding: var(--size-3) var(--size-5);
   text-align: center;
   text-decoration: none;
   width: 100%;
@@ -24,27 +33,27 @@
   }
 
   &:visited {
-    color: color(shades, light);
+    color: $button-visited-color;
   }
 
   &:hover,
   &:focus {
-    background-color: color(brand, blue-cool-50v);
-    color: color(shades, light);
+    background-color: $button-hover-bg;
+    color: $button-hover-color;
   }
 
   &:active {
-    background-color: color(brand, blue-cool-50v);
-    color: color(shades, light);
+    background-color: $button-active-bg;
+    color: $button-active-color;
   }
 
   &:not([disabled]):focus {
-    outline-offset: units(0.5);
+    outline-offset: var(--size-1);
   }
 
   &:disabled {
-    background-color: color(grayscale, gray-20);
-    color: color(shades, light);
+    background-color: $button-disabled-bg;
+    color: $button-disabled-color;
     cursor: default;
     pointer-events: none;
   }
@@ -56,25 +65,25 @@
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  color: color(brand, blue-cool-30v);
-  font-weight: font-weight(normal);
+  color: $button-color;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   text-align: left;
   text-decoration: underline;
 
   &:visited {
-    color: color(brand, blue-cool-30v);
+    color: $button-color;
   }
 
   &:hover,
   &:focus {
     background-color: transparent;
-    color: color(brand, blue-cool-50v);
+    color: shade-color($button-bg, 20%);
   }
 
   &:active {
     background-color: transparent;
-    color: color(brand, blue-cool-50v);
+    color: shade-color($button-bg, 20%);
   }
 }

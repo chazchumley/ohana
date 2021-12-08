@@ -1,25 +1,23 @@
 // @file
 // Styles for checkbox form items.
 
-@use '../../../01-core/functions' as *;
-@use '../../../01-core/mixins' as *;
-@use '../../../variables' as *;
+@use '../../../01-core' as *;
 
 .form-item--checkbox {
-  margin-bottom: units(1);
+  margin-bottom: var(--size-2);
 }
 
 .form-item--checkbox.has-visible-label-after {
   .form-item__checkbox {
-    @include visually-hidden(true);
+    @include visually-hidden;
 
     + .form-item__label {
       cursor: pointer;
       display: block;
 
       &::before {
-        background: color(shades, light);
-        border: 1px solid color(grayscale, gray-50);
+        background: var(--color-white);
+        border: 1px solid $gray-500;
         content: '\a0';
         display: inline-block;
         height: rem(20px);
@@ -35,8 +33,8 @@
     }
 
     &:checked + .form-item__label::before {
-      @include svg-background(correct);
-      background-color: color(brand, blue-cool-50v);
+      @include svg-background('/img/correct.svg');
+      background-color: $primary;
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: rem(20px);

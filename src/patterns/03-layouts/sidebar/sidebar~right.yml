@@ -2,10 +2,10 @@
 modifier: 'l-sidebar--right'
 constrain: ''
 header: |-
-  <p style="border: 1px dashed #333;color:#333;padding:1em; margin:0;">Optional Header</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Optional Header</p>
 aside: |-
-  <p style="border: 1px dashed #333;color:#333;padding:1em; margin:0;">Optional Aside</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Optional Aside</p>
 main: |-
-  <p style="border: 1px dashed #333;color:#333;padding:1em; margin:0;">Main Content</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Main Content</p>
 footer: |-
-  <p style="border: 1px dashed #333;color:#333;padding:1em; margin:0;">Optional Footer</p>
+  <p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Optional Footer</p>

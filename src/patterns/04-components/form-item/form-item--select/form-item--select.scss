@@ -2,12 +2,11 @@
 // Styles for select form items.
 
 @use 'sass:math';
-@use '../../../01-core/functions' as *;
-@use '../../../01-core/mixins' as *;
+@use '../../../01-core' as *;
 
 .form-item--select {
   .form-item__select {
-    @include svg-background(select-arrows);
+    @include svg-background('/img/select-arrows.svg');
     background-position: right math.div(rem(20px), 2) center; // LTR
     background-repeat: no-repeat;
     background-size: rem(20px);

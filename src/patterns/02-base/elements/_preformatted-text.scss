@@ -1,12 +1,12 @@
 // @file
 // Preformatted text styles.
 
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 pre {
-  font-family: font-family(mono);
-  font-size: font-size(5);
-  margin: 0 0 units(2);
+  font-family: var(--font-mono);
+  font-size: var(--scale-00);
+  margin: 0 0 var(--size-4);
   overflow: auto;
 
   @media print {

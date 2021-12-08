@@ -1,16 +1,15 @@
 // @file
 // Styles for radio form items.
 
-@use '../../../01-core/functions' as *;
-@use '../../../variables' as *;
+@use '../../../01-core' as *;
 
 .form-item--radio {
-  margin-bottom: units(1);
+  margin-bottom: var(--size-2);
 
   .form-item__radio {
     appearance: none;
-    background-color: color(shades, light);
-    border: 1px solid color(grayscale, gray-50);
+    background-color: var(--color-white);
+    border: 1px solid $gray-500;
     border-radius: 50%;
     box-shadow: 0 0 0 2px transparent;
     cursor: pointer;
@@ -25,9 +24,9 @@
     width: 18px;
 
     &:checked {
-      background-color: color(brand, blue-cool-50v);
-      border: 2px solid color(shades, light);
-      box-shadow: 0 0 0 2px color(brand, blue-cool-50v);
+      background-color: $primary;
+      border: 2px solid var(--color-white);
+      box-shadow: 0 0 0 2px $primary;
     }
 
     &:disabled {

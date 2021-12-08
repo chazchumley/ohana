@@ -4,7 +4,7 @@
   {% endif %}
 
   {% block content %}
-    {{ content }}
+    {{ content|default('<div><p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Main Content</p></div>') }}
   {% endblock %}
 
   {% if constrain %}

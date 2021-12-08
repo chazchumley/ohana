@@ -1,20 +1,20 @@
 // @file
 // Styles for fields.
 
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 @use '../../02-base/elements/headings' as *;
 
 .field {
-  margin-bottom: units(2);
+  margin-bottom: var(--size-4);
 }
 
 .field__label {
-  @extend %h4;
+  @include heading-4;
   display: block;
   margin-bottom: 0;
 
   &.is-inline {
-    @extend %h5;
+    @include heading-5;
     display: inline-block;
     margin-bottom: 0;
     margin-right: 0.25rem;

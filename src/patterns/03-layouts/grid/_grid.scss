@@ -1,7 +1,7 @@
 // @file
 // Styles for Grid layout.
 
-@use '../../variables' as *;
+@use '../../01-core' as *;
 
 .l-grid {
   display: grid;
@@ -11,32 +11,32 @@
 
 .l-grid--2col {
   @media(min-width:$small-screen) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 .l-grid--3col {
   @media(min-width:$small-screen) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 .l-grid--4col {
   @media(min-width: 600px) and (max-width: 800px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @media(min-width: 801px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 .l-grid--6col {
   @media(min-width: 600px) and (max-width: 999px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   @media(min-width: 1000px) {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }

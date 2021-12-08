@@ -9,8 +9,8 @@
 
 <div class="pl-box-shadow">
   {% for elevation, shadow in shadows %}
-    {% set box_style = 'box-shadow: '~ shadow ~';' %}
-    <div class="pl-box-shadow__item" style="{{ box_style }}">
+    {% set box_style = 'shadow-'~ shadow %}
+    <div class="pl-box-shadow__item {{ box_style }}">
       <div class="pl-box-shadow__label">
         Elevation Level
         {{ elevation }}

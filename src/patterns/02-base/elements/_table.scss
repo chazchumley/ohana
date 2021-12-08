@@ -1,10 +1,10 @@
 // @file
 // Table styles.
 
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 caption {
-  margin-bottom: units(0.5);
+  margin-bottom: var(--size-1);
 }
 
 // col {}
@@ -14,36 +14,36 @@ caption {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: units(2);
+  margin-bottom: var(--size-4);
   min-width: 100%;
 }
 
 // tbody {}
 
 td {
-  background-color: color(table, background);
-  border: 1px solid color(table, border);
-  padding: units(2);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: var(--size-4);
 }
 
 tfoot {
   td,
   th {
-    background-color: color(table, background-foot);
+    background-color: $gray-200;
   }
 }
 
 th {
-  background-color: color(table, background);
-  border: 1px solid color(table, border);
-  padding: units(2);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: var(--size-4);
   text-align: left;
 }
 
 thead {
   td,
   th {
-    background-color: color(table, background-head);
+    background-color: $gray-200;
   }
 
   @media print {

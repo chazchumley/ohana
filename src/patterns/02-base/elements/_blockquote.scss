@@ -1,18 +1,17 @@
 // @file
 // Blockquote styles.
 
-@use '../../variables' as *;
-@use '../../01-core/functions' as *;
+@use '../../01-core' as *;
 
 blockquote {
   color: $blockquote-color;
-  font-family: font-family(body);
-  font-size: font-size(10);
-  margin: 0 0 units(5);
+  font-family: $blockquote-font-family;
+  font-size: var(--scale-3);
+  margin: 0 0 var(--size-10);
 
   // Add top margin when blockquote is preceded by other elements
   * + & {
-    margin-top: units(5);
+    margin-top: var(--size-10);
   }
 
   p {
@@ -33,14 +32,14 @@ blockquote {
 
   cite {
     display: block;
-    margin-top: units(2);
+    margin-top: var(--size-4);
     text-align: right;
 
     em {
-      border-left: 1px solid color(ui, border);
-      font-weight: font-weight(normal);
-      margin-left: units(0.5);
-      padding-left: units(1);
+      border-left: 1px solid $gray-400;
+      font-weight: var(--font-regular);
+      margin-left: var(--size-1);
+      padding-left: var(--size-2);
     }
   }
 

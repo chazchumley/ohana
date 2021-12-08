@@ -1,0 +1,14 @@
+// @file
+// Box shadow mixin
+
+@use '../functions/shadow' as *;
+
+@mixin box-shadow($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);
+  }
+}

@@ -1,0 +1,87 @@
+// @file
+// Styles for list group.
+
+@use '../../01-core' as *;
+
+$list-group-border-radius: var(--size-1);
+$list-group-item-bg: var(--color-white);
+$list-group-item-border-width: 1px;
+$list-group-item-border-color: $gray-300;
+$list-group-item-color: $gray-800;
+$list-group-item-padding: var(--size-2) var(--size-4);
+$list-group-item-hover-bg: $gray-100;
+$list-group-item-hover-color: $gray-800;
+
+.list-group {
+  border-radius: $list-group-border-radius;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.list-group__item {
+  background-color: $list-group-item-bg;
+  border: $list-group-item-border-width solid $list-group-item-border-color;
+  color: $list-group-item-color;
+  display: block;
+  margin: 0;
+  padding: $list-group-item-padding;
+  position: relative;
+  text-decoration: none;
+
+  &:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  & + & {
+    border-top: 0;
+  }
+}
+
+// Variants
+.list-group--links {
+  .list-group__item {
+    &:hover,
+    &:focus {
+      background-color: $list-group-item-hover-bg;
+      color: $list-group-item-hover-color;
+      z-index: 1;
+    }
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    text-decoration: inherit;
+    width: 100%;
+  }
+}
+
+.list-group--flush {
+  border-radius: 0;
+
+  .list-group__item {
+    border-width: 0 0 1px;
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+}
+
+.list-group--numbered {
+  list-style-type: none;
+  counter-reset: section;
+
+  > li::before {
+    // Increments only this instance of the section counter
+    content: counters(section, '.') '. ';
+    counter-increment: section;
+  }
+}

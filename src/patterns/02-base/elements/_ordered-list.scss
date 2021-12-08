@@ -1,14 +1,12 @@
 // @file
 // Ordered list styles.
 
-@use '../../01-core/functions' as *;
-
 ol {
-  margin: 0 0 units(2);
-  padding: 0 0 0 units(3);
+  margin: 0 0 var(--size-4);
+  padding: 0 0 0 var(--size-6);
 
   ol,
   ul {
-    margin-top: units(1);
+    margin-top: var(--size-2);
   }
 }

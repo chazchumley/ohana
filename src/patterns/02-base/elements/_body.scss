@@ -1,11 +1,9 @@
 // @file
 // Body styles.
 
-@use '../../01-core/functions' as *;
-
 body {
-  background-color: color(background, light);
-  color: color(text, dark);
+  background-color: var(--color-white);
+  color: var(--color-black);
   margin: 0;
   overflow-x: hidden;
   padding: 0;

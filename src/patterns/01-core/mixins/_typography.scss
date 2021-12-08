@@ -1,0 +1,93 @@
+// @file
+// Typography mixins
+
+@use '../variables' as *;
+
+@mixin heading-base {
+  color: var(--color-black);
+  font-family: var(--font-serif);
+  font-weight: var(--font-bold);
+  hyphens: none;
+  margin: 0 0 var(--size-4);
+  text-rendering: optimizeLegibility;
+
+  @media print {
+    orphans: 3;
+    page-break-after: avoid;
+    widows: 3;
+
+    &::after {
+      display: inline-block;
+    }
+  }
+
+  * + & {
+    margin-top: var(--size-4);
+  }
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+@mixin heading-1 {
+  @include heading-base;
+  font-size: var(--scale-5);
+  line-height: var(--line-xs);
+
+  @media(min-width:$small-screen) {
+    font-size: var(--scale-6);
+  }
+}
+
+@mixin heading-2 {
+  @include heading-base;
+  font-size: var(--scale-4);
+  line-height: var(--line-xs);
+
+  @media(min-width:$small-screen) {
+    font-size: var(--scale-5);
+  }
+}
+
+@mixin heading-3 {
+  @include heading-base;
+  font-size: var(--scale-3);
+  line-height: var(--line-xs);
+
+  @media(min-width:$small-screen) {
+    font-size: var(--scale-4);
+  }
+}
+
+@mixin heading-4 {
+  @include heading-base;
+  font-size: var(--scale-2);
+  line-height: var(--line-xs);
+
+  @media(min-width:$small-screen) {
+    font-size: var(--scale-3);
+  }
+}
+
+@mixin heading-5 {
+  @include heading-base;
+  font-size: var(--scale-1);
+  line-height: var(--line-xs);
+
+  @media(min-width:$small-screen) {
+    font-size: var(--scale-2);
+  }
+}
+
+@mixin heading-6 {
+  @include heading-base;
+  font-size: var(--scale-0);
+  line-height: var(--line-xs);
+  text-transform: uppercase;
+
+  @media(min-width:$small-screen) {
+    font-size: var(--scale-1);
+  }
+}

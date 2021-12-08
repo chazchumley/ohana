@@ -1,16 +1,40 @@
 // @file
 // Styles for Tabs.
 
-@use '../../01-core/mixins' as *;
-@use '../../01-core/functions' as *;
-@use '../../variables' as *;
+@use '../../01-core' as *;
+
+$tabs-bg: $gray-100;
+$tabs-border-radius: var(--size-1);
+$tabs-margin-bottom: var(--size-4);
+$tabs-padding: var(--size-2);
+
+$tabs-item-margin: 0 0 var(--size-2) 0;
+$tabs-item-margin-small: 0 var(--size-2) 0 0;
+
+$tabs-link-border-radius: var(--size-1);
+$tabs-link-font-size: var(--scale-2);
+$tabs-link-padding: var(--size-2) var(--size-4);
+$tabs-link-bg: $primary;
+$tabs-link-color: var(--color-white);
+
+$tabs-link-visited-color: var(--color-white);
+
+$tabs-link-hover-bg: shade-color($tabs-link-bg, 20%);
+$tabs-link-hover-color: var(--color-white);
+
+$tabs-link-active-bg: shade-color($tabs-link-bg, 20%);
+$tabs-link-active-color: var(--color-white);
 
 .tabs {
   @include clearfix;
+  background-color: $tabs-bg;
+  border-radius: $tabs-border-radius;
+  margin-bottom: $tabs-margin-bottom;
+  padding: $tabs-padding;
 }
 
 .tabs__items {
-  @include list-clean;
+  @include list-unstyled;
   display: flex;
   flex-direction: column;
 
@@ -24,68 +48,45 @@
 }
 
 .tabs__item {
-  &:first-child {
-    .tabs__link {
-      border-bottom-left-radius: 0;
-      border-left: 0;
-      border-top-left-radius: 0;
+  margin: $tabs-item-margin;
+
+  @media(min-width:$small-screen) {
+    margin: $tabs-item-margin-small;
+
+    &:last-child {
+      margin: 0;
     }
-  }
-
-  &:last-child {
-    .tabs__link {
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-    }
-  }
-
-  &.is-active {
-    z-index: 1;
-  }
-
-  &:focus-within,
-  &:hover {
-    z-index: 2;
   }
 }
 
 .tabs__link {
-  background-color: color(grayscale, gray-10);
-  border-left: 1px solid color(grayscale, gray-40);
-  border-radius: 0;
-  color: color(shades, dark);
-  display: block;
-  font-family: font-family(system);
-  font-size: font-size(5);
-  line-height: line-height(tight);
-  margin: 0;
-  padding: units(1) units(2);
+  background-color: $tabs-link-bg;
+  border-radius: $tabs-link-border-radius;
+  color: $tabs-link-color;
+  display: inline-block;
+  font-size: $tabs-link-font-size;
+  padding: $tabs-link-padding;
+  text-align: center;
   text-decoration: none;
+  width: 100%;
+
+  @media(min-width:$small-screen) {
+    width: auto;
+  }
 
   &:visited {
-    color: color(shades, light);
+    color: $tabs-link-visited-color;
   }
 
   &:hover,
   &:focus {
-    background-color: color(grayscale, gray-70);
-    color: color(shades, light);
+    background-color: $tabs-link-hover-bg;
+    color: $tabs-link-hover-color;
   }
 
-  &:active {
-    background-color: color(grayscale, gray-70);
-    color: color(shades, light);
-  }
-
+  &:active,
   &.is-active {
-    background-color: color(grayscale, gray-70);
-    border-color: color(grayscale, gray-40);
-    color: color(shades, light);
-
-    &:hover {
-      background-color: color(grayscale, gray-70);
-      border-color: color(grayscale, gray-40);
-      color: color(shades, light);
-    }
+    background-color: $tabs-link-active-bg;
+    color: $tabs-link-active-color;
   }
 }

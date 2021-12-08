@@ -1,7 +1,7 @@
 // @file
 // Button element styles.
 
-@use '../../01-core/mixins' as *;
+@use '../../01-core' as *;
 
 // Don’t style button elements, since they’re often styled as links for
 // accessible widgets. Use the .button class in components/button.
@@ -9,7 +9,7 @@ button {
   cursor: pointer;
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.15;
+  line-height: var(--line-xs);
   margin: 0;
   overflow: visible;
   text-transform: none;

@@ -1,13 +1,11 @@
 // @file
 // Styles for Section layout.
 
-@use '../../01-core/functions' as *;
-
 .l-section {
-  margin-bottom: units(4);
+  margin-bottom: var(--size-8);
 }
 
 .l-section__title {
-  margin-bottom: units(2);
+  margin-bottom: var(--size-4);
   position: relative;
 }

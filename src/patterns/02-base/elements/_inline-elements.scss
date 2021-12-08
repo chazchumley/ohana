@@ -1,9 +1,7 @@
 // @file
 // Inline element styles.
 
-@use '../../variables' as *;
-@use '../../01-core/functions' as *;
-@use '../../01-core/mixins' as *;
+@use '../../01-core' as *;
 
 a {
   background-color: transparent;
@@ -39,7 +37,7 @@ a {
 
     &[href]::after {
       content: ' <' attr(href) '>';
-      font-family: font-family(body);
+      font-family: var(--font-sans);
       font-size: 10pt;
       font-weight: normal;
       text-transform: lowercase;
@@ -79,22 +77,22 @@ abbr {
 }
 
 b {
-  font-weight: bolder;
+  font-weight: var(--font-extrabold);
 }
 
 cite {
   color: $cite-color;
-  font-family: font-family(body);
-  font-size: font-size(1);
+  font-family: var(--font-sans);
+  font-size: var(--scale-000);
   font-style: normal;
-  font-weight: font-weight(semibold);
+  font-weight: var(--font-semibold);
   letter-spacing: 0.02em;
-  line-height: line-height(tight);
+  line-height: var(--line-xs);
 }
 
 code {
-  font-family: font-family(mono);
-  font-size: font-size(5);
+  font-family: var(--font-mono);
+  font-size: var(--scale-0);
 }
 
 // del {}
@@ -110,8 +108,8 @@ dfn {
 // ins {}
 
 kbd {
-  font-family: font-family(mono);
-  font-size: font-size(5);
+  font-family: var(--font-mono);
+  font-size: var(--scale-0);
 }
 
 mark {
@@ -124,8 +122,8 @@ mark {
 // s {}
 
 samp {
-  font-family: font-family(mono);
-  font-size: font-size(5);
+  font-family: var(--font-mono);
+  font-size: var(--scale-0);
 }
 
 small {

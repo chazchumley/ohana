@@ -1,7 +1,7 @@
 // @file
 // Link mixins
 
-@use '../../variables' as *;
+@use '../variables' as *;
 
 @mixin link($link: $link-color, $hover: $link-color-hover, $active: $link-color-active, $visited: $link-color-visited) {
   color: $link;

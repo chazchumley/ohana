@@ -1,7 +1,4 @@
 ---
-header: |-
-  <div><p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Header</p></div>
-main: |-
-  <div><p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Main</p></div>
-footer: |-
-  <div><p style="border: 1px dashed #333;color:#333;padding:1em;margin:0;">Footer</p></div>
+header: ''
+main: ''
+footer: ''

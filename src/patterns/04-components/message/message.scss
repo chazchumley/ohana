@@ -1,23 +1,28 @@
 // @file
 // Styles for Messages.
 
-@use '../../01-core/functions' as *;
-@use '../../01-core/mixins' as *;
+@use '../../01-core' as *;
 
 // Messages
-$message-color: color(messages, text-color) !default;
-$message-status-background: color(messages, status-background) !default;
-$message-status-border: color(messages, status-border) !default;
-$message-error-background: color(messages, error-background) !default;
-$message-error-border: color(messages, error-border) !default;
-$message-warning-background: color(messages, warning-background) !default;
-$message-warning-border: color(messages, warning-border) !default;
+$message-border-width: 1px;
+$message-margin-bottom: var(--size-4);
+$message-padding: var(--size-4);
+$message-color: var(--color-black);
+
+$message-status-bg: tint-color($green, 80%);
+$message-status-border: $green;
+
+$message-error-bg: tint-color($red, 80%);
+$message-error-border: $red;
+
+$message-warning-bg: tint-color(yellow, 80%);
+$message-warning-border: $yellow;
 
 .message {
-  border: 1px solid;
-  margin-bottom: units(2);
+  border: $message-border-width solid;
+  margin-bottom: $message-margin-bottom;
   overflow: hidden;
-  padding: units(2);
+  padding: $message-padding;
   position: relative;
   word-wrap: break-word;
 
@@ -25,11 +30,11 @@ $message-warning-border: color(messages, warning-border) !default;
     bottom: -0.5em;
     content: '';
     display: block;
-    height: em(52px);
+    height: 52px;
     position: absolute;
     right: -0.5em;
     transform: rotate(-20deg);
-    width: em(52px);
+    width: 52px;
 
     @media print {
       display: none !important;
@@ -38,7 +43,7 @@ $message-warning-border: color(messages, warning-border) !default;
 
   a {
     color: $message-color;
-    font-weight: font-weight(semibold);
+    font-weight: 600;
     text-decoration: underline;
   }
 }
@@ -51,7 +56,7 @@ $message-warning-border: color(messages, warning-border) !default;
 
 // Status Message
 .message--status {
-  background-color: $message-status-background;
+  background-color: $message-status-bg;
   border-color: $message-status-border;
 
   &::before {
@@ -61,7 +66,7 @@ $message-warning-border: color(messages, warning-border) !default;
 
 // Error Message
 .message--error {
-  background-color: $message-error-background;
+  background-color: $message-error-bg;
   border-color: $message-error-border;
 
   &::before {
@@ -71,14 +76,14 @@ $message-warning-border: color(messages, warning-border) !default;
   .message__item {
     em:first-child {
       font-style: normal;
-      font-weight: font-weight(bold);
+      font-weight: 700;
     }
   }
 }
 
 // Warning Message
 .message--warning {
-  background-color: $message-warning-background;
+  background-color: $message-warning-bg;
   border-color: $message-warning-border;
 
   &::before {
