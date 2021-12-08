@@ -3,8 +3,8 @@
 
 @use '../../01-core' as *;
 
-$breadcrumb-padding: units(2) 0;
-$breadcrumb-item-color: $black;
+$breadcrumb-padding: var(--size-4) 0;
+$breadcrumb-item-color: var(--color-black);
 
 .breadcrumb {
   padding: $breadcrumb-padding;
@@ -13,8 +13,8 @@ $breadcrumb-item-color: $black;
 .breadcrumb__list {
   display: block;
   list-style-type: none;
-  margin: - units(0.5);
-  padding: units(0.5);
+  margin: - var(--size-1);
+  padding: var(--size-1);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -36,7 +36,7 @@ $breadcrumb-item-color: $black;
         bottom: -0.2em;
         content: '';
         display: inline-block;
-        margin: 0 units(1);
+        margin: 0 var(--size-2);
         position: relative;
       }
     }
@@ -58,7 +58,7 @@ $breadcrumb-item-color: $black;
       bottom: -0.2em;
       content: '';
       display: inline-block;
-      margin: 0 units(1);
+      margin: 0 var(--size-2);
       position: relative;
     }
   }

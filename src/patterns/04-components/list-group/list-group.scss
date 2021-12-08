@@ -3,12 +3,12 @@
 
 @use '../../01-core' as *;
 
-$list-group-border-radius: units(0.5);
-$list-group-item-bg: $white;
+$list-group-border-radius: var(--size-1);
+$list-group-item-bg: var(--color-white);
 $list-group-item-border-width: 1px;
 $list-group-item-border-color: $gray-300;
 $list-group-item-color: $gray-800;
-$list-group-item-padding: units(1) units(2);
+$list-group-item-padding: var(--size-2) var(--size-4);
 $list-group-item-hover-bg: $gray-100;
 $list-group-item-hover-color: $gray-800;
 

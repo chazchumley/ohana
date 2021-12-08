@@ -1,7 +1,6 @@
 @use 'functions' as *;
 
 // Grayscale Variables
-$white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -11,7 +10,6 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black: #000;
 
 // System Color Variables
 $blue: #0d6efd;
@@ -28,10 +26,6 @@ $cyan: #0dcaf0;
 // Brand Color Variables
 $primary: $blue;
 
-// Typography Variables
-$font-heading: var(--font-serif);
-$font-body: var(--font-sans);
-
 // Links
 $link-color: $primary;
 $link-color-visited: shade-color($link-color, 20%);
@@ -41,11 +35,11 @@ $link-color-active: shade-color($link-color, 20%);
 // Inline Elements
 $cite-color: $gray-600;
 $mark-background: $yellow;
-$mark-color: $black;
+$mark-color: var(--color-black);
 
 // Blockquote
 $blockquote-color: $primary;
-$blockquote-font-family: $font-body;
+$blockquote-font-family: var(--font-sans);
 
 // Media Query Ranges
 $small-screen: 576px;

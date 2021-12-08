@@ -5,9 +5,9 @@
 
 // Messages
 $message-border-width: 1px;
-$message-margin-bottom: units(2);
-$message-padding: units(2);
-$message-color: $black;
+$message-margin-bottom: var(--size-4);
+$message-padding: var(--size-4);
+$message-color: var(--color-black);
 
 $message-status-bg: tint-color($green, 80%);
 $message-status-border: $green;

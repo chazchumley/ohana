@@ -4,26 +4,26 @@
 @use '../../01-core' as *;
 
 $tabs-bg: $gray-100;
-$tabs-border-radius: units(0.5);
-$tabs-margin-bottom: units(2);
-$tabs-padding: units(1);
+$tabs-border-radius: var(--size-1);
+$tabs-margin-bottom: var(--size-4);
+$tabs-padding: var(--size-2);
 
-$tabs-item-margin: 0 0 units(1) 0;
-$tabs-item-margin-small: 0 units(1) 0 0;
+$tabs-item-margin: 0 0 var(--size-2) 0;
+$tabs-item-margin-small: 0 var(--size-2) 0 0;
 
-$tabs-link-border-radius: units(0.5);
-$tabs-link-font-size: font-size(5);
-$tabs-link-padding: units(1) units(2);
+$tabs-link-border-radius: var(--size-1);
+$tabs-link-font-size: var(--scale-2);
+$tabs-link-padding: var(--size-2) var(--size-4);
 $tabs-link-bg: $primary;
-$tabs-link-color: $white;
+$tabs-link-color: var(--color-white);
 
-$tabs-link-visited-color: $white;
+$tabs-link-visited-color: var(--color-white);
 
 $tabs-link-hover-bg: shade-color($tabs-link-bg, 20%);
-$tabs-link-hover-color: $white;
+$tabs-link-hover-color: var(--color-white);
 
 $tabs-link-active-bg: shade-color($tabs-link-bg, 20%);
-$tabs-link-active-color: $white;
+$tabs-link-active-color: var(--color-white);
 
 .tabs {
   @include clearfix;

@@ -1,15 +1,14 @@
 // @file
 // HTML styles.
 
-@use '../../01-core' as *;
-
 html {
   box-sizing: border-box;
-  font-family: $font-body;
+  font-family: var(--font-sans);
   font-size: 100%;
   line-height: var(--line-md);
   min-height: 100%;
   overflow-x: hidden;
   position: relative;
+  scroll-behavior: smooth;
   text-size-adjust: 100%;
 }

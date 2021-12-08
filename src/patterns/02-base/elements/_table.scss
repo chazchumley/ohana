@@ -21,8 +21,8 @@ table {
 // tbody {}
 
 td {
-  background-color: $white;
-  border: 1px solid $black;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
   padding: var(--size-4);
 }
 
@@ -34,8 +34,8 @@ tfoot {
 }
 
 th {
-  background-color: $white;
-  border: 1px solid $black;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
   padding: var(--size-4);
   text-align: left;
 }

@@ -4,7 +4,7 @@
 @use '../../../01-core' as *;
 
 .form-item--checkbox {
-  margin-bottom: units(1);
+  margin-bottom: var(--size-2);
 }
 
 .form-item--checkbox.has-visible-label-after {
@@ -16,7 +16,7 @@
       display: block;
 
       &::before {
-        background: $white;
+        background: var(--color-white);
         border: 1px solid $gray-500;
         content: '\a0';
         display: inline-block;

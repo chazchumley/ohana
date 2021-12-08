@@ -6,7 +6,7 @@
 $l-sidebar-width: 300px;
 
 .l-sidebar {
-  margin-bottom: units(5);
+  margin-bottom: var(--size-10);
   width: 100%;
 }
 

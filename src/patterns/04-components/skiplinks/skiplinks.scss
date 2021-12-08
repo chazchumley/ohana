@@ -3,12 +3,12 @@
 
 @use '../../01-core' as *;
 
-$skiplinks-link-bg: $black;
-$skiplinks-link-border-width: units(2px);
-$skiplinks-link-border-color: $white;
-$skiplinks-link-border-radius: units(0.5);
-$skiplinks-link-color: $white;
-$skiplinks-link-padding: units(1);
+$skiplinks-link-bg: var(--color-black);
+$skiplinks-link-border-width: 2px;
+$skiplinks-link-border-color: var(--color-white);
+$skiplinks-link-border-radius: var(--size-1);;
+$skiplinks-link-color: var(--color-white);
+$skiplinks-link-padding: var(--size-2);
 
 .skiplinks {
   display: flex;

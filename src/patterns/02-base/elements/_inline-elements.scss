@@ -37,7 +37,7 @@ a {
 
     &[href]::after {
       content: ' <' attr(href) '>';
-      font-family: $font-body;
+      font-family: var(--font-sans);
       font-size: 10pt;
       font-weight: normal;
       text-transform: lowercase;
@@ -82,7 +82,7 @@ b {
 
 cite {
   color: $cite-color;
-  font-family: $font-body;
+  font-family: var(--font-sans);
   font-size: var(--scale-000);
   font-style: normal;
   font-weight: var(--font-semibold);

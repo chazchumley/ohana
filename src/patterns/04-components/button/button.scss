@@ -4,26 +4,26 @@
 @use '../../01-core' as *;
 
 $button-bg: $primary;
-$button-color: $white;
-$button-visited-color: $white;
+$button-color: var(--color-white);
+$button-visited-color: var(--color-white);
 $button-hover-bg: shade-color($button-bg, 20%);
-$button-hover-color: $white;
+$button-hover-color: var(--color-white);
 $button-active-bg: shade-color($button-bg, 20%);
-$button-active-color: $white;
+$button-active-color: var(--color-white);
 $button-disabled-bg: $gray-200;
-$button-disabled-color: $white;
+$button-disabled-color: var(--color-white);
 
 .button {
   appearance: none;
   background-color: $button-bg;
   border: 0;
-  border-radius: units(0.5);
+  border-radius: var(--size-1);
   box-sizing: border-box;
   color: $button-color;
   cursor: pointer;
   display: inline-block;
   font-weight: var(--font-bold);
-  padding: units(1.5) units(2.5);
+  padding: var(--size-3) var(--size-5);
   text-align: center;
   text-decoration: none;
   width: 100%;
@@ -48,7 +48,7 @@ $button-disabled-color: $white;
   }
 
   &:not([disabled]):focus {
-    outline-offset: units(0.5);
+    outline-offset: var(--size-1);
   }
 
   &:disabled {

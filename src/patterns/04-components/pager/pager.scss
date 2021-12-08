@@ -1,13 +1,13 @@
 // @file
 // Styles for Pager.
 
-@use '../../01-core' as *;
+@use '../../01-core'as *;
 
 %pager__link {
   background-color: transparent;
-  color: $black;
-  min-width: units(5);
-  padding: units(1);
+  color: var(--color-black);
+  min-width: var(--size-10);
+  padding: var(--size-2);
 
   &:focus {
     outline: 1px dotted $primary;
@@ -48,7 +48,7 @@
 .pager__item--current.pager__item {
   @extend %pager__link;
   background-color: $primary;
-  color: $white;
+  color: var(--color-white);
 }
 
 .pager__link {
@@ -57,31 +57,31 @@
   text-decoration: none;
 
   &:visited {
-    color: $black;
+    color: var(--color-black);
   }
 
   &:hover,
   &:focus {
     background-color: $primary;
-    color: $white;
+    color: var(--color-white);
   }
 
   &:active {
     background-color: $primary;
-    color: $white;
+    color: var(--color-white);
   }
 }
 
 .pager__link--previous,
 .pager__link--next {
   background-color: transparent;
-  color: $black;
+  color: var(--color-black);
   position: relative;
 
   &:hover,
   &:focus {
     background-color: transparent;
-    color: $black;
+    color: var(--color-black);
 
     .pager__link-icon g {
       fill: $primary;
@@ -89,23 +89,23 @@
   }
 
   &:visited {
-    color: $black;
+    color: var(--color-black);
   }
 }
 
 .pager__item--previous {
-  margin-right: units(1);
+  margin-right: var(--size-2);
 
   .pager__link {
-    padding-left: units(4);
+    padding-left: var(--size-8);
   }
 }
 
 .pager__item--next {
-  margin-left: units(1);
+  margin-left: var(--size-2);
 
   .pager__link {
-    padding-right: units(4);
+    padding-right: var(--size-8);
   }
 }
 
@@ -114,10 +114,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-48%);
-  width: units(3);
+  width: var(--size-6);
 
   g {
-    fill: $black;
+    fill: var(--color-black);
   }
 
   .pager__item--next & {

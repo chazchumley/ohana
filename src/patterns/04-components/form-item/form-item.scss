@@ -4,7 +4,7 @@
 @use '../../01-core' as *;
 
 .form-item {
-  margin: 0 0 units(1);
+  margin: 0 0 var(--size-2);
 }
 
 .form-item__label {
@@ -23,7 +23,7 @@
 
 .form-item__description {
   color: $gray-500;
-  font-size: font-size(5);
+  font-size: var(--scale-2);
 
   > :last-child {
     margin-bottom: 0;
@@ -54,17 +54,17 @@
   border: 1px solid $gray-300;
   border-radius: 0;
   display: inline-block;
-  font-size: font-size(3);
-  margin: units(0.5) 0;
+  font-size: var(--scale-0);
+  margin: var(--size-1) 0;
   max-width: 100%;
-  padding: units(1.5) units(1);
+  padding: var(--size-3) var(--size-2);
   transition-duration: 200ms;
   transition-property: background-color, border;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    background-color: $white;
+    background-color: var(--color-white);
     border: 1px solid $gray-500;
   }
 
