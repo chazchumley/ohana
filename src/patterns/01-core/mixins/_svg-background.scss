@@ -4,4 +4,6 @@
 @mixin svg-background($path) {
   background-image: url($path), linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
 }

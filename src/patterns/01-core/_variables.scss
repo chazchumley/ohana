@@ -49,8 +49,8 @@ $xlarge-screen: 1200px;
 $xxlarge-screen: 1400px;
 
 // Gutters
-$gutter-width: units(2.5);
-$grid-gutter-width: units(5);
+$gutter-width: var(--size-5);
+$grid-gutter-width: var(--size-10);
 
 // Contstraints
 $max-width: rem(1440px) !default;

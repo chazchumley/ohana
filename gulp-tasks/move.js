@@ -13,11 +13,11 @@ module.exports = {
   moveFonts: function() {
     return src(
       [
-        './src/patterns/global/fonts/**/*.woff',
-        './src/patterns/global/fonts/**/*.woff2',
-        './src/patterns/global/fonts/**/*.eot',
-        './src/patterns/global/fonts/**/*.ttf',
-        './src/patterns/global/fonts/**/*.svg'
+        './src/patterns/02-base/fonts/**/*.woff',
+        './src/patterns/02-base/fonts/**/*.woff2',
+        './src/patterns/02-base/fonts/**/*.eot',
+        './src/patterns/02-base/fonts/**/*.ttf',
+        './src/patterns/02-base/fonts/**/*.svg'
       ],
       { base: './' }
     )
