@@ -1,0 +1,21 @@
+{
+    "name": "chazchumley/ohana",
+    "description": "A Pattern Lab based Drupal starter theme.",
+    "type": "drupal-theme",
+    "license": "GPL-2.0-or-later",
+    "support": {
+        "issues": "https://github.com/chazchumley/ohana/issues",
+        "source": "https://github.com/chazchumley/ohana"
+    },
+    "authors": [
+        {
+            "name": "Chaz Chumley",
+            "email": "chaz.chumley@gmail.com"
+        }
+    ],
+    "require": {
+        "drupal/components": "^2.4",
+        "drupal/twig_field_value": "^2.0",
+        "drupal/twig_tweak": "^3.1"
+    }
+}
