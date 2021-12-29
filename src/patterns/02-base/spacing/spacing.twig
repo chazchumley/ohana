@@ -7,12 +7,10 @@
  *
 #}
 
-
 <table class="pl-spacing">
   <thead>
     <tr>
-      <th class="pl-spacing__header">Unit</th>
-      <th class="pl-spacing__header">REM</th>
+      <th class="pl-spacing__header">Size</th>
       <th class="pl-spacing__header">PX</th>
       <th class="pl-spacing__header">Example</th>
     </tr>
@@ -20,8 +18,7 @@
   <tbody>
     {% for item in spacing|sort %}
       <tr>
-        <td class="pl-spacing__cell">{{ item.unit }}</td>
-        <td class="pl-spacing__cell">{{ item.rem }}</td>
+        <td class="pl-spacing__cell">{{ item.size }}</td>
         <td class="pl-spacing__cell">{{ item.px }}</td>
         <td class="pl-spacing__cell">
           <div style="height:{{ item.px }}; width:{{ item.px }}; background-color: #ccc;"></div>
