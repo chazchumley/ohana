@@ -256,7 +256,7 @@ function drush_ohana($human_readable_name = NULL) {
   $machine_name = preg_replace($search, '', $machine_name);
 
   // Description of theme.
-  $description = (drush_get_option('description')) ? trim(drush_get_option('description')) : 'Theme based on <a href="http://ohana.info">ohana</a>.';
+  $description = (drush_get_option('description')) ? trim(drush_get_option('description')) : 'Theme based on <a href="https://github.com/chazchumley/ohana">Ohana</a>.';
 
   // Determine the path to the new theme.
   $theme_path = 'custom';
