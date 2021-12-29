@@ -11,6 +11,10 @@ Autoprefixer & Babel is set to support the last 2 versions of modern browsers
 
 These can be updated at any time within the `package.json`.
 
+## Initialize a custom theme from Ohana by running this command within this directory:
+`php ohana.php "[Theme Name]"` (where `[Theme Name]` is the name of your custom theme, e.g. `"My Theme"`)
+This will result in a clone of this theme located at `themes/custom/[theme-name]` where `[theme-name]` is the machine-readable version of `"[Theme Name]"` entered above (which in the `"My Theme"` example would result in a machine name of `my-theme`). Use that theme to create any customizations for your site and refer back to this Ohana theme for any necessary updates in the future.
+
 ## Run the following commands from the theme directory
 If you haven't yet, install nvm:
 https://github.com/creationix/nvm
