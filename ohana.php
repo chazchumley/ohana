@@ -201,7 +201,7 @@ function ohana_drush_command() {
   $items = array();
 
   $items['ohana'] = array(
-    'description' => 'Create an ohana-based theme.',
+    'description' => 'Create an Ohana-based theme.',
     'arguments' => array(
       'human_readable_name' => 'The name of your theme.',
     ),
@@ -212,8 +212,8 @@ function ohana_drush_command() {
       'slim' => 'Only copy base files',
     ),
     'examples' => array(
-      'php ohana.php "My Awesome Theme"' => 'Creates an ohana theme called "My Awesome Theme", using the default options.',
-      'php ohana.php "My Awesome Theme" --machine-name mat' => 'Creates a ohana theme called "My Awesome Theme" with the specific machine name "mat".',
+      'php ohana.php "My Awesome Theme"' => 'Creates an Ohana theme called "My Awesome Theme", using the default options.',
+      'php ohana.php "My Awesome Theme" --machine-name mat' => 'Creates a Ohana theme called "My Awesome Theme" with the specific machine name "mat".',
     ),
   );
 
@@ -226,7 +226,7 @@ function ohana_drush_command() {
 function ohana_drush_help($section) {
   switch ($section) {
     case 'drush:ohana':
-      return dt('This command will create an ohana theme. See examples to get started.');
+      return dt('This command will create an Ohana theme. See examples to get started.');
   }
 }
 
@@ -237,7 +237,7 @@ function drush_ohana($human_readable_name = NULL) {
 
   // If no $human_readable_name provided, abort.
   if (!$human_readable_name) {
-    print(dt('Theme name missing. See help using \'drush help ohana\'.'));
+    print(dt('Theme name missing. See help using \'drush help Ohana\'.'));
     return;
   }
 
@@ -393,7 +393,7 @@ function drush_ohana_create($human_readable_name, $machine_name, $description, $
  */
 function _ohana_get_alterations($human_readable_name, $machine_name, $description) {
   return array(
-    'ohana' => $human_readable_name,
+    'Ohana' => $human_readable_name,
     'ohana' => $machine_name,
     'Theme using Storybook and component-driven development' => $description,
     'hidden: true' => '',
@@ -790,7 +790,7 @@ function _ohana_notify_fail($path = '', $message = '') {
  */
 function _ohana_notify_success($human_readable_name, $theme_path) {
   // Notify user of the newly created theme.
-  $message = 'Successfully created the ohana theme "!name" created in: !path, you can now run \'yarn\' or \'npm install\' to install.';
+  $message = 'Successfully created the Ohana theme "!name" created in: !path, you can now run \'yarn\' or \'npm install\' to install.';
 
   $message = dt($message, array(
     '!name' => $human_readable_name,
