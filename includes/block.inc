@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Provides the necessary hooks for the block theme suggestions.
+ * Block-related hook implementations.
  */
 
 use Drupal\block_content\BlockContentInterface;

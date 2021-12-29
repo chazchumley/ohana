@@ -1,37 +1,12 @@
-{% if type == 'error' %}
-  {% set classes = [
-    'message',
-    'message--error',
-    modifier ? modifier,
-    attributes ? attributes.class
-  ]|join(' ')|trim %}
-{% elseif type == 'warning' %}
-  {% set classes = [
-    'message',
-    'message--warning',
-    modifier ? modifier,
-    attributes ? attributes.class
-  ]|join(' ')|trim %}
-{% else %}
-  {% set classes = [
-    'message',
-    'message--status',
-    modifier ? modifier,
-    attributes ? attributes.class
-  ]|join(' ')|trim %}
-{% endif %}
+{{ attach_library('ohana/message') }}
 
-<div class="{{ classes }}" {% if type == 'error' %} role="alert" {% else %} role="contentinfo" {% endif %} {% if heading %}aria-label="{{ heading }}"{% endif %} {{ attributes ? attributes|without('class','id') }}>
-  <div class="message__content">
-    <h2 class="visually-hidden">{{ heading }}</h2>
-    {% if messages|length > 1 %}
-      <ul class="message__list">
-        {% for message in messages %}
-          <li class="message__item">{{- message -}}</li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      {{- messages|first -}}
-    {% endif %}
+{% for type, messages in message_list %}
+  <div {% if type == 'error' %} role="alert" {% else %} role="contentinfo" {% endif %} aria-label="{{ status_headings[type] }}"{{ attributes ? attributes|without('role', 'aria-label') }} class="message message--{{ type }}">
+    <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
+    <ul class="message__list">
+      {% for message in messages %}
+        <li class="message__item">{{- message -}}</li>
+      {% endfor %}
+    </ul>
   </div>
-</div>
+{% endfor %}

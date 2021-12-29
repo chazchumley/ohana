@@ -34,11 +34,11 @@
 {% extends '@layouts/page/page.twig' %}
   {% block header %}
     {{ page.header }}
-    {{ page.help }}
-    {{ page.highlighted }}
   {% endblock %}
 
   {% block main %}
+    {{ page.help }}
+    {{ page.highlighted }}
     {{ page.preface }}
     {{ page.content }}
     {{ page.postscript }}

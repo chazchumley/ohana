@@ -1,15 +1,11 @@
-{#
-/**
- * @file
- * Theme override for a 'form' element.
- *
- * Available variables
- * - attributes: A list of HTML attributes for the wrapper element.
- * - children: The child elements of the form.
- *
- * @see template_preprocess_form()
- */
-#}
-<form{{ attributes }}>
-  {{ children }}
-</form>
+{% embed '@layouts/form/form.twig' with {
+  'constrain': 'l-constrain'
+} %}
+
+  {% block content %}
+    <form{{ attributes }}>
+      {{ children }}
+    </form>
+  {% endblock %}
+
+{% endembed %}
