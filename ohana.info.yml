@@ -1,7 +1,6 @@
 name: Ohana
 type: theme
 description: 'Pattern Lab based starter theme.'
-package: Core
 core_version_requirement: ^8.8 || ^9
 base theme: stable
 dependencies:
