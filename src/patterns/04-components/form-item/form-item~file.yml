@@ -1,0 +1,15 @@
+---
+type: 'file'
+name: 'file'
+errors: ''
+is_disabled: false
+is_required: false
+is_full_width: false
+label_display: 'before'
+label: '<label class="form-item__label" for="edit-file">Default file input example</label>'
+description_display: 'after'
+description:
+  content: ''
+prefix: ''
+suffix: ''
+children: '<input class="form-item__file" id="edit-file" type="file" size="60" maxlength="128" accept="image/*">'

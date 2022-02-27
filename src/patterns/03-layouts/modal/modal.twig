@@ -1,0 +1,12 @@
+{{ attach_library('ohana/modal')}}
+
+<div class="l-modal {{ modifier }}" style="display: none;">
+  <div class="l-constrain">
+    <a class="l-modal__close" href="#">X</a>
+    <div class="l-modal__grid">
+      {% block items %}
+        {{ content|default('<p style="border: 1px dashed #333; color:#333; padding:1rem; margin:0;">Modal Content</p>') }}
+      {% endblock %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+// @file
+// Utility classes for Animation
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.slide-down {
+  animation-name: slideDown;
+}
+
+.slide-up {
+  animation-name: slideUp;
+}
+
+.is-animated {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  will-change: transform,opacity;
+}

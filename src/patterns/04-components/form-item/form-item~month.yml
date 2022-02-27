@@ -1,0 +1,15 @@
+---
+type: 'month'
+name: 'month'
+errors: ''
+is_disabled: false
+is_required: false
+is_full_width: false
+label_display: 'before'
+label: '<label class="form-item__label" for="edit-month">Month</label>'
+description_display: 'after'
+description:
+  content: 'The description for this form field'
+prefix: ''
+suffix: ''
+children: '<input class="form-item__month" id="edit-month" type="month" size="12">'

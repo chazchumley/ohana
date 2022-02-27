@@ -12,7 +12,8 @@ $tabs-item-margin: 0 0 var(--size-2) 0;
 $tabs-item-margin-small: 0 var(--size-2) 0 0;
 
 $tabs-link-border-radius: var(--size-1);
-$tabs-link-font-size: var(--scale-2);
+$tabs-link-font-family: var(--font-sans);
+$tabs-link-font-size: var(--scale-0);
 $tabs-link-padding: var(--size-2) var(--size-4);
 $tabs-link-bg: $primary;
 $tabs-link-color: var(--color-white);
@@ -31,6 +32,12 @@ $tabs-link-active-color: var(--color-white);
   border-radius: $tabs-border-radius;
   margin-bottom: $tabs-margin-bottom;
   padding: $tabs-padding;
+
+  // Tabs in Drupal toolbar
+  .toolbar-tab & {
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
 
 .tabs__items {
@@ -64,6 +71,7 @@ $tabs-link-active-color: var(--color-white);
   border-radius: $tabs-link-border-radius;
   color: $tabs-link-color;
   display: inline-block;
+  font-family: $tabs-link-font-family;
   font-size: $tabs-link-font-size;
   padding: $tabs-link-padding;
   text-align: center;

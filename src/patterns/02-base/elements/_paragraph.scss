@@ -2,6 +2,7 @@
 // Paragraph styles.
 
 p {
+  font-size: var(--scale-2);
   margin: 0 0 var(--size-4);
 
   @media print {

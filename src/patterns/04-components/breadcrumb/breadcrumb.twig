@@ -1,3 +1,5 @@
+{{ attach_library('ohana/breadcrumb') }}
+
 {% set breadcrumb_id = 'breadcrumb-label-' ~ random(1, 20) %}
 
 <nav aria-labelledby="{{ breadcrumb_id }}" class="breadcrumb {{ modifier }}" role="navigation">

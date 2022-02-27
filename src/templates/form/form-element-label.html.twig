@@ -1,8 +1,8 @@
 {% set classes = [
   'form-item__label',
-  title_display == 'after' ? 'is-after',
-  title_display == 'invisible' ? 'visually-hidden',
-  required ? 'is-required',
+  is_disabled ? 'is-disabled',
+  is_required ? 'is-required',
+  label_display == 'invisible' ? 'u-visually-hidden',
   required ? 'js-form-required',
 ] %}
 

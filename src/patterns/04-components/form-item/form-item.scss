@@ -4,11 +4,14 @@
 @use '../../01-core' as *;
 
 .form-item {
-  margin: 0 0 var(--size-2);
+  margin: 0 0 var(--size-4);
 }
 
 .form-item__label {
-  display: block;
+  display: inline-block;
+  font-family: var(--font-system);
+  font-size: var(--scale-0);
+  margin-bottom: var(--size-2);
 
   .is-disabled > & {
     opacity: 0.35;
@@ -22,8 +25,10 @@
 }
 
 .form-item__description {
-  color: $gray-500;
-  font-size: var(--scale-2);
+  color: $gray-600;
+  font-family: var(--font-system);
+  font-size: var(--scale-00);
+  margin-top: var(--size-1);
 
   > :last-child {
     margin-bottom: 0;
@@ -31,10 +36,10 @@
 }
 
 .form-item__required-marker::before {
+  color: $red;
   content: '*';
 }
 
-%form-item__box,
 .form-item__color,
 .form-item__date,
 .form-item__email,
@@ -52,25 +57,23 @@
   appearance: none;
   background-color: $gray-100;
   border: 1px solid $gray-300;
-  border-radius: 0;
-  display: inline-block;
+  border-radius: var(--size-1);
+  display: block;
+  font-family: var(--font-system);
   font-size: var(--scale-0);
-  margin: var(--size-1) 0;
   max-width: 100%;
-  padding: var(--size-3) var(--size-2);
-  transition-duration: 200ms;
-  transition-property: background-color, border;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: var(--size-2) var(--size-3);
+  transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: var(--color-white);
     border: 1px solid $gray-500;
   }
 
   &:not([disabled]) {
     &:focus {
-      @include focus-outline;
+      box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+      outline: 0;
     }
   }
 
@@ -88,26 +91,310 @@
   .is-full-width > & {
     width: 100%;
   }
+}
 
-  .is-dark & {
-    background-color: $gray-600;
-    border: 1px solid $gray-600;
-    color: $gray-100;
+// Form Item: Textarea
+.form-item__textarea {
+  height: auto;
+}
 
-    &:hover,
-    &:focus {
-      background-color: $gray-600;
-      border: 1px solid $gray-600;
-      color: $gray-100;
+// Form Item: Checkbox
+.form-item--checkbox {
+  margin-bottom: var(--size-2);
+}
+
+.form-item--checkbox.has-visible-label-after {
+  .form-item__checkbox {
+    @include visually-hidden;
+
+    + .form-item__label {
+      cursor: pointer;
+      display: block;
+
+      &::before {
+        background: var(--color-white);
+        border: 1px solid $gray-500;
+        content: '\a0';
+        display: inline-block;
+        height: var(--size-5);
+        line-height: var(--size-5);
+        margin-right: var(--size-2);
+        text-indent: 0.15em;
+        transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out, color 200ms ease-in-out, opacity 200ms ease-in-out, text-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+        vertical-align: middle;
+        width: var(--size-5);
+      }
     }
 
-    &::placeholder {
-      color: $gray-100;
-      opacity: 1;
+    &:checked + .form-item__label::before {
+      @include svg-background('/img/correct.svg');
+      background-color: $primary;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: var(--size-5);
+    }
+
+    &:focus + .form-item__label::before {
+      box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+      outline: 0;
+    }
+
+    &:disabled + .form-item__label {
+      cursor: default;
+      opacity: 0.35;
+
+      &::before {
+        cursor: not-allowed;
+      }
     }
   }
 }
 
-.form-item__textarea {
-  height: auto;
+// Form Item: Radio
+.form-item--radio {
+  margin-bottom: var(--size-2);
+
+  .form-item__radio {
+    appearance: none;
+    background-color: var(--color-white);
+    border: 1px solid $gray-500;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px transparent;
+    cursor: pointer;
+    height: var(--size-4);
+    margin-right: var(--size-1);
+    outline: none;
+    position: relative;
+    top: 2px;
+    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, border-radius 200ms ease-in-out;
+    width: var(--size-4);
+
+    &:checked {
+      background-color: $primary;
+      border: 2px solid var(--color-white);
+      box-shadow: 0 0 0 2px $primary;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.35;
+    }
+
+    + .form-item__label {
+      cursor: pointer;
+      display: inline;
+    }
+
+    &:disabled + .form-item__label {
+      cursor: default;
+      opacity: 0.35;
+    }
+  }
+}
+
+// Form Item: Range
+.form-item--range {
+  .form-item__range {
+    appearance: none;
+    background: transparent;
+    height: 1.5rem;
+    padding: 0;
+    width: 100%;
+
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+
+      &::-moz-range-thumb {
+        box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+      }
+
+      &::-webkit-slider-thumb {
+        box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+      }
+    }
+
+    // Remove outer focus styling on Firefox.
+    &::-moz-focus-outer {
+      border: 0;
+    }
+
+    &::-moz-range-thumb {
+      appearance: none;
+      background: $primary;
+      border: 0;
+      border-radius: 1rem;
+      box-shadow: inset 0 1px 2px rgba(var(--color-black), .075);
+      cursor: pointer;
+      height: 1rem;
+      transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      width: 1rem;
+
+      &:active {
+        background-color: tint-color($primary, 70%);
+      }
+    }
+
+    &::-moz-range-track {
+      background-color: $gray-300;
+      border-color: transparent;
+      border-radius: 1rem;
+      box-shadow: inset 0 1px 2px rgba(var(--color-black), .075);
+      color: transparent;
+      cursor: pointer;
+      height: 0.5rem;
+      width: 100%;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background: $primary;
+      border: 0;
+      border-radius: 1rem;
+      box-shadow: 0 .1rem .25rem rgba(var(--color-black), .1);
+      height: 1rem;
+      margin-top: -0.25rem;
+      transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      width: 1rem;
+
+      &:active {
+        background-color: tint-color($primary, 70%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+      }
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-color: $gray-300;
+      border-color: transparent;
+      border-radius: 1rem;
+      box-shadow: inset 0 1px 2px rgba(var(--color-black), .075);
+      color: transparent;
+      cursor: pointer;
+      height: 0.5rem;
+      width: 100%;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::-moz-range-thumb,
+    &::-webkit-slider-thumb {
+      background-color: $gray-500;
+    }
+  }
+
+  &.is-full-width > .form-item__range {
+    width: 100%;
+  }
+}
+
+// Form Item: File
+.form-item--file {
+  .form-item__file {
+    appearance: none;
+    background-color: var(--color-white);
+    background-clip: padding-box;
+    border: 1px solid $gray-400;
+    border-radius: 0.25rem;
+    box-shadow: inset 0 1px 2px rgba(var(--color-black), .075);
+    display: block;
+    font-family: var(--font-system);
+    font-size: var(--scale-0);
+    font-weight: var(--font-regular);
+    line-height: var(--line-md);
+    overflow: hidden;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+
+    &::file-selector-button {
+      background-color: $gray-200;
+      border-color: inherit;
+      border-inline-end-width: 1px;
+      border-radius: 0;
+      border-style: solid;
+      border-width: 0;
+      color: $gray-900;
+      margin-inline-end: var(--size-2);
+      margin: (-var(--size-1)) (-var(--size-2));
+      padding: var(--size-1) var(--size-2);
+      pointer-events: none;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &:hover:not(:disabled):not([readonly])::file-selector-button {
+      background-color: shade-color($gray-200, 5%);
+    }
+
+    &::-webkit-file-upload-button {
+      background-color: $gray-200;
+      border-color: inherit;
+      border-inline-end-width: 1px;
+      border-radius: 0;
+      border-style: solid;
+      border-width: 0;
+      color: $gray-900;
+      margin-inline-end: var(--size-2);
+      margin: (-var(--size-1)) (-var(--size-2));
+      padding: var(--size-1) var(--size-2);
+      pointer-events: none;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+      background-color: shade-color($gray-200, 5%);
+    }
+  }
+}
+
+// Form Item: Color
+.form-item--color {
+  .form-item__color {
+    height: auto;
+    max-width: 3rem;
+    padding: var(--size-1);
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+
+    &::-moz-color-swatch {
+      border-radius: 0.25rem;
+      height: 1.5em;
+    }
+
+    &::-webkit-color-swatch {
+      border-radius: 0.25rem;
+      height: 1.5em;
+    }
+  }
+}
+
+// Form Item: Select
+.form-item--select {
+  .form-item__select {
+    @include svg-background('/img/select-arrows.svg');
+    background-position: right var(--size-2) center; // LTR
+    background-repeat: no-repeat;
+    background-size: var(--size-5);
+    display: block;
+    padding-right: var(--size-10);
+
+    // Remove inner focus styling on Firefox.
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 var(--color-black);
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
 }

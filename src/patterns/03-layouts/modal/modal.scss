@@ -1,0 +1,26 @@
+// @file
+// Styles for Modal Layout.
+
+@use '../../01-core' as *;
+
+.l-modal {
+  background: var(--color-black);
+  color: var(--color-white);
+  max-height: 700px;
+  min-height: 300px;
+  padding: var(--size-2) 0 var(--size-7);
+}
+
+.l-modal__close {
+  color: $gray-500;
+  display: flex;
+  font-family: var(--font-sans);
+  font-size: var(--scale-3);
+  justify-content: flex-end;
+}
+
+.l-modal__grid {
+  display: grid;
+  grid-gap: var(--size-10);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
