@@ -1,25 +1,25 @@
 :where(html) {
-  --size-xs: 0.063rem; /* 1px */
-  --size-sm: 0.125rem; /* 2px */
-  --size-05: 0.25rem; /* 4px */
-  --size-1: 0.5rem; /* 8px */
-  --size-105: 0.75rem; /* 12px */
-  --size-2: 1rem; /* 16px */
-  --size-205: 1.25rem; /* 20px */
-  --size-3: 1.5rem; /* 24px */
-  --size-4: 2rem; /* 32px */
-  --size-5: 2.5rem; /* 40px */
-  --size-6: 3rem; /* 48px */
-  --size-7: 3.5rem; /* 56px */
-  --size-8: 4rem; /* 64px */
-  --size-9: 4.5rem; /* 72px */
-  --size-10: 5rem; /* 80px */
-  --size-11: 5.5rem; /* 88px */
-  --size-12: 6rem; /* 96px */
-  --size-13: 6.5rem; /* 104px */
-  --size-14: 7rem; /* 112px */
-  --size-15: 7.5rem; /* 120px */
-  --size-20: 10rem; /* 160px */
+  --size-xs: 0.063rem; // 1px
+  --size-sm: 0.125rem; // 2px
+  --size-05: 0.25rem;  // 4px
+  --size-1: 0.5rem;    // 8px
+  --size-105: 0.75rem; // 12px
+  --size-2: 1rem;      // 16px
+  --size-205: 1.25rem; // 20px
+  --size-3: 1.5rem;    // 24px
+  --size-4: 2rem;      // 32px
+  --size-5: 2.5rem;    // 40px
+  --size-6: 3rem;      // 48px
+  --size-7: 3.5rem;    // 56px
+  --size-8: 4rem;      // 64px
+  --size-9: 4.5rem;    // 72px
+  --size-10: 5rem;     // 80px
+  --size-11: 5.5rem;   // 88px
+  --size-12: 6rem;     // 96px
+  --size-13: 6.5rem;   // 104px
+  --size-14: 7rem;     // 112px
+  --size-15: 7.5rem;   // 120px
+  --size-20: 10rem;    // 160px
   --size-fluid-1: clamp(.5rem, 1vw, 1rem);
   --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
   --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
