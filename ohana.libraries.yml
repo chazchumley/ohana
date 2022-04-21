@@ -1,0 +1,133 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap: { type: external }
+      dist/css/global.css: {}
+      dist/css/toolbar.css: {}
+      dist/css/button.css: {}
+
+block:
+  css:
+    layout:
+      dist/css/block.css: {}
+
+content:
+  css:
+    layout:
+      dist/css/content.css: {}
+
+footer:
+  css:
+    layout:
+      dist/css/footer.css: {}
+
+form:
+  css:
+    layout:
+      dist/css/form.css: {}
+
+header:
+  css:
+    layout:
+      dist/css/header.css: {}
+
+modal:
+  css:
+    layout:
+      dist/css/modal.css: {}
+
+nav:
+  css:
+    layout:
+      dist/css/nav.css: {}
+
+page:
+  css:
+    layout:
+      dist/css/page.css: {}
+
+region:
+  css:
+    layout:
+      dist/css/region.css: {}
+
+section:
+  css:
+    layout:
+      dist/css/section.css: {}
+
+sidebar:
+  css:
+    layout:
+      dist/css/sidebar.css: {}
+
+view:
+  css:
+    layout:
+      dist/css/view.css: {}
+
+breadcrumb:
+  css:
+    component:
+      dist/css/breadcrumb.css: {}
+
+field:
+  css:
+    component:
+      dist/css/field.css: {}
+
+form-item:
+  css:
+    component:
+      dist/css/form-item.css: {}
+
+menu:
+  css:
+    component:
+      dist/css/menu.css: {}
+
+message:
+  css:
+    component:
+      dist/css/message.css: {}
+
+pager:
+  css:
+    component:
+      dist/css/pager.css: {}
+
+page-title:
+  css:
+    component:
+      dist/css/page-title.css: {}
+
+site-logo:
+  css:
+    component:
+      dist/css/site-logo.css: {}
+
+site-name:
+  css:
+    component:
+      dist/css/site-name.css: {}
+
+site-slogan:
+  css:
+    component:
+      dist/css/site-slogan.css: {}
+
+skiplinks:
+  css:
+    component:
+      dist/css/skiplinks.css: {}
+
+tabs:
+  css:
+    component:
+      dist/css/tabs.css: {}
+
+view-unformatted:
+  css:
+    component:
+      dist/css/view-unformatted.css: {}

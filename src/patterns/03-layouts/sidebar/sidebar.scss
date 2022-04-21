@@ -1,0 +1,46 @@
+// @file
+// Styles for the Sidebar layout.
+
+@use '../../01-core' as *;
+
+$l-sidebar-width: 300px;
+
+.l-sidebar {
+  margin-bottom: var(--size-10);
+  width: 100%;
+}
+
+.l-sidebar__grid {
+  @media(min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.l-sidebar__aside {
+  @media(min-width: $screen-md) {
+    display: block;
+    flex-basis: $l-sidebar-width;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: $l-sidebar-width;
+
+    .l-sidebar--right & {
+      order: 1;
+    }
+  }
+}
+
+.l-sidebar__main {
+  max-width: 100%;
+  position: relative;
+
+  @media(min-width: $screen-md) {
+    flex-basis: calc(100% - #{$l-sidebar-width});
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: calc(100% - #{$l-sidebar-width});
+  }
+}

@@ -1,0 +1,36 @@
+name: Ohana
+type: theme
+description: 'Pattern Lab based starter theme.'
+package: Core
+core_version_requirement: ^8.8 || ^9
+base theme: false
+dependencies:
+  - components
+  - twig_tweak
+  - twig_field_value
+
+libraries:
+  - ohana/global
+
+ckeditor_stylesheets:
+  - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap
+  - dist/css/global.css
+
+regions:
+  page_top: 'Page top'
+  header: Header
+  help: Help
+  highlighted: Highlighted
+  preface: Preface
+  content: Content
+  postscript: Postscript
+  footer: Footer
+  hidden: Hidden
+  page_bottom: 'Page bottom'
+
+components:
+  namespaces:
+    layouts: src/patterns/03-layouts
+    components: src/patterns/04-components
+    composites: src/patterns/05-composites
+    templates: src/patterns/06-templates

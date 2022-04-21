@@ -1,0 +1,20 @@
+// @file
+// Styles for Font face.
+
+// Droid Serif Regular.
+@font-face {
+  font-family: 'droid';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url('../fonts/DroidSerif-Regular-webfont.woff') format('woff');
+}
+
+// Droid Serif Bold.
+@font-face {
+  font-family: 'droid';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url('../fonts/DroidSerif-Bold-webfont.woff') format('woff');
+}

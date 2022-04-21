@@ -1,0 +1,21 @@
+{{ attach_library('ohana/header') }}
+
+{% set classes = [
+  'l-header',
+  modifier ? modifier : '',
+  attributes ? attributes.class
+]|join(' ')|trim %}
+
+<header class="{{ classes }}" {{ attributes ? attributes|without('class','id') }} role="banner">
+  {% if constrain %}
+    <div class="{{ constrain }}">
+  {% endif %}
+
+  {% block content %}
+    {{ content|default('<p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Header Content</p>') }}
+  {% endblock %}
+
+  {% if constrain %}
+    </div>
+  {% endif %}
+</header>

@@ -1,0 +1,13 @@
+// @file
+// Dialog element styles.
+
+:where(dialog) {
+  background-color: var(--gray-0);
+  color: inherit;
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-6);
+
+  &::backdrop {
+    backdrop-filter: blur(25px);
+  }
+}

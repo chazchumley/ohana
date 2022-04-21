@@ -1,0 +1,6 @@
+// @file
+// Progress element styles.
+
+:where(progress) {
+  vertical-align: baseline;
+}

@@ -1,0 +1,15 @@
+{{ attach_library('ohana/footer') }}
+
+<footer class="l-footer {{ modifier }}" role="contentinfo">
+  {% if constrain %}
+    <div class="{{ constrain }}">
+  {% endif %}
+
+  {% block content %}
+    {{ content|default('<p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Footer Content</p>') }}
+  {% endblock %}
+
+  {% if constrain %}
+    </div>
+  {% endif %}
+</footer>

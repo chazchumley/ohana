@@ -1,0 +1,16 @@
+// @file
+// Button element styles.
+
+@use '../../01-core' as *;
+
+:where(button) {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+:where(button label[for]) {
+  cursor: pointer;
+  touch-action: manipulation;
+}

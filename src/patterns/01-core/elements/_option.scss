@@ -1,0 +1,12 @@
+// @file
+// Options element styles.
+
+// :where(option) {}
+
+:where(optgroup) {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: var(--font-bold);
+  line-height: var(--line-xs);
+  margin: 0;
+}

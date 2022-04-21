@@ -1,0 +1,11 @@
+---
+modifier: 'l-sidebar--right'
+constrain: ''
+header: |-
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Optional Header</p>
+aside: |-
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Optional Aside</p>
+main: |-
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Main Content</p>
+footer: |-
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Optional Footer</p>

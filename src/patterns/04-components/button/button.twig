@@ -1,0 +1,5 @@
+{% if button %}
+  <button class="button {{ modifier }}" {% if disabled %} disabled {% endif %}>{{ text|default('Button Text') }}</button>
+{% else %}
+  <a href="{{ url }}" class="button {{ modifier }}">{{ text|default('Button Text') }}</a>
+{% endif %}

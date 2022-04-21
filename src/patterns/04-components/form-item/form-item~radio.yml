@@ -1,0 +1,15 @@
+---
+type: 'radio'
+name: 'radio'
+errors: ''
+is_disabled: false
+is_required: false
+is_full_width: false
+label_display: 'after'
+label: '<label class="form-item__label" for="radio">Option</label>'
+description_display: 'after'
+description:
+  content: ''
+prefix: ''
+suffix: ''
+children: '<input class="form-item__radio" id="radio" type="radio">'

@@ -1,0 +1,67 @@
+// @file
+// Typography mixins
+
+@mixin heading-base {
+  color: var(--gray-9);
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-900);
+  hyphens: none;
+  line-height: var(--font-lineheight-4);
+  margin: 0 0 var(--size-1);
+  text-rendering: optimizeLegibility;
+
+  @media print {
+    orphans: 3;
+    page-break-after: avoid;
+    widows: 3;
+
+    &::after {
+      display: inline-block;
+    }
+  }
+
+  * + & {
+    margin-top: var(--size-2);
+  }
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+@mixin heading-1 {
+  @include heading-base;
+  font-size: var(--font-size-10);
+  max-inline-size: var(--size-header-1);
+}
+
+@mixin heading-2 {
+  @include heading-base;
+  font-size: var(--font-size-8);
+  max-inline-size: var(--size-header-2);
+}
+
+@mixin heading-3 {
+  @include heading-base;
+  font-size: var(--font-size-6);
+  max-inline-size: var(--size-header-3);
+}
+
+@mixin heading-4 {
+  @include heading-base;
+  font-size: var(--font-size-5);
+  max-inline-size: var(--size-header-3);
+}
+
+@mixin heading-5 {
+  @include heading-base;
+  font-size: var(--font-size-3);
+  max-inline-size: var(--size-header-3);
+}
+
+@mixin heading-6 {
+  @include heading-base;
+  font-size: var(--font-size-1);
+  max-inline-size: var(--size-header-3);
+}

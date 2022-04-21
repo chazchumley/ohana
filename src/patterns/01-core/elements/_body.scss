@@ -1,0 +1,10 @@
+// @file
+// Body styles.
+
+:where(body) {
+  margin: 0;
+  min-block-size: 100%;
+  padding: 0;
+  scrollbar-gutter: stable both-edges;
+  word-wrap: break-word;
+}

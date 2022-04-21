@@ -1,0 +1,31 @@
+{#
+ /**
+  * @file
+  * Theme override for page title block.
+  */
+#}
+
+{% set classes = [
+  'l-block--provider-' ~ configuration.provider|clean_class,
+  'l-block--id-' ~ plugin_id|clean_class,
+] %}
+
+{% set attributes = attributes.addClass(classes) %}
+
+{% embed '@layouts/block/block.twig' with {
+  'attributes': attributes,
+  'block_wrapper': true,
+  'constrain': '',
+  'title_prefix': title_prefix,
+  'title_suffix': title_suffix,
+  'label': label is not empty ? label : false,
+  'content_wrapper': true
+} %}
+
+  {% block content %}
+    {% include '@components/page-title/page-title.twig' with {
+      'page_title': content['#title']
+    } %}
+  {% endblock %}
+
+{% endembed %}

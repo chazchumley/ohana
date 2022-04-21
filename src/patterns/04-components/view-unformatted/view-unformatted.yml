@@ -1,0 +1,8 @@
+---
+title: 'View Title'
+heading: 'h3'
+has_wrapper: true
+element: 'div'
+rows:
+ - content: |-
+    <div class="l-view__row" style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Row One</div>

@@ -1,0 +1,14 @@
+<section class="pl-colors">
+  {% for title, list in colors %}
+    <div class="just-for-gap">
+      <h3>{{ title }}</h3>
+      <article class="color-demo">
+        {% for color, hex in list %}
+          <div style="background-color: {{ hex }}">
+            <div>{{ color }}</div>
+          </div>
+        {% endfor %}
+      </article>
+    </div>
+  {% endfor %}
+</section>

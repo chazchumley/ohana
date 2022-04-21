@@ -1,0 +1,22 @@
+<section class="pl-sizes">
+  <table class="sizes-demo">
+    <thead>
+      <tr>
+        <th>Size</th>
+        <th>REM</th>
+        <th>PX</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in spacing %}
+      <tr>
+        <td>{{ item.size }}</td>
+        <td>{{ item.rem }}</td>
+        <td>{{ item.px }}</td>
+        <td><div style="block-size:{{ item.rem }}; background-color: gray;"></div></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>

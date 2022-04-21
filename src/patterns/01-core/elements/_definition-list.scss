@@ -1,0 +1,24 @@
+// @file
+// Definition list styles.
+
+:where(dd) {
+  max-inline-size: var(--size-content-2);
+  margin-bottom: var(--size-4);
+
+  dt + & {
+    margin-top: 0;
+  }
+}
+
+:where(dt) {
+  font-weight: var(--font-weight-700);
+  max-inline-size: var(--size-header-3);
+
+  &:not(:first-of-type) {
+    margin-block-start: var(--size-5);
+  }
+}
+
+:where(dl) {
+  font-size: var(--font-size-2);
+}

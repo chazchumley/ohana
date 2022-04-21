@@ -1,0 +1,53 @@
+// @file
+// Universal styles.
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  @media print {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}
+
+:where(:focus-visible) {
+  outline-color: var(--indigo-7);
+  outline-offset: 5px;
+  transition: outline-offset 145ms var(--ease-2);
+}
+
+:where(:not(fieldset, progress, meter)) {
+  border-width: 0;
+  border-style: solid;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+
+:where(:not(pre) > code, kbd) {
+  white-space: nowrap;
+}
+
+:where(:not(pre) > code) {
+  padding: var(--size-1) var(--size-2);
+  background: var(--gray-2);
+  border-radius: var(--radius-2);
+}
+
+:where(:not(dialog)) {
+  margin: 0;
+}
+
+:where([tabindex]:not([tabindex*="-"])) {
+  cursor: pointer;
+  touch-action: manipulation;
+}

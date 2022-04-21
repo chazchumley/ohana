@@ -1,0 +1,40 @@
+// @file
+// Heading styles.
+
+@use '../../01-core' as *;
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  @include heading-4;
+}
+
+h5 {
+  @include heading-5;
+}
+
+h6 {
+  @include heading-6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // Remove top margin for adjacent subheadings.
+  & + & {
+    margin-top: 0;
+  }
+}

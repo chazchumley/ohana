@@ -1,0 +1,9 @@
+{% embed '@layouts/form/form.twig' %}
+
+  {% block content %}
+    <form{{ attributes }}>
+      {{ children }}
+    </form>
+  {% endblock %}
+
+{% endembed %}

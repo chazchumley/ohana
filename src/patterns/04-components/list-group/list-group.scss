@@ -1,0 +1,79 @@
+// @file
+// Styles for list group.
+
+.list-group {
+  border-radius: var(--radius-2);
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+}
+
+.list-group__item {
+  background-color: white;
+  border-color: var(--gray-3);
+  border-style: solid;
+  border-width: var(--border-size-1);
+  color: var(--gray-8);
+  display: block;
+  margin: 0;
+  padding-block: var(--size-2);
+  padding-inline: var(--size-3);
+  position: relative;
+  text-decoration: none;
+
+  &:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  & + & {
+    border-top: 0;
+  }
+}
+
+// Variants
+.list-group--links {
+  .list-group__item {
+    &:hover,
+    &:focus {
+      background-color: var(--gray-1);
+      color: var(--gray-8);
+      z-index: var(--layer-1);
+    }
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    text-decoration: inherit;
+    width: 100%;
+  }
+}
+
+.list-group--flush {
+  border-radius: 0;
+
+  .list-group__item {
+    border-width: 0 0 var(--border-size-1);
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+}
+
+.list-group--numbered {
+  list-style-type: none;
+  counter-reset: section;
+
+  > li::before {
+    // Increments only this instance of the section counter
+    content: counters(section, '.') '. ';
+    counter-increment: section;
+  }
+}

@@ -1,0 +1,31 @@
+// @file
+// Styles for fields.
+
+.field {
+  margin-bottom: var(--size-4);
+}
+
+.field__label {
+  font-weight: var(--font-weight-700);
+  display: block;
+  margin-bottom: 0;
+
+  &.is-inline {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 0.25rem;
+
+    &::after {
+      content: ':';
+    }
+
+    + .field__content {
+      display: inline;
+    }
+  }
+}
+
+// Variants
+.field--tight {
+  margin-bottom: 0;
+}

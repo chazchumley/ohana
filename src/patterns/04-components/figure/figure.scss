@@ -1,0 +1,65 @@
+// @file
+// Styles for Figure.
+
+@use '../../01-core' as *;
+
+.figure {
+  display: table;
+  margin-bottom: var(--size-4);
+
+  &.u-align-left {
+    @media(min-width: $screen-sm) {
+      margin-right: var(--size-8);
+      max-width: calc(50% - #{var(--size-4)});
+    }
+  }
+
+  &.u-align-right {
+    @media(min-width: $screen-sm) {
+      margin-left: var(--size-8);
+      max-width: calc(50% - #{var(--size-4)});
+    }
+  }
+}
+
+.figure__caption {
+  caption-side: bottom;
+  display: table-caption;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-00);
+  font-weight: var(--font-weight-700);
+  line-height: var(--font-lineheight-2);
+  margin-top: var(--size-2);
+}
+
+.figure--center {
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--size-4);
+}
+
+.figure--left {
+  @media(min-width: $screen-sm) {
+    float: left;
+    margin-right: var(--layout-gutter);
+    max-width: calc(50% - #{var(--size-4)});
+  }
+}
+
+.figure--right {
+  @media(min-width: $screen-sm) {
+    float: right;
+    margin-left: var(--layout-gutter);
+    max-width: calc(50% - #{var(--size-4)});
+  }
+}
+
+.figure--video {
+  display: block;
+  width: 100%;
+
+  .figure__caption {
+    display: block;
+  }
+}

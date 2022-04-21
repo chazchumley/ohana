@@ -1,0 +1,33 @@
+// @file
+// Blockquote styles.
+
+:where(blockquote) {
+  border-inline-start-width: var(--border-size-3);
+  display: grid;
+  font-size: var(--font-size-2);
+  gap: var(--size-3);
+  margin: 0 0 var(--size-5);
+  max-inline-size: var(--size-content-2);
+  padding-block: var(--size-3);
+  padding-inline: var(--size-4);
+
+   * + & {
+    margin-top: var(--size-5);
+  }
+
+  p {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  @media print {
+    page-break-inside: avoid;
+  }
+}
+
+:where(:not(blockquote) > cite) {
+  padding-inline-start: var(--size-2);
+}

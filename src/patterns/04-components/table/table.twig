@@ -1,0 +1,42 @@
+{% if 'table--responsive' in modifier %}
+  <div class="table--responsive">
+{% endif %}
+  <table class="table {{ modifier|replace({'table--responsive': ''}) }}">
+    <thead>
+      <tr>
+        <th>Table Heading A</th>
+        <th>Table Heading B</th>
+        <th>Table Heading C</th>
+        <th>Table Heading D</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table Cell A1</td>
+        <td>Table Cell B1</td>
+        <td>Table Cell C1</td>
+        <td>Table Cell D1</td>
+      </tr>
+      <tr>
+        <td>Table Cell A2</td>
+        <td>Table Cell B2</td>
+        <td>Table Cell C2</td>
+        <td>Table Cell D2</td>
+      </tr>
+      <tr>
+        <td>Table Cell A3</td>
+        <td>Table Cell B3</td>
+        <td>Table Cell C3</td>
+        <td>Table Cell D3</td>
+      </tr>
+      <tr>
+        <td>Table Cell A4</td>
+        <td>Table Cell B4</td>
+        <td>Table Cell C4</td>
+        <td>Table Cell D4</td>
+      </tr>
+    </tbody>
+  </table>
+{% if 'table--responsive' in modifier %}
+  </div>
+{% endif %}

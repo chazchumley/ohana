@@ -1,0 +1,29 @@
+// @file
+// Details element styles.
+
+:where(details) {
+  background: var(--gray-2);
+  border-radius: var(--radius-2);
+  padding-block: var(--size-2);
+  padding-inline: var(--size-3);
+
+  &[open] > summary {
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+    margin-bottom: var(--size-2);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+:where(summary) {
+  background: var(--gray-3);
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  font-weight: var(--font-weight-700);
+  margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+  padding: var(--size-2) var(--size-3);
+  touch-action: manipulation;
+}

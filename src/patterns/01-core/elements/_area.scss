@@ -1,0 +1,7 @@
+// @file
+// Area element styles.
+
+:where(area) {
+  cursor: pointer;
+  touch-action: manipulation;
+}

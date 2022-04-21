@@ -1,0 +1,7 @@
+// @file
+// Ordered list styles.
+
+:where(ol) {
+  font-size: var(--font-size-2);
+  padding-inline-start: var(--size-4);
+}

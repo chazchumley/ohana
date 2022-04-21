@@ -1,0 +1,159 @@
+// @file
+// Inline element styles.
+
+@use '../../01-core' as *;
+
+:where(a) {
+  background-color: transparent;
+  transition-duration: 200ms;
+  transition-property: background-color, border-color, color, outline-color, text-decoration-color;
+  transition-timing-function: var(--ease-in-out-2);
+
+  &:where([href]) {
+    color: var(--indigo-5);
+    text-decoration-color: var(--indigo-5);
+
+    &:where(:hover) {
+      color: var(--indigo-9);
+      text-decoration-color: var(--indigo-9);
+    }
+
+    &:where(:visited) {
+      color: var(--indigo-5);
+      text-decoration-color: var(--indigo-5);
+    }
+  }
+
+  &:where(:not(:hover)) {
+    text-decoration: inherit;
+  }
+
+  @media print {
+    &,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &[href]::after {
+      content: ' <' attr(href) '>';
+      font-family: var(--font-sans);
+      font-size: 10pt;
+      font-weight: normal;
+      text-transform: lowercase;
+    }
+
+    // Uncomment and replace example.com with your site’s domain.
+    //&[href^='/']::after {
+    //  content: ' <http://example.com' attr(href) '>';
+    //}
+
+    &[href^='javascript:']::after,
+    &[href^='mailto:']::after,
+    &[href^='tel:']::after,
+    &[href^='#']::after,
+    &[href*='?']::after {
+      content: '';
+    }
+  }
+}
+
+:where(abbr) {
+  text-decoration-color: var(--blue-5);
+  text-underline-offset: var(--size-xs);
+
+  &:hover {
+    cursor: help;
+  }
+
+  @media print {
+    &[title]::after {
+      content: ' (' attr(title) ')';
+    }
+  }
+}
+
+:where(b) {
+  font-weight: var(--font-weight-900);
+}
+
+:where(cite) {
+  color: var(--gray-6);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-0);
+  font-style: normal;
+  font-weight: var(--font-weight-600);
+  letter-spacing: var(--font-letterspacing-1);
+  line-height: var(--font-lineheight-1);
+}
+
+:where(code) {
+  font-family: var(--font-mono);
+}
+
+:where(del) {
+  background-color: var(--red-9);
+  color: var(--red-1);
+}
+
+:where(dfn) {
+  font-style: italic;
+}
+
+:where(ins) {
+  background-color: var(--green-9);
+  color: var(--green-1);
+  text-underline-offset: var(--size-xs);
+}
+
+:where(kbd) {
+  border-color: var(--gray-4);
+  border-radius: var(--radius-2);
+  border-width: var(--border-size-1);
+  font-family: var(--font-mono);
+  padding: var(--size-1) var(--size-2);
+}
+
+:where(mark) {
+  border-radius: var(--radius-2);
+  padding-inline: var(--size-1);
+}
+
+:where(samp) {
+  font-family: var(--font-mono);
+}
+
+:where(small) {
+  font-size: max(.5em, var(--font-size-0));
+  max-inline-size: var(--size-content-1);
+}
+
+:where(strong) {
+  font-weight: var(--font-weight-700);
+}
+
+:where(sub) {
+  bottom: -0.25em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+:where(sup) {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
+  vertical-align: baseline;
+}
+
+:where(u) {
+  text-underline-offset: var(--size-xs);
+}
+
+:where(var) {
+  border-color: var(--gray-4);
+  border-radius: var(--radius-2);
+  border-width: var(--border-size-1);
+  padding: var(--size-1) var(--size-2);
+}

@@ -1,0 +1,9 @@
+{% embed '@layouts/sidebar/sidebar.twig' with {
+  'constrain': 'l-constrain',
+} %}
+
+  {% block main %}
+    {{- content -}}
+  {% endblock %}
+
+{% endembed %}

@@ -1,0 +1,16 @@
+// @file
+// Styles for Menu.
+
+@use '../../01-core' as *;
+
+.menu {
+  @include list-unstyled;
+
+  @media print {
+    display: none;
+  }
+}
+
+.menu__item {
+  margin-bottom: 0;
+}

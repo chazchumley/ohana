@@ -1,0 +1,88 @@
+// @file
+// Styles for Button.
+
+@use '../../01-core' as *;
+
+$button-bg: var(--blue-5);
+$button-color: white;
+$button-visited-color: white;
+$button-hover-bg: var(--blue-7);
+$button-hover-color: white;
+$button-active-bg: var(--blue-7);
+$button-active-color: white;
+$button-disabled-bg: var(--gray-3);
+$button-disabled-color: black;
+$button-radius: var(--radius-2);
+
+.button {
+  appearance: none;
+  background-color: $button-bg;
+  border: 0;
+  border-radius: $button-radius;
+  color: $button-color;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: var(--font-bold);
+  padding: var(--size-1) var(--size-2);
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  @media(min-width: $screen-sm) {
+    width: auto;
+  }
+
+  &:visited {
+    color: $button-visited-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-bg;
+    color: $button-hover-color;
+  }
+
+  &:active {
+    background-color: $button-active-bg;
+    color: $button-active-color;
+  }
+
+  &:not([disabled]):focus {
+    outline-offset: var(--size-1);
+  }
+
+  &:disabled {
+    background-color: $button-disabled-bg;
+    color: $button-disabled-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+// Unstyled Button
+.button--unstyled {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--indigo-7);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  &:visited {
+    color: var(--indigo-7);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: var(--indigo-9);
+  }
+
+  &:active {
+    background-color: transparent;
+    color: var(--indigo-9);
+  }
+}

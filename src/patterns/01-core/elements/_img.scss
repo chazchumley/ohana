@@ -1,0 +1,13 @@
+// @file
+// IMG element styles.
+
+:where(img) {
+  block-size: auto;
+  display: block;
+  max-inline-size: 100%;
+
+  @media print {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}

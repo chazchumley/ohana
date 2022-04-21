@@ -1,0 +1,8 @@
+// @file
+// Nav element styles.
+
+:where(nav) {
+  @media print {
+    display: none;
+  }
+}

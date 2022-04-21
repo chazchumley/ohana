@@ -1,0 +1,241 @@
+:where(html) {
+  --link: var(--indigo-7);
+  --link-visited: var(--grape-7);
+  --text-1: var(--gray-9);
+  --text-2: var(--gray-7);
+  --surface-1: var(--gray-0);
+  --surface-2: var(--gray-2);
+  --surface-3: var(--gray-3);
+  --surface-4: var(--gray-4);
+  --max-inline-body: calc(100vw - (var(--size-8) * 2));
+}
+
+// Default Pattern Lab Styling
+.pl {
+  padding-block: var(--size-4);
+  padding-inline: var(--size-4);
+}
+
+.pl-c-category {
+  display: none;
+}
+
+.pl-c-pattern__header {
+  align-items: center;
+  padding-top: 0;
+}
+
+.pl-c-pattern__title a {
+  font-family: var(--font-system);
+  font-size: var(--font-size-2);
+  margin: 0;
+  padding: 0;
+}
+
+.pl-c-tabs__list {
+  a {
+    margin: 0;
+  }
+}
+
+.pl-c-tabs__list-item {
+  padding-inline-end: var(--size-2);
+  padding-inline-start: 0;
+}
+
+.pl-c-tabs__panel pre[class*="language-"] {
+  background-image: none;
+  min-width: 100%;
+}
+
+.pl-c-tabs__panel code[class*="language-"] {
+  font-size: var(--font-size-0);
+}
+
+// Aspect Ratio Demos
+.pl-aspect-ratio {
+  display: grid;
+  gap: var(--size-4);
+  justify-items: flex-start;
+  padding-block: var(--size-6);
+
+  .aspect-demo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--size-4);
+
+    > div {
+      block-size: var(--size-20);
+      border-color: var(--surface-4);
+      border-width: var(--border-size-3);
+      box-shadow: var(--shadow-3);
+      display: grid;
+      max-inline-size: var(--max-inline-body);
+      place-content: center;
+    }
+  }
+}
+
+// Border Demos
+.pl-borders {
+  display: grid;
+  gap: var(--size-4);
+  justify-items: flex-start;
+  padding-block: var(--size-6);
+
+  .border-demo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--size-5);
+
+    > div {
+      aspect-ratio: var(--ratio-square);
+      border-color: var(--gray-3);
+      border-style: solid;
+      border-width: var(--size-05);
+      display: grid;
+      font-size: var(--font-size-4);
+      inline-size: var(--size-20);
+      place-content: center;
+    }
+  }
+}
+
+/* Color Demo */
+.pl-colors {
+  display: grid;
+  gap: var(--size-4);
+  justify-items: flex-start;
+  padding-block: var(--size-6);
+
+  .color-demo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--size-3);
+
+    > div {
+      align-content: end;
+      aspect-ratio: var(--ratio-square);
+      border-color: var(--gray-3);
+      border-radius: var(--radius-1);
+      border-width: var(--size-00);
+      display: grid;
+      inline-size: var(--size-20);
+
+      > div {
+        background-color: rgba(black, 0.3);
+        color: white;
+        font-size: var(--font-size-00);
+        padding: var(--size-2);
+      }
+    }
+  }
+}
+
+/* Font Demo */
+.pl-fonts {
+  display: grid;
+  gap: var(--size-4);
+  justify-items: flex-start;
+  padding-block: var(--size-6);
+
+  .font-demo {
+    @media(min-width: 768px) {
+      display: grid;
+      gap: var(--size-3);
+      grid-template-columns: 35% 65%;
+    }
+
+    .font-preview {
+      flex-shrink: 0;
+      font-size: var(--font-size-13);
+      font-weight: var(--font-weight-400);
+      line-height: var(--font-line-height-1);
+      width: 100%;
+    }
+
+    .font-meta {
+      width: 100%;
+
+      @media(min-width: 768px) {
+        display: grid;
+        grid-template-columns: 35% 65%;
+      }
+    }
+
+    .font-meta__alpha {
+      color: var(--gray-7);
+      width: 100%;
+    }
+
+    .font-meta__label {
+      color: var(--gray-6);
+    }
+
+    .font-meta__preview {
+      border-top: var(--border-size-1) solid var(--gray-3);
+      margin: var(--size-2) 0 0;
+      padding: var(--size-2) 0 0;
+      width: fit-content;
+
+      @media(min-width: 768px) {
+        border-left: var(--border-size-1) solid var(--gray-3);
+        border-top: 0;
+        margin: 0 0 0 var(--size-2);
+        padding: 0 0 0 var(--size-2);
+      }
+
+      > div {
+        font-size: var(--font-size-0);
+        line-height: var(--font-lineheight-4);
+      }
+    }
+  }
+}
+
+// Shadow Demo
+.pl-shadows {
+  display: grid;
+  gap: var(--size-4);
+  justify-items: flex-start;
+  padding-block: var(--size-6);
+
+  .shadow-demo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--size-5);
+
+    > div {
+      aspect-ratio: var(--ratio-square);
+      border-color: var(--gray-3);
+      border-radius: var(--radius-3);
+      border-width: var(--size-00);
+      display: grid;
+      inline-size: var(--size-20);
+      place-content: center;
+    }
+  }
+}
+
+// Sizes Demo
+.pl-sizes {
+  .sizes-demos {
+    div {
+      background-color: var(--gray-3);
+      display: grid;
+    }
+  }
+}
+
+// General formatting
+.just-for-gap {
+  display: grid;
+  gap: var(--size-4);
+  margin-bottom: var(--size-2);
+  width: 100%;
+
+  h3 {
+    font-family: var(--font-system);
+    margin: 0;
+  }
+}

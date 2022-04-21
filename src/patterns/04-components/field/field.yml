@@ -1,0 +1,9 @@
+---
+modifier: ''
+element: 'div'
+label_hidden: false
+label_element: 'div'
+label_display: ''
+label: 'Field Label'
+items:
+  - content: 'Field Item'

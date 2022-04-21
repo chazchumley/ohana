@@ -1,0 +1,24 @@
+{{ attach_library('ohana/breadcrumb') }}
+
+{% set classes = [
+  'breadcrumb',
+  modifier ? modifier : '',
+  attributes ? attributes.class,
+]|join(' ')|trim %}
+
+<nav class="{{ classes }}" {{ attributes ? attributes|without('class','id') }} aria-labelledby="system-breadcrumb" role="navigation">
+  <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
+  <div class="breadcrumb__content">
+    <ol class="breadcrumb__list">
+      {% for item in breadcrumb %}
+        <li class="breadcrumb__item">
+          {% if item.url %}
+            <a href="{{ item.url }}" class="breadcrumb__link">{{ item.text }}</a>
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>

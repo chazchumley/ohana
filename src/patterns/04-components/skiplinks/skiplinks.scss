@@ -1,0 +1,36 @@
+// @file
+// Styles for SKiplinks.
+
+.skiplinks {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: var(--layer-important);
+}
+
+.skiplinks__link,
+.skiplinks__link:visited,
+.skiplinks__link:focus {
+  background-color: black;
+  border-color: white;
+  border-width: 2px;
+  border-bottom-left-radius: var(--size-1);
+  border-bottom-right-radius: var(--size-1);
+  border-top: 0;
+  box-shadow: var(--shadow-2);
+  color: white;
+  display: inline-block;
+  font-weight: var(--font-weight-700);
+  margin: 0;
+  outline: 0;
+  padding: var(--size-2);
+  text-align: center;
+  text-decoration: none;
+}
+
+// Remove :focus styles for skiplink targets.
+// stylelint-disable-next-line selector-max-id
+#main:focus {
+  outline: 0;
+}

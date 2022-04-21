@@ -1,0 +1,9 @@
+---
+modifier: ''
+grid_content: |-
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Grid item</p>
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Grid item</p>
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Grid item</p>
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Grid item</p>
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Grid item</p>
+  <p style="border: var(--border-size-1) dashed var(--gray-3); color: var(--gray-6); padding: 1rem; max-inline-size: 100%; margin: 0;">Grid item</p>

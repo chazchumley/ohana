@@ -1,0 +1,52 @@
+// @file
+// Accessibility mixin
+
+// Hide an element visually, but have it available for screen readers
+@mixin visually-hidden() {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  word-wrap: normal;
+}
+
+// Turns off the visually-hidden effect.
+@mixin visually-hidden-off() {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+// Makes an element visible when focused if it also has the visually-hidden styles.
+@mixin focusable {
+  &:focus,
+  &:active {
+    @include visually-hidden-off;
+  }
+}
+
+// Hide an element completely hidden, visually and to screen readers.
+@mixin hidden() {
+  display: none;
+}
+
+// Makes an element completely hidden, visually and to screen readers, but maintains its layout.
+@mixin invisible() {
+  visibility: hidden;
+}
+
+// Completely hide an element if it has a true aria-hidden attribute.
+@mixin aria-hidden {
+  &[aria-hidden='true'] {
+    display: none;
+  }
+}

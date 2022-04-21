@@ -1,0 +1,9 @@
+{{ attach_library('ohana/site-slogan') }}
+
+{% set classes = [
+  'site-slogan',
+  attributes ? attributes.class
+]|join(' ')|trim %}
+
+
+<span class="{{ classes }}" {{ attributes ? attributes|without('class','id') }}>{{ site_slogan }}</span>

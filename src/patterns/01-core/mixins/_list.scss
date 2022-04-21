@@ -1,0 +1,96 @@
+// @file
+// List Mixins
+
+@use 'clearfix' as *;
+@use '../props/media' as *;
+
+@mixin list-border {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  > li {
+    border-bottom: 1px solid var(--gray-5);
+    padding: var(--size-05);
+  }
+}
+
+@mixin list-column {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  > li {
+    break-inside: avoid-column;
+    display: table;
+    margin-bottom: 0;
+    padding-bottom: var(--size-05);
+  }
+
+  @media(min-width: $screen-sm) {
+    column-count: 2;
+    column-gap: var(--size-4);
+  }
+}
+
+@mixin list-inline {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  > li {
+    display: inline;
+  }
+}
+
+@mixin list-pipeline {
+  @include clearfix;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  > li {
+    border-right: 1px solid var(--gray-5);
+    display: block;
+    float: left;
+    margin-right: 0.75em;
+    padding-left: 0;
+    padding-right: 0.75em;
+
+    &.is-active {
+      font-weight: 700;
+    }
+
+    &:last-child {
+      border-right: 0;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin list-unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

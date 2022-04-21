@@ -1,0 +1,9 @@
+{% embed '@layouts/footer/footer.twig' with {
+  'constrain': 'l-constrain'
+} %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+{% endembed %}
