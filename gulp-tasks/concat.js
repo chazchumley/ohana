@@ -31,7 +31,10 @@ module.exports = {
   // Concat all JS into a master bundle.
   concatJS: function() {
     return (
-      src(['./dist/js/*.js', '!./dist/js/all.js'])
+      src([
+        './dist/js/*.js',
+        '!./dist/js/all.js'
+      ])
         .pipe(concat('all.js'))
         .pipe(dest('./dist/js'))
     );

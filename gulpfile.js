@@ -11,11 +11,11 @@ const patternlab = require('@pattern-lab/core')(config);
 //
 // Each task is broken apart to it's own node module.
 // Check out the ./gulp-tasks directory for more.
+const { compileSass, compileJS } = require('./gulp-tasks/compile');
 const { cleanCSS, cleanFonts, cleanImages, cleanJS } = require('./gulp-tasks/clean');
 const { copyFonts } = require('./gulp-tasks/copy');
 const { compressAssets } = require('./gulp-tasks/compress');
 const { lintJS, lintSass } = require('./gulp-tasks/lint');
-const { compileSass, compileJS } = require('./gulp-tasks/compile');
 const { concatCSS, concatJS } = require('./gulp-tasks/concat');
 const { minifyCSS, minifyJS } = require('./gulp-tasks/minify');
 const server = require('browser-sync').create();
@@ -23,23 +23,23 @@ const server = require('browser-sync').create();
 // Clean all directories.
 exports.clean = parallel(cleanCSS, cleanFonts, cleanImages, cleanJS);
 
-// Copy our fonts
+// Copy our fonts.
 exports.copy = copyFonts;
 
-// Compress Files
+// Compress Files.
 exports.compress = compressAssets;
 
-// Lint Sass and JavaScript
+// Lint Sass and JavaScript.
 exports.lint = parallel(lintSass, lintJS);
 
-// Compile Our Sass and JS
-exports.compile = series(parallel(compileSass, compileJS));
+// Compile Our Sass and JS.
+exports.compile = parallel(compileSass, compileJS);
 
 // Concat all CSS and JS files into a master bundle.
 exports.concat = parallel(concatCSS, concatJS);
 
-// Minify Our Sass and JS
-exports.minify = series(parallel(minifyCSS, minifyJS));
+// Minify all CSS and JS files.
+exports.minify = parallel(minifyCSS, minifyJS);
 
 /**
  * Start browsersync server.
