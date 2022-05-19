@@ -18,7 +18,7 @@ module.exports = {
 
   // Clean Images files.
   cleanImages: function() {
-    return del(['./dist/img/*'], { force: true });
+    return del(['./dist/images/*'], { force: true });
   },
 
   // Clean JS files.

@@ -48,7 +48,7 @@
       },
       "css": "./dist/css",
       "fonts": "./dist/fonts",
-      "images": "./dist/img",
+      "images": "./dist/images",
       "js": "./dist/js"
     },
     "public": {
@@ -59,7 +59,7 @@
       "styleguide": "./patternlab/styleguide/",
       "css": "./patternlab/css",
       "fonts": "./patternlab/fonts",
-      "images": "./patternlab/img",
+      "images": "./patternlab/images",
       "js": "./patternlab/js"
     }
   },

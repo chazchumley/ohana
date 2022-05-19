@@ -30,7 +30,10 @@ module.exports = {
         './src/patterns/**/**/*.scss',
         './src/styleguide/*.scss'
       ])
-      .pipe(sass.sync().on('error', handleError))
+      .pipe(sass.sync({
+        includePaths: ['node_modules'],
+        outputStyle: 'expanded'
+      }).on('error', handleError))
       .pipe(prefix({ cascade: false }))
       .pipe(rename(function(path) { path.dirname = ''; return path;}))
       .pipe(dest('./dist/css'));
