@@ -24,10 +24,5 @@ module.exports = {
   // Clean JS files.
   cleanJS: function() {
     return del(['./dist/js/*'], { force: true });
-  },
-
-  // Clean Vendor files.
-  cleanVendor: function() {
-    return del(['./dist/vendor/*'], { force: true });
   }
 };

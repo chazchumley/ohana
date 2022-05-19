@@ -11,28 +11,35 @@ const patternlab = require('@pattern-lab/core')(config);
 //
 // Each task is broken apart to it's own node module.
 // Check out the ./gulp-tasks directory for more.
-const { compileSass, compileJS, minifyCSS, minifyJS } = require('./gulp-tasks/compile');
-const { lintJS, lintSass } = require('./gulp-tasks/lint');
+const { cleanCSS, cleanFonts, cleanImages, cleanJS } = require('./gulp-tasks/clean');
+const { copyFonts } = require('./gulp-tasks/copy');
 const { compressAssets } = require('./gulp-tasks/compress');
-const { cleanCSS, cleanFonts, cleanImages, cleanJS, cleanVendor } = require('./gulp-tasks/clean');
+const { lintJS, lintSass } = require('./gulp-tasks/lint');
+const { compileSass, compileJS } = require('./gulp-tasks/compile');
 const { concatCSS, concatJS } = require('./gulp-tasks/concat');
-const { moveFonts } = require('./gulp-tasks/move');
+const { minifyCSS, minifyJS } = require('./gulp-tasks/minify');
 const server = require('browser-sync').create();
 
-// Compile Our Sass and JS
-exports.compile = series(parallel(compileSass, compileJS, moveFonts), parallel(minifyCSS, minifyJS));
+// Clean all directories.
+exports.clean = parallel(cleanCSS, cleanFonts, cleanImages, cleanJS);
 
-// Lint Sass and JavaScript
-exports.lint = parallel(lintSass, lintJS);
+// Copy our fonts
+exports.copy = copyFonts;
 
 // Compress Files
 exports.compress = compressAssets;
 
+// Lint Sass and JavaScript
+exports.lint = parallel(lintSass, lintJS);
+
+// Compile Our Sass and JS
+exports.compile = series(parallel(compileSass, compileJS));
+
 // Concat all CSS and JS files into a master bundle.
 exports.concat = parallel(concatCSS, concatJS);
 
-// Clean all directories.
-exports.clean = parallel(cleanCSS, cleanFonts, cleanImages, cleanJS, cleanVendor);
+// Minify Our Sass and JS
+exports.minify = series(parallel(minifyCSS, minifyJS));
 
 /**
  * Start browsersync server.
@@ -94,7 +101,7 @@ function watchFiles() {
   // Watch all my sass files and compile sass if a file changes.
   watch(
     './src/patterns/**/**/*.scss',
-    series(parallel(lintSass, compileSass), concatCSS, (done) => {
+    series(parallel(lintSass, compileSass), concatCSS, minifyCSS, (done) => {
       server.reload('*.css');
       done();
     })
@@ -104,7 +111,7 @@ function watchFiles() {
   watch(
     './src/patterns/**/**/*.js',
     series(
-      parallel(cleanJS, lintJS, compileJS), concatJS, (done) => {
+      parallel(cleanJS, lintJS, compileJS), concatJS, minifyJS, (done) => {
         server.reload('*.js');
         done();
       }
@@ -142,7 +149,10 @@ function watchFiles() {
 // Watch task that runs a browsersync server.
 exports.watch = series(
   parallel(cleanCSS, cleanJS),
-  parallel(lintSass, compileSass, lintJS, compileJS, compressAssets, moveFonts),
+  parallel(copyFonts),
+  parallel(compressAssets),
+  parallel(lintSass, lintJS),
+  parallel(compileSass, compileJS),
   parallel(concatCSS, concatJS),
   parallel(minifyCSS, minifyJS),
   series(watchPatternlab, serve, watchFiles)
@@ -154,7 +164,10 @@ exports.styleguide = buildPatternlab;
 // Default Task
 exports.default = series(
   parallel(cleanCSS, cleanJS),
-  parallel(lintSass, compileSass, lintJS, compileJS, compressAssets, moveFonts),
+  parallel(copyFonts),
+  parallel(compressAssets),
+  parallel(lintSass, lintJS),
+  parallel(compileSass, compileJS),
   parallel(concatCSS, concatJS),
   parallel(minifyCSS, minifyJS),
   buildPatternlab
