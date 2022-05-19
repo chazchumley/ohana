@@ -11,7 +11,7 @@ const patternlab = require('@pattern-lab/core')(config);
 //
 // Each task is broken apart to it's own node module.
 // Check out the ./gulp-tasks directory for more.
-const { compileSass, compileJS } = require('./gulp-tasks/compile');
+const { compileSass, compileJS, minifyCSS, minifyJS } = require('./gulp-tasks/compile');
 const { lintJS, lintSass } = require('./gulp-tasks/lint');
 const { compressAssets } = require('./gulp-tasks/compress');
 const { cleanCSS, cleanFonts, cleanImages, cleanJS, cleanVendor } = require('./gulp-tasks/clean');
@@ -20,7 +20,7 @@ const { moveFonts } = require('./gulp-tasks/move');
 const server = require('browser-sync').create();
 
 // Compile Our Sass and JS
-exports.compile = parallel(compileSass, compileJS, moveFonts);
+exports.compile = series(parallel(compileSass, compileJS, moveFonts), parallel(minifyCSS, minifyJS));
 
 // Lint Sass and JavaScript
 exports.lint = parallel(lintSass, lintJS);
@@ -144,6 +144,7 @@ exports.watch = series(
   parallel(cleanCSS, cleanJS),
   parallel(lintSass, compileSass, lintJS, compileJS, compressAssets, moveFonts),
   parallel(concatCSS, concatJS),
+  parallel(minifyCSS, minifyJS),
   series(watchPatternlab, serve, watchFiles)
 );
 
@@ -155,5 +156,6 @@ exports.default = series(
   parallel(cleanCSS, cleanJS),
   parallel(lintSass, compileSass, lintJS, compileJS, compressAssets, moveFonts),
   parallel(concatCSS, concatJS),
+  parallel(minifyCSS, minifyJS),
   buildPatternlab
 );
