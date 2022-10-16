@@ -14,7 +14,7 @@ module.exports = {
     return (
       src([
         './dist/css/*.css',
-        '!./dist/css/all.css',
+        '!./dist/css/*all*.css',
         '!./dist/css/pattern-scaffolding.css'
       ])
         .pipe(sourcemaps.init())
