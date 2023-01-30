@@ -45,7 +45,7 @@
     "@pattern-lab/engine-twig-php": "5.16.2",
     "@pattern-lab/plugin-tab": "^5.16.1",
     "@pattern-lab/uikit-workshop": "5.16.2",
-    "browser-sync": "^2.27.9",
+    "browser-sync": "^2.27.11",
     "del": "^6.0.0",
     "generator-ohana": "^1.0.2",
     "gulp": "^4.0.2",
