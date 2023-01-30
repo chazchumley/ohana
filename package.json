@@ -67,7 +67,6 @@
     "stylelint-scss": "^3.21.0",
     "yo": "^4.3.0"
   },
-  "dependencies": {},
   "resolutions": {
     "@basalt/twig-renderer": "2.1.0"
   }
