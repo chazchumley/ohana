@@ -24,7 +24,7 @@
   padding-block: var(--size-1);
   padding-inline: var(--size-2);
   text-decoration: none;
-  transition: background-color .2s var(--ease-3), color .2s var(--ease-3);
+  transition: background-color 0.2s var(--ease-3), color 0.2s var(--ease-3);
 
   &[href]:is(.is-active, :hover, :focus-visible) {
     background-color: var(--indigo-5);

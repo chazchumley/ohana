@@ -41,10 +41,10 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
-    "@pattern-lab/core": "5.16.2",
-    "@pattern-lab/engine-twig-php": "5.16.2",
+    "@pattern-lab/core": "^5.17.0",
+    "@pattern-lab/engine-twig-php": "5.17.0",
     "@pattern-lab/plugin-tab": "^5.16.1",
-    "@pattern-lab/uikit-workshop": "5.16.2",
+    "@pattern-lab/uikit-workshop": "5.17.0",
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
     "generator-ohana": "^1.0.2",
