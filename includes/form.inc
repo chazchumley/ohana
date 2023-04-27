@@ -89,7 +89,7 @@ function ohana_theme_suggestions_container_alter(array &$suggestions, array $var
  */
 function ohana_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   if (isset($variables['element']['#form_id'])) {
-    $suggestions[] = 'form-item__' . $variables['element']['#form_id'];
+    $suggestions[] = 'form__' . $variables['element']['#form_id'];
   }
 }
 
