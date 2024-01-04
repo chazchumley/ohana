@@ -39,13 +39,13 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.16.11",
-    "@pattern-lab/core": "^5.17.0",
-    "@pattern-lab/engine-twig-php": "5.17.0",
-    "@pattern-lab/plugin-tab": "^5.16.1",
-    "@pattern-lab/uikit-workshop": "5.17.0",
-    "browser-sync": "^2.27.9",
+    "@pattern-lab/core": "^6.0.1",
+    "@pattern-lab/engine-twig-php": "6.0.1",
+    "@pattern-lab/plugin-tab": "^6.0.0",
+    "@pattern-lab/uikit-workshop": "6.0.3",
+    "browser-sync": "^2.29.3",
     "del": "^6.0.0",
     "generator-ohana": "^1.0.2",
     "gulp": "^4.0.2",
@@ -65,7 +65,7 @@
     "sass": "^1.50.0",
     "stylelint": "^13.13.1",
     "stylelint-scss": "^3.21.0",
-    "yo": "^4.3.0"
+    "yo": "^4.3.1"
   },
   "resolutions": {
     "@basalt/twig-renderer": "2.1.0"
