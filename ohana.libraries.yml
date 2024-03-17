@@ -1,133 +1,68 @@
 global:
   version: VERSION
   css:
-    theme:
-      //fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap: { type: external }
+    base:
       dist/css/global.css: {}
-      dist/css/toolbar.css: {}
+      dist/css/utilities.css: {}
+    component:
       dist/css/button.css: {}
 
-block:
-  css:
-    layout:
-      dist/css/block.css: {}
-
-content:
-  css:
-    layout:
-      dist/css/content.css: {}
-
-footer:
-  css:
-    layout:
-      dist/css/footer.css: {}
-
-form:
-  css:
-    layout:
-      dist/css/form.css: {}
-
-header:
-  css:
-    layout:
-      dist/css/header.css: {}
-
-modal:
-  css:
-    layout:
-      dist/css/modal.css: {}
-
-nav:
-  css:
-    layout:
-      dist/css/nav.css: {}
-
-page:
-  css:
-    layout:
-      dist/css/page.css: {}
-
-region:
-  css:
-    layout:
-      dist/css/region.css: {}
-
-section:
-  css:
-    layout:
-      dist/css/section.css: {}
-
-sidebar:
-  css:
-    layout:
-      dist/css/sidebar.css: {}
-
-view:
-  css:
-    layout:
-      dist/css/view.css: {}
-
-breadcrumb:
+callout:
   css:
     component:
-      dist/css/breadcrumb.css: {}
+      dist/css/callout.css: {}
 
-field:
+card:
   css:
     component:
-      dist/css/field.css: {}
+      dist/css/card.css: {}
 
-form-item:
+call-to-action:
   css:
     component:
-      dist/css/form-item.css: {}
+      dist/css/call-to-action.css: {}
 
-menu:
+content-highlight:
   css:
     component:
-      dist/css/menu.css: {}
+      dist/css/content-highlight.css: {}
 
-message:
+date:
   css:
     component:
-      dist/css/message.css: {}
+      dist/css/date.css: {}
 
-pager:
+date-badge:
   css:
     component:
-      dist/css/pager.css: {}
+      dist/css/date-badge.css: {}
 
-page-title:
+event-card:
   css:
     component:
-      dist/css/page-title.css: {}
+      dist/css/event-card.css: {}
 
-site-logo:
+eyebrow:
   css:
     component:
-      dist/css/site-logo.css: {}
+      dist/css/eyebrow.css: {}
 
-site-name:
+featured-card:
   css:
     component:
-      dist/css/site-name.css: {}
+      dist/css/featured-card.css: {}
 
-site-slogan:
+person-card:
   css:
     component:
-      dist/css/site-slogan.css: {}
+      dist/css/person-card.css: {}
 
-skiplinks:
+person-directory:
   css:
     component:
-      dist/css/skiplinks.css: {}
+      dist/css/person-directory.css: {}
 
-tabs:
+readtime:
   css:
     component:
-      dist/css/tabs.css: {}
-
-view-unformatted:
-  css:
-    component:
-      dist/css/view-unformatted.css: {}
+      dist/css/readtime.css: {}

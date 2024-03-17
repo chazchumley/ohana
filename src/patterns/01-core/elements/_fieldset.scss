@@ -1,7 +1,0 @@
-// @file
-// Fieldset element styles.
-
-:where(fieldset) {
-  border-radius: var(--radius-2);
-  border: var(--border-size-1) solid var(--gray-4);
-}

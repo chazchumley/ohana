@@ -1,8 +1,0 @@
-// @file
-// Menu element styles.
-
-:where(menu) {
-  display: flex;
-  gap: var(--size-3);
-  padding-inline-start: 0;
-}

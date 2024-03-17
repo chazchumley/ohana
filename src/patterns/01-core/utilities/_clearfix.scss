@@ -1,9 +1,0 @@
-// @file
-// Utility classes for Clearfix
-
-@use '../mixins/clearfix' as *;
-
-// Clearfix
-.clearfix {
-  @include clearfix;
-}

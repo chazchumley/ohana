@@ -1,8 +1,0 @@
-// @file
-// Horizontal rule styles.
-
-:where(hr) {
-  background-color: var(--gray-3);
-  height: var(--border-size-2);
-  margin-block: var(--size-fluid-2);
-}

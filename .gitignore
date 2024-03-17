@@ -11,7 +11,7 @@ npm-debug.log
 *.map
 
 # Ignore any artifact files.
-# The patternlab build needs the subfolder to exist but we don't
+# The stroybook build needs the subfolder to exist but we don't
 # want to commit anything in them beyond the .gitkeep file.
 dist/css/*
 !dist/css/.gitkeep
@@ -22,7 +22,5 @@ dist/images/*
 dist/js/*
 !dist/js/.gitkeep
 
-# Ignore Patternlab files that change every time.
-patternlab
-dependencyGraph.json
-
+# Ignore static storybook files.
+storybook-static
