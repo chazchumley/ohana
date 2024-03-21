@@ -1,13 +1,18 @@
-name: Surface
+name: Ohana
 type: theme
 description: 'A clean, accessible, and flexible Drupal front-end theme.'
-alt text: 'Screenshot of Surface, Drupal front-end theme.'
+alt text: 'Screenshot of Ohana, Drupal front-end theme.'
 package: Core
 core_version_requirement: ^8.9 || ^9 || ^10
 base theme: false
 
+dependencies:
+  - components
+  - twig_tweak
+  - twig_field_value
+
 libraries:
-  - surface/global
+  - ohana/global
 
 regions:
   header: Header
@@ -18,3 +23,19 @@ regions:
   content_below: Content Below
   footer: Footer
   theme: Theme
+
+components:
+  namespaces:
+    ohana: templates/custom
+    images: dist/images
+    base: source/patterns/base
+    elements: source/patterns/elements
+    components: source/patterns/components
+    collections: source/patterns/collections
+    layouts: source/patterns/layouts
+    pages: source/patterns/pages
+    theme: source/patterns/theme
+
+ckeditor5-stylesheets:
+  - dist/css/global.css
+  - dist/css/utilities.css
