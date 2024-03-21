@@ -1,16 +1,16 @@
 import parse from 'html-react-parser';
 
-import eyebrow from './eyebrow.twig';
+import twigTemplate from './eyebrow.twig';
 import data from './eyebrow.yml';
+import './eyebrow.css';
 
 const settings = {
   title: 'Elements/Eyebrow',
-  tags: ['autodocs'],
 };
 
-const Eyebrow = {
+export const Eyebrow = {
   name: 'Plain text label',
-  render: (args) => parse(eyebrow(args)),
+  render: (args) => parse(twigTemplate(args)),
   args: {
     ...data,
     eyebrow: {
@@ -21,9 +21,9 @@ const Eyebrow = {
   },
 };
 
-const Linked = {
+export const Linked = {
+  ...Eyebrow,
   name: 'Label as a link',
-  render: (args) => parse(eyebrow(args)),
   args: {
     ...data,
     eyebrow: {
@@ -35,4 +35,3 @@ const Linked = {
 };
 
 export default settings;
-export { Eyebrow, Linked };

@@ -13,12 +13,6 @@
   padding-block: var(--size-8);
   padding-inline: var(--size-8);
 
-  /* Lighten the background color for title container so it is more readable
-  when the Santa Barbara Sand background color is present. */
-  .bg-santa-barbara-sand.layout--onecol & {
-    background-color: var(--gray-50);
-  }
-
   @media (--tablet) {
     gap: var(--size-10);
     grid-template-columns: repeat(2, 1fr);

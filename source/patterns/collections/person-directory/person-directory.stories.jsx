@@ -1,22 +1,22 @@
 import parse from 'html-react-parser';
 
-import person from './person-directory.twig';
+import twigTemplate from './person-directory.twig';
 import data from './person-directory.yml';
+import './person-directory.css';
 
 const settings = {
   title: 'Collections/Person directory',
-  args: { ...data },
-  render: (args) => parse(person(args)),
 };
 
-const Grid = {
-  name: 'Person directory',
+export const GridDisplay = {
+  name: 'Person directory - Grid',
+  render: (args) => parse(twigTemplate(args)),
   args: { ...data },
 };
 
-const List = {
-  name: 'Person directory',
-  ...Grid,
+export const ListDisplay = {
+  ...GridDisplay,
+  name: 'Person directory - List',
   args: {
     ...data,
     modifier: 'is-list',
@@ -24,4 +24,3 @@ const List = {
 };
 
 export default settings;
-export { Grid, List };

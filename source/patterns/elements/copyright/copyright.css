@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Copyright styles.
+ */
+
+.copyright {
+  color: var(--black);
+  display: flex;
+  font-size: var(--font-size-0);
+  text-transform: uppercase;
+}

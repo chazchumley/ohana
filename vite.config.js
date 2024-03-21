@@ -18,10 +18,8 @@ export default defineConfig({
         lintCommand: 'stylelint "./source/patterns/**/*.css"',
       },
     }),
-    // Twig namespaces for including components.
     twig({
       namespaces: {
-        assets: join(__dirname, './source/assets'),
         base: join(__dirname, './source/patterns/base'),
         elements: join(__dirname, './source/patterns/elements'),
         components: join(__dirname, './source/patterns/components'),
@@ -31,9 +29,7 @@ export default defineConfig({
         theme: join(__dirname, './source/patterns/theme'),
       },
     }),
-    // YML for including data.
     yml(),
-    // Copy static images from `source` to `dist/images`
     viteStaticCopy({
       targets: [
         {
@@ -45,31 +41,36 @@ export default defineConfig({
     watchAndRun([
       {
         name: 'css',
-        watchKind: ['add', 'change'],
+        watchKind: ['add', 'change', 'unlink'],
         watch: path.resolve('source/patterns/**/*.css'),
         run: 'vite build',
         delay: 300,
       },
       {
         name: 'js',
-        watchKind: ['add', 'change'],
+        watchKind: ['add', 'change', 'unlink'],
         watch: path.resolve('source/patterns/**/*.js'),
+        run: 'vite build',
+        delay: 300,
+      },
+      {
+        name: 'images',
+        watchKind: ['add', 'change', 'unlink'],
+        watch: path.resolve('source/patterns/**/images/*.{png,jpg,jpeg,svg,webp}'),
         run: 'vite build',
         delay: 300,
       },
     ]),
   ],
   build: {
+    brotliSize: false,
     emptyOutDir: true,
-    outDir: './dist',
+    outDir: 'dist',
     rollupOptions: {
-      // Recursively globbing through all CSS and JS files
-      // within the source directory.
       input: [
         ...glob.sync(path.resolve(__dirname, 'source/patterns/**/*.{css,js}')),
       ],
       output: {
-        // Outputs CSS and JS into their respective directories within `dist`..
         assetFileNames: 'css/[name].css',
         entryFileNames: 'js/[name].js',
       },

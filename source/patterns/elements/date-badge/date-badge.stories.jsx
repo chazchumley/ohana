@@ -1,23 +1,23 @@
 import parse from 'html-react-parser';
-
 import { withBackground } from '../../../../.storybook/decorators';
-import badge from './date-badge.twig';
+
+import twigTemplate from './date-badge.twig';
 import data from './date-badge.yml';
 import './date-badge.css';
 
 const settings = {
   title: 'Elements/Date Badge',
-  tags: ['autodocs'],
+};
+
+export const dateBadge = {
+  name: 'Date badge',
+  render: (args) => parse(twigTemplate(args)),
   args: { ...data },
 };
 
-const Badge = {
-  render: (args) => parse(badge(args)),
-  args: { ...data },
-};
-
-const BadgeLight = {
-  render: (args) => parse(badge(args)),
+export const dateBadgeLight = {
+  ...dateBadge,
+  name: 'Light date badge',
   args: {
     ...data,
     modifier: 'date-badge--light',
@@ -26,4 +26,3 @@ const BadgeLight = {
 };
 
 export default settings;
-export { Badge, BadgeLight };

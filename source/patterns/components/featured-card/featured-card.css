@@ -13,20 +13,9 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Based on the production site (medschool.ucla.edu), the main content section
-  max-width is 1376px.  Setting the same here for when component is viewed in Patternlab. */
-  .pl & {
-    margin: 0 auto;
-    max-width: 1376px;
-  }
-
   /* In Articles, the readtime field needs a little spacing. */
   .readtime {
     margin-block-start: var(--size-2);
-
-    .layout--onecol & {
-      color: var(--white);
-    }
   }
 }
 
@@ -48,12 +37,6 @@
   .button--secondary {
     margin-block-start: var(--size-4);
   }
-
-  .layout--onecol & {
-    .eyebrow {
-      color: var(--white);
-    }
-  }
 }
 
 .featured-card__date--wrapper {
@@ -70,16 +53,6 @@
 
     &:hover {
       color: var(--ucla-blue);
-    }
-
-    .layout--onecol & {
-      color: var(--white);
-    }
-  }
-
-  .layout--onecol & {
-    .date {
-      color: var(--white);
     }
   }
 
@@ -101,10 +74,6 @@
   display: flex;
   font-weight: var(--font-weight-600);
 
-  .layout--onecol & {
-    color: var(--ucla-yellow);
-  }
-
   a,
   a:hover {
     align-items: center;
@@ -125,11 +94,6 @@
   line-height: var(--leading-snug);
   margin-block-end: var(--size-2);
 
-  /* If component is within a one column layout, change text color to white. */
-  .layout--onecol & {
-    color: var(--white);
-  }
-
   @media (--laptop) {
     font-size: var(--font-size-8);
   }
@@ -140,11 +104,6 @@
   font-family: var(--font-body);
   font-size: var(--font-size-4);
   margin-block-end: var(--size-3);
-
-  /* If component is within a one column layout, change text color to white. */
-  .layout--onecol & {
-    color: var(--white);
-  }
 
   @media (--laptop) {
     font-size: var(--font-size-5);

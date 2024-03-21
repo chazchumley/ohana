@@ -1,8 +1,6 @@
 <h{{ title.level|default('2') }} {% if title.modifier %}class="{{ title.modifier }}"{% endif %}">
   {% if title.url %}
-    <a href="{{ title.url }}" class="heading__link">
-      {{ title.text }}
-    </a>
+    <a href="{{ title.url }}">{{ title.text }}</a>
   {% else %}
     {{ title.text }}
   {% endif %}

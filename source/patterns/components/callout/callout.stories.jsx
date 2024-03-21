@@ -1,20 +1,20 @@
 import parse from 'html-react-parser';
 
-import callout from './callout.twig';
+import twigTemplate from './callout.twig';
 import data from './callout.yml';
+import './callout.css';
 
 const settings = {
   title: 'Components/Callout',
-  args: { ...data },
-  render: (args) => parse(callout(args)),
 };
 
-const Stacked = {
+export const Stacked = {
   name: 'Callout',
+  render: (args) => parse(twigTemplate(args)),
   args: { ...data },
 };
 
-const Horizontal = {
+export const Horizontal = {
   ...Stacked,
   name: 'Callout Horizontal',
   args: {
@@ -23,41 +23,13 @@ const Horizontal = {
   },
 };
 
-const Reversed = {
+export const Reversed = {
   ...Stacked,
-  name: 'Callout Horizontal',
+  name: 'Callout Horizontal Reversed',
   args: {
     ...data,
     modifier: 'is-horizontal is-reversed',
   },
 };
 
-const Quote = {
-  ...Stacked,
-  name: 'Callout Horizontal',
-  args: {
-    ...data,
-    modifier: 'is-quote',
-  },
-};
-
-const QuoteHorizontal = {
-  ...Stacked,
-  name: 'Callout Horizontal',
-  args: {
-    ...data,
-    modifier: 'is-quote is-horizontal',
-  },
-};
-
-const HorizontalReversed = {
-  ...Stacked,
-  name: 'Callout Horizontal',
-  args: {
-    ...data,
-    modifier: 'is-quote is-horizontal is-reversed',
-  },
-};
-
 export default settings;
-export { Stacked, Horizontal, Reversed, Quote, QuoteHorizontal, HorizontalReversed };

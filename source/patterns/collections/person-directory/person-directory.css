@@ -34,11 +34,6 @@
   font-weight: var(--font-weight-400);
   line-height: var(--leading-none);
   margin-block-end: var(--size-8);
-
-  /* If Venice Canal background color exists, change title text color to white. */
-  .bg-venice-canal.layout--onecol & {
-    color: var(--white);
-  }
 }
 
 .person-directory__items {

@@ -1,18 +1,17 @@
 import parse from 'html-react-parser';
 
-import card from './event-card.twig';
+import twigTemplate from './event-card.twig';
 import data from './event-card.yml';
+import './event-card.css';
 
 const settings = {
-  title: 'Components/Event card',
-  args: { ...data },
-  render: (args) => parse(card(args)),
+  title: 'Components/Event list card',
 };
 
-const Card = {
-  name: 'Event Card',
+export const Card = {
+  name: 'Event list card',
   args: { ...data },
+  render: (args) => parse(twigTemplate(args)),
 };
 
 export default settings;
-export { Card };

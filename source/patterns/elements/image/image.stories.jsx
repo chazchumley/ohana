@@ -1,16 +1,15 @@
 import parse from 'html-react-parser';
 
-import image from './image.twig';
+import twigTemplate from './image.twig';
 import data from './image.yml';
 
-export default {
+const settings = {
   title: 'Elements/Image',
-  tags: ['autodocs'],
-  render: (args) => parse(image(args)),
 };
 
 export const Image = {
   name: '1:1',
+  render: (args) => parse(twigTemplate(args)),
   args: {
     ...data,
     image: '<img src="images/1-1.svg" alt="placeholder text" />',
@@ -48,3 +47,5 @@ export const Rectangular169 = {
     image: '<img src="images/16-9.svg" alt="placeholder text" />',
   },
 };
+
+export default settings;

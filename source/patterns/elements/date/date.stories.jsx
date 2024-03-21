@@ -1,19 +1,17 @@
 import parse from 'html-react-parser';
 
-import date from './date.twig';
+import twigTemplate from './date.twig';
 import data from './date.yml';
 
 const settings = {
   title: 'Elements/Date',
-  tags: ['autodocs'],
-  args: { ...data },
 };
 
 // Plain text title story.
-const Date = {
-  render: (args) => parse(date(args)),
+export const Date = {
+  name: 'Date',
+  render: (args) => parse(twigTemplate(args)),
   args: { ...data },
 };
 
 export default settings;
-export { Date };

@@ -1,7 +1,13 @@
 import React from 'react';
 
-const withGlobalWrapper = (Story) => (
+const withContainer = (Story) => (
   <div className="container">
+    <Story />
+  </div>
+);
+
+const withProse = (Story) => (
+  <div className="prose">
     <Story />
   </div>
 );
@@ -12,4 +18,4 @@ const withBackground = (Story) => (
   </div>
 );
 
-export { withGlobalWrapper, withBackground };
+export { withContainer, withProse, withBackground };

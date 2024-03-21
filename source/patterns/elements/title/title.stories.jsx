@@ -1,17 +1,17 @@
 import parse from 'html-react-parser';
+import { withProse } from '../../../../.storybook/decorators';
 
-import markup from './title.twig';
+import twigTemplate from './title.twig';
 import data from './title.yml';
 
 const settings = {
   title: 'Elements/Title',
-  tags: ['autodocs'],
-  args: { ...data },
+  decorators: [withProse],
 };
 
-// Plain text title story.
-const Title = {
-  render: (args) => parse(markup(args)),
+export const Title = {
+  name: 'Title',
+  render: (args) => parse(twigTemplate(args)),
   args: {
     ...data,
     title: {
@@ -23,7 +23,7 @@ const Title = {
 };
 
 // Linked title story.
-const Linked = {
+export const Linked = {
   name: 'Title as a link',
   ...Title,
   args: {
@@ -38,4 +38,3 @@ const Linked = {
 };
 
 export default settings;
-export { Title, Linked };

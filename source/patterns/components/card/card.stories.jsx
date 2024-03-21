@@ -1,23 +1,22 @@
 import parse from 'html-react-parser';
 
-import card from './card.twig';
+import twigTemplate from './card.twig';
 import data from './card.yml';
+import './card.css';
 
 const settings = {
   title: 'Components/Card',
-  tags: ['autodocs'],
-  args: { ...data },
 };
 
-const Default = {
+export const EventCard = {
   name: 'Event card',
-  render: (args) => parse(card(args)),
+  render: (args) => parse(twigTemplate(args)),
   args: { ...data },
 };
 
-const Article = {
+export const ArticleCard = {
+  ...EventCard,
   name: 'Article card',
-  render: (args) => parse(card(args)),
   args: {
     ...data,
     event_type: '',
@@ -28,4 +27,3 @@ const Article = {
 };
 
 export default settings;
-export { Default, Article };

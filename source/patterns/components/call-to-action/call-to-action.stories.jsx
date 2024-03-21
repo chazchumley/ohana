@@ -1,18 +1,17 @@
 import parse from 'html-react-parser';
 
-import ctaTwig from './call-to-action.twig';
+import twigTemplate from './call-to-action.twig';
 import data from './call-to-action.yml';
+import './call-to-action.css';
 
 const settings = {
   title: 'Components/Call to action',
-  args: { ...data },
-  render: (args) => parse(ctaTwig(args)),
 };
 
-const cta = {
+export const CTA = {
   name: 'Call to action',
+  render: (args) => parse(twigTemplate(args)),
   args: { ...data },
 };
 
 export default settings;
-export { cta };

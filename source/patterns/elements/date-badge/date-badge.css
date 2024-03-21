@@ -2,6 +2,7 @@
  * @file
  * Date badge styles.
  */
+
 .date-badge {
   background-color: var(--ucla-blue);
   color: var(--white);
